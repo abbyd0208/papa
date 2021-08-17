@@ -1,0 +1,23 @@
+body {
+  background-color: $background;
+}
+
+header {
+  .navbar-brand {
+    display: none;
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+  }
+  .navbar-nav {
+    width: 100%;
+    justify-content: space-between;
+
+    .logo {
+      display: block;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+}
