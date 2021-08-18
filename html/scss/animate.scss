@@ -3,15 +3,19 @@
     img{ width: 100%; height: auto;}
 }
 
+@mixin size($w,$h) {
+    width: $w;
+    height: $h;
+    // overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
 .about{
     // *{ border: 1px solid RED; }
-    width: 136px;
-    height: 134px;
-    overflow: hidden;
-    position: relative;
+    @include size(136px, 134px);
     border: 1px solid green;
-    transition: all .5s linear;
-    cursor: pointer;
+  
     .item{ position: absolute;}
     @for $i from 1 to 6 {
         .ani_#{$i}{
@@ -29,5 +33,73 @@
         .ani_3{right: 3%;}
         .ani_4{ transform-origin: bottom right; transform: rotate(5deg);}
         .ani_5{ transform-origin: bottom right; transform: rotate(15deg);right: 53%;}
+    }
+}
+
+
+.intro{
+    @include size(126px, 133px);
+    @for $i from 1 to 6 {
+        .ani_#{$i}{
+            transition: all .3s linear;
+        }
+    }
+    .item{ position: absolute;}
+    .ani_1{ left: 0; bottom: 0; width: 100%; }
+    .ani_2{ left: 32%; top: 42%; width: 12%;}
+    .ani_3{ right: 0; top: 8%; width: 19%;}
+    .ani_4{ left: 24%; top: 25%; width: 29%;} 
+    .ani_5{ left: 0; bottom: 5%; width: 58%;}
+
+    &:hover{
+        .ani_1{}
+        .ani_2{top: 40%;}
+        .ani_3{top: 0;}
+        .ani_4{top: 23%;}
+        .ani_5{ transform: rotate(-15deg);}
+    }
+}
+
+.works{
+    @include size(126px, 132px);
+    @for $i from 1 to 5 {
+        .ani_#{$i}{
+            transition: all .3s linear;
+        }
+    }
+    .item{ position: absolute;}
+    .ani_1{ width: 71%; right: 0; bottom: 0;}
+    .ani_2{ width: 54%; right: 10%; top: 0;}
+    .ani_3{ width: 55%; left: 5%; bottom: 0;}
+    .ani_4{ width: 60%; right: 5%; bottom: 0;} 
+    
+    &:hover{
+        .ani_1{}
+        .ani_2{ transform: rotate(5deg);}
+        .ani_3{ left: 0%;}
+        .ani_4{ right: 10%;}
+    }
+}
+
+.feature{
+    @include size(155px, 122px);
+    @for $i from 1 to 6 {
+        .ani_#{$i}{
+            transition: all .3s linear;
+        }
+    }
+    .item{ position: absolute;}
+    .ani_1{ width: 55%; left: 0; bottom: 0;}
+    .ani_2{ width: 45%; right: 0; bottom: 0;}
+    .ani_3{ width: 30%; left: 25%; bottom: 0%;transform-origin: center left;}
+    .ani_4{ width: 30%; right: 15%; bottom: 0%; transform-origin: center right;}
+    .ani_5{ width: 13%;left: 50%;}
+
+    &:hover{
+        .ani_1{ left: -3%;}
+        .ani_2{ right: -3%;}
+        .ani_3{ left: 29%; transform: rotate(-60deg);}
+        .ani_4{ right: 19%;transform: rotate(60deg);}
+        .ani_5{ transform: rotate(-20deg); left: 52%;}
     }
 }
