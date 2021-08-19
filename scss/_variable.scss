@@ -7,10 +7,11 @@ $background: #fff6e5 !default;
 // $warning: #ffd22c !default;
 // $danger: #fd3635 !default;
 // $light: #C4C4C4!default;
-// $dark: #0e5557 !default;
+
 // $primary-color: #00d3be !important;
 $primary-color: #7cbade !important;
 $secondary-color: #d2754c !important;
+$font-color: #262222 !default;
 
 // 蓋掉 bootstrap預設字體樣式
 $font-family-sans-serif: 'Noto Sans TC', 'Roboto', sans-serif, Arial, '微軟正黑體', 'Microsoft JhengHei', -apple-system,
@@ -57,7 +58,7 @@ $grid-breakpoints: map-merge(
     md: 768px,
     lg: 992px,
     xl: 1200px,
-    xxl: 1400px //新增,,,,
+    xxl: 1400px //新增,,,,,,
   ),
   $grid-breakpoints
 );
@@ -77,7 +78,7 @@ $container-max-widths: map-merge(
     md: 720px,
     lg: 960px,
     xl: 1140px,
-    xxl: 1366px //新增,,,,
+    xxl: 1366px //新增,,,,,,
   ),
   $container-max-widths
 );

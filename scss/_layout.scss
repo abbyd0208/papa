@@ -1,23 +1,318 @@
 body {
   background-color: $background;
+  height: 200vh;
 }
 
-header {
+.navbar {
+  background-color: $background;
+  @include basic-shadow;
+}
+
+// rwd 右側按鈕
+.navbar-toggler {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: $secondary;
+  margin: 40px 0 20px;
+  border: none;
+  // 取消 bootstrap focus 效果
+  &:focus {
+    outline: none;
+  }
+  &.open {
+    background-color: $background;
+  }
+  svg {
+    font-size: 35px;
+    color: #ffffff;
+    display: none;
+    &.show {
+      display: inline-block;
+    }
+  }
+
+  .fa-bars {
+    font-size: 35px;
+    color: #ffffff;
+  }
+
+  .fa-times {
+    font-size: 50px;
+    color: $primary;
+  }
+}
+
+//navbar 共用樣式
+.navbar-nav {
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .nav-item {
+    position: relative;
+    font-size: 1.75rem;
+    // 左右四個item
+    a {
+      line-height: 48px;
+      color: $font-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-decoration: none;
+      img {
+        width: 125px;
+        margin-bottom: 30px;
+      }
+    }
+
+    // 訂閱按鈕箭頭圖標
+    svg {
+      font-size: 24px;
+      margin: 0 8px 2px 0;
+      @include media-breakpoint-down(md) {
+        font-size: 22px;
+        margin-bottom: 1px;
+      }
+    }
+  }
+}
+
+//動態navbar
+.sticky_nav {
+  width: 100%;
+  position: fixed;
+  top: -100%;
+  transition: top 0.8s ease 0s;
+  z-index: 150;
+  &.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+    .navbar-nav {
+      width: 60%;
+      min-width: 790px;
+      margin: 24px 50px 24px 0;
+      .nav-item {
+        // 訂閱按鈕
+        &:last-child {
+          margin-left: 10px;
+          position: relative;
+          a {
+            color: #ffffff;
+            div {
+              height: 50px;
+              background-color: $primary;
+              &::before {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                left: -25px;
+                background-color: $primary;
+              }
+              &::after {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                right: -25px;
+                background-color: $primary;
+              }
+            }
+          }
+        }
+
+        &.line {
+          &::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 140px;
+            position: absolute;
+            bottom: 25px;
+            background-color: #707070;
+            right: -15%;
+            @include media-breakpoint-down(md) {
+              display: none;
+            }
+          }
+          &::after {
+            @include media-breakpoint-down(lg) {
+              left: 83%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    visibility: hidden;
+    &.show_nav {
+      visibility: initial;
+    }
+    button {
+      visibility: initial;
+    }
+    &.navbar-expand-lg .navbar-collapse {
+      .navbar-nav {
+        margin: 0 auto;
+        width: 90%;
+        align-items: center;
+        min-width: 0;
+        .nav-item {
+          width: 100%;
+          font-size: 1.5rem;
+          padding: 14px 0;
+
+          img {
+            display: none;
+          }
+          &:nth-child(-n + 3) {
+            border-bottom: 1px solid $main-gray;
+          }
+          // 訂閱按鈕 rwd
+          &:last-child {
+            right: 0;
+            top: 0;
+            width: fit-content;
+            position: relative;
+            margin: -10px 20px 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//靜態navbar
+.static_nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
   .navbar-brand {
     display: none;
     @include media-breakpoint-down(md) {
       display: block;
     }
   }
-  .navbar-nav {
-    width: 100%;
-    justify-content: space-between;
+  &.navbar-expand-lg .navbar-collapse {
+    justify-content: center;
 
-    .logo {
-      display: block;
+    .navbar-nav {
+      width: 80%;
+      margin: 90px 0 60px;
+      position: relative;
+      flex-wrap: nowrap;
+      // 兩條直線
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 140px;
+        position: absolute;
+        bottom: 25px;
+        background-color: #707070;
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+      &::before {
+        left: 15%;
+        @include media-breakpoint-down(lg) {
+          left: 16%;
+        }
+      }
+      &::after {
+        left: 84%;
+        @include media-breakpoint-down(lg) {
+          left: 83%;
+        }
+      }
+      .nav-item {
+        // 中間logo
+        &.logo {
+          margin-top: -30px;
+          img {
+            width: 200px;
+          }
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+        // 訂閱按鈕
+        &:last-child {
+          position: absolute;
+          z-index: 100;
+          right: -40px;
+          top: -70px;
+          margin: 0 20px;
+          a {
+            color: #ffffff;
+            div {
+              height: 50px;
+              background-color: $primary;
+              &::before {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                left: -25px;
+                background-color: $primary;
+              }
+              &::after {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                right: -25px;
+                background-color: $primary;
+              }
+            }
+          }
+        }
+      }
+
       @include media-breakpoint-down(md) {
-        display: none;
+        margin: 0 auto;
+        width: 90%;
+        align-items: center;
+        // item rwd
+        .nav-item {
+          width: 100%;
+          font-size: 1.5rem;
+          padding: 14px 0;
+          img {
+            display: none;
+          }
+          &:nth-child(-n + 4) {
+            border-bottom: 1px solid $main-gray;
+          }
+          // 訂閱按鈕 rwd
+          &:last-child {
+            right: 0;
+            top: 0;
+            width: fit-content;
+            position: relative;
+            margin: -10px 20px 12px;
+          }
+        }
       }
     }
+  }
+}
+
+.content {
+  padding-top: 376px;
+  @include media-breakpoint-down(md) {
+    padding-top: 150px;
   }
 }
