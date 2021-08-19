@@ -1,20 +1,22 @@
 .animate{
     border: 1px solid #eee;
     img{ width: 100%; height: auto;}
+    &.overflowHidden{ overflow: hidden;}
+}
+//  .menu 暫時排版用 正式要拿掉
+.menu{ display: flex;
+    .animate{ margin: 0 20px;}
 }
 
 @mixin size($w,$h) {
     width: $w;
     height: $h;
-    // overflow: hidden;
     position: relative;
     cursor: pointer;
 }
 
 .about{
-    // *{ border: 1px solid RED; }
     @include size(136px, 134px);
-    border: 1px solid green;
   
     .item{ position: absolute;}
     @for $i from 1 to 6 {
@@ -101,5 +103,72 @@
         .ani_3{ left: 29%; transform: rotate(-60deg);}
         .ani_4{ right: 19%;transform: rotate(60deg);}
         .ani_5{ transform: rotate(-20deg); left: 52%;}
+    }
+}
+
+.about_conent{
+    @include size(718px, 514px);
+    .item{ position: absolute;}
+    .ani_1{width: 52%; right: -10%; bottom: 0; z-index: 5;}
+    .ani_2{width: 40%; right: 27%; bottom: 5%; animation: redKid 1s infinite alternate both;
+        animation-delay: -5s;
+    }
+    .ani_3{width: 33%; right: 10%; top: 10%; animation: blueKid 1s infinite alternate both; animation-delay: -1s;}
+    .ani_4{width: 25%; left: 25%; top: 10%; animation: flower 1s infinite alternate both;
+        animation-delay: -0.8s;}
+    .ani_5{ }
+
+    @keyframes redKid {
+        0%{right: 20%;}
+        100%{ right: 25%;}
+    }
+
+    @keyframes blueKid {
+        0%{top: 5%;}
+        100%{top: 10%;}
+    }
+
+    @keyframes flower {
+        0%{left: 20%; top: 5%;}
+        100%{left: 25%; top: 10%;}
+    }
+
+}
+
+.intro_content{
+    @include size(382px, 460px);
+    .item{ position: absolute;}
+    .ani_1{ width: 67%; left: 0%; bottom: 0; z-index: 10;}
+   
+    .ani_4{ width: 65%; left: 30%; top: 12%;}
+    .group{width: 57%; height: 90%; left: 42%; top: 0;
+        .ani_2{ width: 100%; position: absolute; left: 0; top: 0; z-index: 3;}
+        .ani_3{ width: 50%;position: absolute; left: 40%; top: 50%; z-index: 6; animation:arms infinite  1s alternate both;}
+    }
+    &.active{
+        .ani_1{ animation:yellowＲectangle 1.5s alternate both; animation-delay: 1s;}
+        .group{ animation:girl 1.5s alternate both; animation-delay: 1.5s;}
+        .ani_4{ animation:blueCircle 1.5s alternate both; animation-delay: 2s;}
+    }
+
+    @keyframes yellowＲectangle {
+        0%{left: -100%;}
+        100%{ left: 0;}
+        
+    }
+
+    @keyframes girl {
+        0%{left: -100%;}
+        100%{ left: 42%;}
+    }
+
+    @keyframes arms {
+        0%{transform: rotate(0deg); }
+        100%{ transform: rotate(10deg); }
+    }
+
+    @keyframes blueCircle {
+        0%{left: -100%;}
+        100%{ left: 30%;}
     }
 }
