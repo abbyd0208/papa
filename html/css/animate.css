@@ -899,10 +899,17 @@ body {
   .feature_card_2 .ani_4 {
     width: 65%;
     bottom: 5%;
-    right: 5%; }
+    right: 5%;
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-animation: paperRotate 1s ease infinite alternate both;
+    animation: paperRotate 1s ease infinite alternate both; }
   .feature_card_2 .ani_5 {
     width: 8%;
-    left: 48%; }
+    left: 48%;
+    -webkit-animation: markRotate 1s ease infinite alternate both;
+    animation: markRotate 1s ease infinite alternate both; }
 
 @-webkit-keyframes thinkRotate {
   0%, 50% {
@@ -925,11 +932,117 @@ body {
     transform: rotate(-10deg); } }
 
 @-webkit-keyframes paperRotate {
-  0% { }
-  100% { } }
+  0%, 50% {
+    bottom: 5%;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    bottom: 8%;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg); } }
 
 @keyframes paperRotate {
-  0% { }
-  100% { } }
+  0%, 50% {
+    bottom: 5%;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    bottom: 8%;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg); } }
+
+@-webkit-keyframes markRotate {
+  0%, 60% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg); } }
+
+@keyframes markRotate {
+  0%, 60% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg); } }
+
+.feature_card_3 {
+  border: 1px solid green;
+  width: 300px;
+  height: 198px;
+  position: relative;
+  cursor: pointer; }
+  .feature_card_3 .item {
+    position: absolute; }
+  .feature_card_3 .ani_1 {
+    width: 52%;
+    left: 0;
+    bottom: 0;
+    -webkit-animation: moveRight .8s ease infinite alternate both;
+    animation: moveRight .8s ease infinite alternate both; }
+  .feature_card_3 .ani_2 {
+    width: 48%;
+    right: 0;
+    bottom: 0;
+    -webkit-animation: moveLeft .8s ease infinite alternate both;
+    animation: moveLeft .8s ease infinite alternate both; }
+  .feature_card_3 .ani_3, .feature_card_3 .ani_4, .feature_card_3 .ani_5 {
+    -webkit-animation: opacity .8s ease infinite alternate both;
+    animation: opacity .8s ease infinite alternate both; }
+  .feature_card_3 .ani_3 {
+    width: 8.6%;
+    left: 47%;
+    top: 35%;
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s; }
+  .feature_card_3 .ani_4 {
+    width: 12%;
+    left: 42%;
+    top: 55%;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s; }
+  .feature_card_3 .ani_5 {
+    width: 13%;
+    left: 28%;
+    top: 75%;
+    -webkit-animation-delay: -3s;
+    animation-delay: -3s; }
+
+@-webkit-keyframes moveLeft {
+  0% {
+    right: 0; }
+  100% {
+    right: 5%; } }
+
+@keyframes moveLeft {
+  0% {
+    right: 0; }
+  100% {
+    right: 5%; } }
+
+@-webkit-keyframes moveRight {
+  0% {
+    left: 0; }
+  100% {
+    left: 5%; } }
+
+@keyframes moveRight {
+  0% {
+    left: 0; }
+  100% {
+    left: 5%; } }
+
+@-webkit-keyframes opacity {
+  0%, 50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes opacity {
+  0%, 50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=animate.css.map */
