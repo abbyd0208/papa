@@ -1,14 +1,16 @@
+body{ background-color: #eee;}
 .animate{
     border: 1px solid #eee;
     img{ width: 100%; height: auto;}
     &.overflowHidden{ overflow: hidden;}
 }
 //  .menu 暫時排版用 正式要拿掉
-.menu{ display: flex;
-    .animate{ margin: 0 20px;}
+.menu{ 
+    .animate{ margin: 0 20px;display: inline-block;}
 }
 
 @mixin size($w,$h) {
+    border: 1px solid green;
     width: $w;
     height: $h;
     position: relative;
@@ -170,5 +172,168 @@
     @keyframes blueCircle {
         0%{left: -100%;}
         100%{ left: 30%;}
+    }
+}
+
+.deco_star{
+    @include size(178px,230px);
+    .item{
+        position: absolute;
+    }
+    .ani_1{width: 35%; left: 0; animation: rotateRight 1s infinite alternate  both;}
+    .ani_2{width: 38%; right: 0; top: 15%; animation: rotateLeft 1s infinite alternate  both;}
+    .ani_3{width: 70%; left: 10%; bottom: 0; animation: rotateRight 1s infinite alternate  both;}
+
+    @keyframes rotateLeft {
+        0%{ transform: rotate(0deg);}
+        100%{transform: rotate(-30deg);}
+    }
+    @keyframes rotateRight {
+        0%{transform: rotate(0deg);}
+        100%{ transform: rotate(30deg);}
+    }
+}
+
+.feature_content{
+    @include size(736px,602px);
+    .item{ position: absolute;}
+    .ani_1{width: 51%; right: 0; bottom: 0; z-index: 7;}
+    .ani_2{width: 43%; right: 35%; bottom: 4%; z-index: 6; animation: redKid 1s infinite alternate both;}
+    .ani_3{width: 44%; right: 25%; top: 10%; z-index: 6; animation: orangeKid 1s infinite alternate both;}
+    .ani_4{width: 78%; left: 10%;  }
+    .ani_5{width: 9%; top: 25%; left: 10%; animation: rotateWave 1s infinite alternate both; } 
+    .ani_6{width: 8%; top: 28%; left: 5%; animation: star 1s infinite alternate both;}
+
+    @keyframes redKid {
+        0%{right: 30%;}
+        100%{right: 35%;}
+    }
+
+    @keyframes orangeKid {
+        0%{right: 20%; top: 15%; }
+        100%{right: 25%; top: 10%; }
+    }
+    @keyframes rotateWave {
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(10deg);}
+    }
+
+    @keyframes star {
+        0%{top: 30%; left: 10%;}
+        100%{top: 28%; left: 5%;}
+    }
+}
+
+.feature_content_2{
+    @include size(606px, 368px);
+    .item{ position: absolute;}
+    .group{
+        width: 90%;
+        // animation: eleMove 5s infinite alternate both;
+    }
+    .ani_1{width: 100%; left: 100%; top: 0;}
+    .ani_2{width: 22%;  left: 35%; top: 10%; z-index: 2; transform-origin: center top; animation: earMove 1s infinite alternate ; }
+    .ani_3{width: 14%; right: -10%; top: 45%;  animation: flowerMove 2s ease-in-out infinite alternate both; }
+
+    @keyframes earMove {
+        0%{ transform: rotate(0deg);}
+        100%{ transform: rotate(45deg);}
+    }
+
+    @keyframes eleMove {
+        0%{ left: -100%;}
+        100%{ left: 0%;}
+    }
+
+    @keyframes flowerMove {
+        0%{ right: -8%; top: 45%; transform: rotate(0);}
+        55%{right: -15%; }
+        100%{ right: 0%; top: 0%; transform: rotate(360deg );}
+    }
+}
+
+.footer_castle{
+    @include size(390px, 536px);
+    .item{ position: absolute;}
+    .ani_1{  width: 23%; left: 58%; top: 15%; animation: flag 2s ease-in-out infinite alternate both; }
+    .ani_2{width: 100%; left: 0; bottom: 0;}
+    @keyframes flag {
+        0%{ top: 15%;}
+        100%{ top: 0%;}
+    }
+}
+
+.footer_grass{
+    @include size(1080px,234px);
+    .item{ position: absolute;}
+    .ani_1{ width: 100%; left: 0; bottom: 0;}
+    .ani_2{ width: 10%; left: 15%; top: 52%; animation: glass 1s ease-in-out infinite alternate both; }
+    .ani_3{ width: 13%; left: 33%; top: 10%; animation: bearRotate 1.5s linear infinite alternate both; animation-delay: 2s; }
+
+    @keyframes glass {
+        0%,50%{ left: 15%;}
+        100%{ left: 18%;}
+    }
+
+    @keyframes bearRotate {
+        0%,50%{ transform: rotate(0deg);}
+        100%{transform: rotate(20deg);}
+    }
+}
+
+.feature_card_1{
+    @include size(276px,218px);
+    .item{ position: absolute;}
+
+    .ani_1{width: 50%; left: 0; bottom: 0;}
+    .ani_2{width: 14%; left: 2%; bottom:10%; transform-origin: center bottom; animation: armRotateLeft 1s infinite alternate both;}
+    .ani_3{width: 50%; right: 0; bottom: 0;}
+    .ani_4{width: 14%; right: 2%; bottom: 10%;transform-origin: center bottom;
+        animation: armRotateRight 1s infinite alternate both;}
+    .ani_5{width: 14%; top: 45%; left: 18.5%;}
+    .ani_6{width: 14%; top: 45%; right: 18%;}
+
+    .ani_5,.ani_6{
+        animation: mouseUp 1s ease-in-out infinite alternate both;
+    }
+   
+    @keyframes mouseUp {
+        0%,50%{top: 46%;}
+        100%{ top: 42%;}
+    }
+
+    @keyframes armRotateLeft {
+        0%,50%{transform: rotate(0deg);}
+        100%{ transform: rotate(-15deg);}
+    }
+
+    @keyframes armRotateRight {
+        0%,50%{transform: rotate(0deg);}
+        100%{ transform: rotate(15deg);}
+    }
+
+    
+}
+
+.feature_card_2{
+    @include size(270px,212px);
+    .item{position: absolute;}
+    .ani_1{ width: 44%; left: 0; bottom: 0;}
+    .ani_2{ width: 20%;left: 12%; bottom: 10%; 
+        transform-origin: center bottom;
+        animation: thinkRotate 1s ease infinite alternate both;
+    }
+    .ani_3{ width: 56%; right: 0; bottom: 0;}
+    .ani_4{ width: 65%; bottom: 5%; right: 5%;}
+    .ani_5{ width: 8%; left: 48%;}
+
+    @keyframes thinkRotate {
+        0%,50%{bottom: 10%; transform: rotate(0deg);}
+        100%{bottom: 15%; transform: rotate(-10deg);}
+    }
+
+    @keyframes paperRotate {
+        0%{}
+        100%{}
     }
 }
