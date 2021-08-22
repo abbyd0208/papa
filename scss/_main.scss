@@ -4,7 +4,7 @@
     padding-top: 150px;
   }
 
-  // .img_box {
+  // ._img_box {
   //   max-width: 560px;
   //   width: 100%;
   //   height: 100%;
@@ -15,13 +15,11 @@
   //   }
   // }
 
-  .img_box {
+  ._img_box {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 100%;
-    margin-bottom: 32px;
-    border-radius: 35%;
     overflow: hidden;
     img {
       position: absolute;
@@ -60,9 +58,22 @@
   .container {
     // 關於小愛爸爸公益平台
     .about {
+      p {
+        line-height: 2.5;
+        @include media-breakpoint-down(lg) {
+          line-height: 2.25;
+        }
+        @include media-breakpoint-down(sm) {
+          line-height: 2;
+        }
+      }
       .d-flex {
         flex-wrap: nowrap;
         margin-bottom: 190px;
+        ._img_box {
+          margin-bottom: 32px;
+          border-radius: 35%;
+        }
         .image {
           padding-right: 40px;
         }
