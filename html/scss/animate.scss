@@ -358,9 +358,9 @@ body{ background-color: #eee;}
     .ani_3,.ani_4,.ani_5{
         animation: opacity .8s ease infinite alternate both;
     }
-    .ani_3{width: 8.6%; left: 47%; top: 35%; animation-delay:-1s;}
-    .ani_4{width: 12%; left: 42%; top: 55%; animation-delay: -2s;}
-    .ani_5{width: 13%; left: 28%; top: 75%; animation-delay: -3s;}
+    .ani_3{width: 8.6%; left: 47%; top: 35%; animation-delay:-2s;}
+    .ani_4{width: 12%; left: 42%; top: 55%; animation-delay: -3s;}
+    .ani_5{width: 13%; left: 28%; top: 75%; animation-delay: -4s;}
 
 
     @keyframes moveLeft {
@@ -379,4 +379,31 @@ body{ background-color: #eee;}
     }
 }
 
+.footer_end{
+    @include size(506px, 298px);
+    .item{ position: absolute;}
+    .ani_1{width:38.5%;}
+    .ani_2{width:17%;}
+    .ani_3{width:27%;}
+    .ani_4{width:36.5%;}
+
+    @keyframes slideUp {
+        0%,30%{transform: translateY(100%);}
+        70%{transform: translateY(-5%);}
+        100%{transform: translateY(0%);}
+    }
+
+    .ani_1{ left: 0;}
+    .ani_2{ left: 30%; bottom: 15%; z-index: 4;}
+    .ani_3{ left: 45%; top: 15%;}
+    .ani_4{ right: 0; top: 10%;}
+
+    &.active{
+        .ani_1,.ani_2,.ani_3,.ani_4{ animation: slideUp .8s ease  alternate both;}
+        .ani_1{animation-delay:.5s;}
+        .ani_2{animation-delay:1s;}
+        .ani_3{animation-delay:1.5s;}
+        .ani_4{animation-delay:2s;}
+    }
+}
 

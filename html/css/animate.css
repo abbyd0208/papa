@@ -994,20 +994,20 @@ body {
     width: 8.6%;
     left: 47%;
     top: 35%;
-    -webkit-animation-delay: -1s;
-    animation-delay: -1s; }
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s; }
   .feature_card_3 .ani_4 {
     width: 12%;
     left: 42%;
     top: 55%;
-    -webkit-animation-delay: -2s;
-    animation-delay: -2s; }
+    -webkit-animation-delay: -3s;
+    animation-delay: -3s; }
   .feature_card_3 .ani_5 {
     width: 13%;
     left: 28%;
     top: 75%;
-    -webkit-animation-delay: -3s;
-    animation-delay: -3s; }
+    -webkit-animation-delay: -4s;
+    animation-delay: -4s; }
 
 @-webkit-keyframes moveLeft {
   0% {
@@ -1044,5 +1044,71 @@ body {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.footer_end {
+  border: 1px solid green;
+  width: 506px;
+  height: 298px;
+  position: relative;
+  cursor: pointer; }
+  .footer_end .item {
+    position: absolute; }
+  .footer_end .ani_1 {
+    width: 38.5%; }
+  .footer_end .ani_2 {
+    width: 17%; }
+  .footer_end .ani_3 {
+    width: 27%; }
+  .footer_end .ani_4 {
+    width: 36.5%; }
+
+@-webkit-keyframes slideUp {
+  0%, 30% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%); }
+  70% {
+    -webkit-transform: translateY(-5%);
+    transform: translateY(-5%); }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%); } }
+
+@keyframes slideUp {
+  0%, 30% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%); }
+  70% {
+    -webkit-transform: translateY(-5%);
+    transform: translateY(-5%); }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%); } }
+  .footer_end .ani_1 {
+    left: 0; }
+  .footer_end .ani_2 {
+    left: 30%;
+    bottom: 15%;
+    z-index: 4; }
+  .footer_end .ani_3 {
+    left: 45%;
+    top: 15%; }
+  .footer_end .ani_4 {
+    right: 0;
+    top: 10%; }
+  .footer_end.active .ani_1, .footer_end.active .ani_2, .footer_end.active .ani_3, .footer_end.active .ani_4 {
+    -webkit-animation: slideUp .8s ease  alternate both;
+    animation: slideUp .8s ease  alternate both; }
+  .footer_end.active .ani_1 {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s; }
+  .footer_end.active .ani_2 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s; }
+  .footer_end.active .ani_3 {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s; }
+  .footer_end.active .ani_4 {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s; }
 
 /*# sourceMappingURL=animate.css.map */
