@@ -1,0 +1,81 @@
+// .navbar-nav .nav-item._sub_btn {
+//   a {
+//     color: #ffffff;
+//     div {
+//       height: 38px;
+//       background-color: $primary;
+
+//       // 訂閱按鈕箭頭圖標
+//       svg {
+//         font-size: 1.25rem;
+//         margin: 0 8px 0 0;
+//         @include media-breakpoint-down(md) {
+//           font-size: 1.125rem;
+//           margin-bottom: 1px;
+//         }
+//       }
+//       &::before {
+//         z-index: -1;
+//         content: '';
+//         position: absolute;
+//         width: 38px;
+//         height: 38px;
+//         border-radius: 50%;
+//         left: -19px;
+//         background-color: $primary;
+//       }
+//       &::after {
+//         z-index: -1;
+//         content: '';
+//         position: absolute;
+//         width: 38px;
+//         height: 38px;
+//         border-radius: 50%;
+//         right: -19px;
+//         background-color: $primary;
+//       }
+//     }
+//   }
+// }
+
+.wrapper ._sub_btn {
+  width: fit-content;
+  a {
+    color: #ffffff;
+    line-height: 38px;
+    div {
+      position: relative;
+      height: 38px;
+      background-color: $primary;
+      // 訂閱按鈕箭頭圖標
+      svg {
+        font-size: 1.25rem;
+        margin: 0 8px 0 0;
+        @include media-breakpoint-down(md) {
+          font-size: 1.125rem;
+          margin-bottom: 1px;
+        }
+      }
+      &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        left: -19px;
+        background-color: $primary;
+      }
+      &::after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        right: -19px;
+        background-color: $primary;
+      }
+    }
+  }
+}

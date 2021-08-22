@@ -58,7 +58,7 @@ $grid-breakpoints: map-merge(
     md: 768px,
     lg: 992px,
     xl: 1200px,
-    xxl: 1400px //新增,,,,,,
+    xxl: 1400px //新增,,,,,,,,,,,,
   ),
   $grid-breakpoints
 );
@@ -78,7 +78,7 @@ $container-max-widths: map-merge(
     md: 720px,
     lg: 960px,
     xl: 1140px,
-    xxl: 1366px //新增,,,,,,
+    xxl: 1260px //新增,,,,,,,,,,,,
   ),
   $container-max-widths
 );

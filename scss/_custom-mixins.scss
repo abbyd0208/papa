@@ -18,7 +18,6 @@
 @mixin mob-display {
   @include media-breakpoint-up(lg) {
     display: none;
-
   }
 
   @include media-breakpoint-down(md) {
@@ -28,23 +27,22 @@
 
 //自訂斷點
 @mixin media-min($size) {
-  @media screen and (min-width:$size) {
+  @media screen and (min-width: $size) {
     @content;
   }
 }
 
-@mixin media-max($size){
-  @media screen and (max-width:$size) {
+@mixin media-max($size) {
+  @media screen and (max-width: $size) {
     @content;
   }
 }
 
-@mixin media-btween($max,$min){
-  @media screen and (max-width:$max) and (min-width:$min) {
+@mixin media-btween($max, $min) {
+  @media screen and (max-width: $max) and (min-width: $min) {
     @content;
   }
 }
-
 
 // flex 排版
 @mixin Dflex {
@@ -74,7 +72,6 @@
 %padding-0 {
   padding: 0;
 }
-
 
 // 置中
 @mixin center {
@@ -116,15 +113,13 @@
   // box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-
 // 漸變
 @mixin transition-cubic {
-  transition: all .4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 %transition-cubic {
-  transition: all .4s cubic-bezier(0.65, 0.05, 0.36, 1);
-
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 // 框線粗細+顏色
@@ -152,7 +147,6 @@
   height: $h;
 }
 
-
 //radio button隱藏樣式
 %radio-btn-hide {
   cursor: pointer;
@@ -165,12 +159,10 @@
   overflow-x: hidden;
 }
 
-
 // 區塊背景與文字顏色設定
 @mixin theme-colors($color) {
-
   // 深底色樣式
-  @if($color==basic-theme) {
+  @if ($color==basic-theme) {
     background: $primary-color;
     color: $white;
 
@@ -218,16 +210,15 @@
   white-space: normal;
 }
 
-
 @mixin fontAwe {
   display: none;
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
 
 %fontAwe {
   display: none;
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
 
@@ -246,9 +237,7 @@
   justify-content: center;
 }
 
-
 @mixin create-heading-type-scale($scale) {
-
   // Check the $scale value and store in a variable to be
   // used when calculating the font sizes.
   $the-heading-type-scale: check-type-scale-value($scale);
@@ -302,9 +291,6 @@
   }
 }
 
-
-
-
 // @mixin transition-hover {
 //   transition: all .3s ease-out;
 // }
@@ -312,7 +298,6 @@
 // %transition-hover {
 //   transition: all .3s ease-out;
 // }
-
 
 // @mixin transition-easeout {
 //   transition: all .4s ease-in-out;
