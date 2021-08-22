@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="js/slick/slick-theme.css">
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .banner_slider img{
+            width: 100%;
+            height: auto;
+        }
+
+        .banner_slider .slick-dots{ border: 1px solid red; bottom: 25px;}
+        .banner_slider .slick-dots li button::before{ background-color: #CDCECF; border: 3px solid #000; border-radius: 50%; content: ''; opacity: 1;}
+
+        .banner_slider .slick-dots li{ margin: 0 20px;}
+        .banner_slider .slick-dots li.slick-active button::before{ background-color: #000;}
+
+    </style>
+</head>
+
+<body>
+    <!-- 上方banner -->
+    <div class="banner_slider">
+        <div>
+            <img src="image/banner.png" alt="">
+        </div>
+        <div>
+            <img src="image/banner.png" alt="">
+        </div>
+        <div>
+            <img src="image/banner.png" alt="">
+        </div>
+    </div>
+
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+
+    <script>
+        $(function(){
+            $('.banner_slider').slick({
+                arrows:false,
+                dots:true
+            });
+        });
+    </script>
+</body>
+
+</html>
