@@ -9,6 +9,15 @@
     margin-bottom: 0;
   }
 
+  ._img_box {
+    padding-bottom: 50%;
+    border-radius: 7%/14%;
+    img {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
   & .d-flex:nth-child(-n + 2) {
     border-bottom: 1px solid #707070;
   }
@@ -16,13 +25,6 @@
 
 .slider {
   margin-bottom: 100px;
-}
-
-.slider {
-  ._img_box {
-    padding-bottom: 50%;
-    border-radius: 7%/14%;
-  }
 }
 
 // 平台卡片樣式
