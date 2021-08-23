@@ -55,7 +55,8 @@
         }
         
         /* 平台特色 */
-
+        .platform{display: flex;  justify-content: space-between;}
+        .platform_card{  margin:0 2%;}
 
     </style>
 </head>
@@ -73,6 +74,8 @@
             <img src="image/banner.png" alt="">
         </div>
     </div>
+
+    <!-- todo banner 缺手機版  -->
 
     <!-- 公益成果 -->
     <div class="works_slide">
@@ -241,8 +244,6 @@
           </div>
       </div>
 
-
-
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
 
@@ -262,6 +263,21 @@
                 dots: true,
                 responsive: [
                     {
+                        breakpoint: 960,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            $('.platform').slick({
+                mobileFirst:true,
+                responsive:[
+                {
                         breakpoint: 960,
                         settings: {
                             arrows: false,
