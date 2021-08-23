@@ -136,6 +136,16 @@
         }
       }
     }
+
+    .platform {
+      margin-bottom: 190px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 60px;
+      }
+      h1 {
+        color: $primary;
+      }
+    }
   }
 }
 ._img_box {

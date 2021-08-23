@@ -4,6 +4,9 @@
   max-width: 1100px;
   border-radius: 7%;
   padding: 24px;
+  h3 {
+    font-weight: bold;
+  }
   p {
     line-height: 2;
     margin-bottom: 0;
@@ -26,39 +29,57 @@
 .slider {
   margin-bottom: 100px;
 }
+.platform {
+  margin-bottom: 190px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 60px;
+  }
+  h1 {
+    color: $primary;
+  }
 
-// 平台卡片樣式
-.platform_card {
-  background-color: #ffffff;
-  max-width: 388px;
-  padding: 24px;
-  border-radius: 7%/5%;
-  @include basic-shadow;
-  ._sub_btn {
-    margin: 0 auto 48px;
-    font-size: 1.75rem;
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
-    a {
-      cursor: text;
-      div {
-        z-index: 3;
-        height: 42px !important;
-        &::before,
-        &::after {
-          width: 42px !important;
+  .platform_card {
+    background-color: #ffffff;
+    max-width: 350px;
+    padding: 24px;
+    border-radius: 7%/5%;
+    @include basic-shadow;
+
+    p {
+      font-size: 1.125rem;
+    }
+    ._sub_btn {
+      margin: 0 auto 48px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+      a {
+        cursor: text;
+        div {
+          z-index: 3;
           height: 42px !important;
+          &::before,
+          &::after {
+            width: 42px !important;
+            height: 42px !important;
+          }
         }
       }
     }
-  }
 
-  ._img_box {
-    width: 80%;
-    padding-bottom: 75%;
-    margin: 0 auto 36px;
-  }
+    ._img_box {
+      width: 80%;
+      padding-bottom: 75%;
+      margin: 0 auto 36px;
+    }
 
-  hr {
-    border-top: 1px solid #707070;
+    hr {
+      border-top: 1px solid #707070;
+    }
+
+    &:nth-child(-n + 2) {
+      margin-right: 8px;
+    }
   }
 }
+// 平台卡片樣式

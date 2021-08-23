@@ -12262,6 +12262,17 @@ header .static_nav.navbar-expand-lg .navbar-collapse .navbar-nav .nav-item:last-
     padding-left: 0;
   }
 }
+.main .container .platform {
+  margin-bottom: 190px;
+}
+@media (max-width: 767.98px) {
+  .main .container .platform {
+    margin-bottom: 60px;
+  }
+}
+.main .container .platform h1 {
+  color: #7cbade;
+}
 
 ._img_box {
   position: relative;
@@ -12282,6 +12293,9 @@ header .static_nav.navbar-expand-lg .navbar-collapse .navbar-nav .nav-item:last-
   max-width: 1100px;
   border-radius: 7%;
   padding: 24px;
+}
+.work-page h3 {
+  font-weight: bold;
 }
 .work-page p {
   line-height: 2;
@@ -12304,36 +12318,54 @@ header .static_nav.navbar-expand-lg .navbar-collapse .navbar-nav .nav-item:last-
   margin-bottom: 100px;
 }
 
-.platform_card {
+.platform {
+  margin-bottom: 190px;
+}
+@media (max-width: 767.98px) {
+  .platform {
+    margin-bottom: 60px;
+  }
+}
+.platform h1 {
+  color: #7cbade;
+}
+.platform .platform_card {
   background-color: #ffffff;
-  max-width: 388px;
+  max-width: 350px;
   padding: 24px;
   border-radius: 7%/5%;
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
 }
-.platform_card ._sub_btn {
+.platform .platform_card p {
+  font-size: 1.125rem;
+}
+.platform .platform_card ._sub_btn {
   margin: 0 auto 48px;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
 }
-.platform_card ._sub_btn a {
+.platform .platform_card ._sub_btn a {
   cursor: text;
 }
-.platform_card ._sub_btn a div {
+.platform .platform_card ._sub_btn a div {
   z-index: 3;
   height: 42px !important;
 }
-.platform_card ._sub_btn a div::before, .platform_card ._sub_btn a div::after {
+.platform .platform_card ._sub_btn a div::before, .platform .platform_card ._sub_btn a div::after {
   width: 42px !important;
   height: 42px !important;
 }
-.platform_card ._img_box {
+.platform .platform_card ._img_box {
   width: 80%;
   padding-bottom: 75%;
   margin: 0 auto 36px;
 }
-.platform_card hr {
+.platform .platform_card hr {
   border-top: 1px solid #707070;
+}
+.platform .platform_card:nth-child(-n+2) {
+  margin-right: 8px;
 }
 /*# sourceMappingURL=style.css.map */
