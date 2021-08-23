@@ -1,20 +1,31 @@
 // slider 內容樣式
 .work-page {
+  // ab 2021.8.22 寬度由slick限制，所以把max-width拿掉
+  // border: 1px solid green;
+  // max-width: 1100px;
   background-color: white;
-  max-width: 1100px;
   border-radius: 7%;
   padding: 24px;
-  h3 {
-    font-weight: bold;
-  }
+  margin: 40px;
+  // >div{ border: 1px solid #000; }
+
   p {
     line-height: 2;
     margin-bottom: 0;
+    @include media-max('1420px') {
+      font-size: 1.125rem;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
   }
 
   ._img_box {
     padding-bottom: 50%;
     border-radius: 7%/14%;
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 20px;
+    }
     img {
       top: 50%;
       transform: translateY(-50%);
@@ -29,6 +40,7 @@
 .slider {
   margin-bottom: 100px;
 }
+
 .platform {
   margin-bottom: 190px;
   @include media-breakpoint-down(sm) {
@@ -37,7 +49,6 @@
   h1 {
     color: $primary;
   }
-
   .platform_card {
     background-color: #ffffff;
     max-width: 350px;
@@ -47,6 +58,9 @@
 
     p {
       font-size: 1.125rem;
+      @include media-breakpoint-down(md) {
+        font-size: 1rem;
+      }
     }
     ._sub_btn {
       margin: 0 auto 48px;
@@ -65,6 +79,11 @@
           }
         }
       }
+
+      @include media-breakpoint-down(md) {
+        font-size: 1.125rem;
+        font-weight: 500;
+      }
     }
 
     ._img_box {
@@ -79,6 +98,91 @@
 
     &:nth-child(-n + 2) {
       margin-right: 8px;
+    }
+  }
+}
+
+.refer {
+  .refer_card {
+    @include Dflex;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    // 頭像
+    .avatar {
+      width: 20%;
+      padding: 0%;
+
+      ._img_box {
+        border-radius: 50%;
+        box-shadow: 1px 4px 6px 0px rgb(0 0 0 / 20%);
+      }
+      @include media-breakpoint-down(sm) {
+        width: 50%;
+      }
+    }
+    // 文字
+    .content {
+      @include Dflex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      background-color: #ffffff;
+      border-radius: 13%/40%;
+      box-shadow: 1px 1px 4px 0px rgb(0 0 0 / 10%);
+      p {
+        max-height: 145px;
+        overflow: auto;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 90%;
+        margin-top: -6%;
+        div {
+          max-height: 150px;
+        }
+        p {
+          max-height: 120px;
+          overflow: auto;
+        }
+      }
+    }
+
+    // 文字左右樣式
+    &.text_right {
+      .content {
+        margin-left: -6%;
+        padding: 12px 5% 12px 9%;
+      }
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        align-items: center;
+        .content {
+          margin-left: 0;
+          padding: 10% 5% 12px 5%;
+        }
+      }
+    }
+
+    &.text_left {
+      .content {
+        margin-right: -6%;
+        padding: 12px 9% 12px 5%;
+        h3 {
+          text-align: end;
+          margin-bottom: 8px;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        flex-direction: column-reverse;
+        align-items: center;
+        .content {
+          margin-right: 0;
+          padding: 10% 5% 12px 5%;
+          h3 {
+            text-align: start;
+          }
+        }
+      }
     }
   }
 }
