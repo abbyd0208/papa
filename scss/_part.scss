@@ -13,9 +13,7 @@
   p {
     line-height: 2;
     margin-bottom: 0;
-    @include media-max('1420px') {
-      font-size: 1.125rem;
-    }
+    font-size: 1.125rem;
     @include media-breakpoint-down(sm) {
       font-size: 1rem;
     }
@@ -43,7 +41,6 @@
 }
 
 .platform_card {
-
   background-color: #ffffff;
   max-width: 350px;
   width: 32%;

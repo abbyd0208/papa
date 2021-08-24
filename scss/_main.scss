@@ -40,17 +40,15 @@
     // 關於小愛爸爸公益平台
     .about {
       p {
-        line-height: 2.5;
-        @include media-breakpoint-down(lg) {
-          line-height: 2.25;
-        }
+        line-height: 2;
         @include media-breakpoint-down(sm) {
-          line-height: 2;
+          line-height: 1.5;
         }
       }
       .d-flex {
         flex-wrap: nowrap;
         margin-bottom: 190px;
+        align-items: center;
         ._img_box {
           margin-bottom: 32px;
           border-radius: 35%;
@@ -169,5 +167,18 @@
     top: 0;
     left: 0;
     width: 100%;
+  }
+}
+
+.slick-slide img.a {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.slick-slide img.b {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
   }
 }
