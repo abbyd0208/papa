@@ -1,184 +1,186 @@
 .main {
-  padding-top: 228px;
-  @include media-breakpoint-down(xl) {
-    padding-top: 197px;
-  }
-  @include media-breakpoint-down(md) {
-    padding-top: 90px;
-  }
-  @include media-breakpoint-down(sm) {
-    padding-top: 78px;
-  }
-
-  .video_box {
-    width: 100%;
-    margin-bottom: 24px;
-    position: relative;
-    height: 0;
-    padding-bottom: 56.25%;
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    padding-top: 228px;
+    @include media-breakpoint-down(xl) {
+        padding-top: 197px;
     }
-
     @include media-breakpoint-down(md) {
-      margin: 0 auto 18px;
+        padding-top: 90px;
     }
-  }
-
-  .content {
-    @include media-breakpoint-down(lg) {
-      // max-height: 265px;
-      overflow: hidden;
+    @include media-breakpoint-down(sm) {
+        padding-top: 78px;
     }
-  }
 
-  .container {
-    // 關於小愛爸爸公益平台
-    .about {
-      p {
-        line-height: 2;
-        @include media-breakpoint-down(sm) {
-          line-height: 1.5;
-        }
-      }
-      .d-flex {
-        flex-wrap: nowrap;
-        margin-bottom: 190px;
-        align-items: center;
-        ._img_box {
-          margin-bottom: 32px;
-          border-radius: 35%;
-        }
-        .image {
-          padding-right: 40px;
+    .video_box {
+        width: 100%;
+        margin-bottom: 24px;
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         @include media-breakpoint-down(md) {
-          margin-bottom: 110px;
+            margin: 0 auto 18px;
+        }
+    }
+
+    .content {
+        position: relative;
+        @include media-breakpoint-down(md) {
+            height: 190px;
         }
         @include media-breakpoint-down(sm) {
-          flex-wrap: wrap;
-          .image {
-            padding-right: 15px;
-          }
+            height: 165px;
         }
-      }
-      // img {
-      //   border-radius: 35%;
-      // }
     }
 
-    // 影片
-    .video_block {
-      width: 90%;
-      margin: 0 auto;
-      margin-bottom: 100px;
-      position: relative;
-      margin-bottom: 190px;
-      @include media-breakpoint-down(md) {
-        margin-bottom: 120px;
-        width: 93%;
-      }
+    .content.unfold {
+        height: 100%;
+    }
 
-      p {
-        margin-bottom: 18px;
-      }
-
-      ._sub_btn {
-        // max-width: 185px;
-        width: fit-content;
-        position: absolute;
-        right: 0px;
-        bottom: -60px;
-        font-size: 1.5rem;
-        line-height: 48px;
-        a {
-          line-height: 42px;
-          div {
-            height: 42px;
-            padding: 0 18px;
-            border-radius: 12%/50%;
-            svg {
-              font-size: 1.5rem;
+    .container {
+        // 關於小愛爸爸公益平台
+        .about {
+            p {
+                line-height: 2;
             }
-            &::before {
-              height: 42px;
-              width: 42px;
-              left: -21px;
+            .d-flex {
+                flex-wrap: nowrap;
+                margin-bottom: 190px;
+                align-items: center;
+                ._img_box {
+                    margin-bottom: 32px;
+                    border-radius: 35%;
+                }
+                .image {
+                    padding-right: 40px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    margin-bottom: 110px;
+                    align-items: stretch;
+                }
+                @include media-breakpoint-down(sm) {
+                    flex-wrap: wrap;
+                    .image {
+                        padding-right: 15px;
+                    }
+                }
             }
-            &::after {
-              height: 42px;
-              width: 42px;
-              right: -21px;
+        }
+
+        // 影片
+        .video_block {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            position: relative;
+            margin-bottom: 190px;
+            @include media-breakpoint-down(md) {
+                margin-bottom: 120px;
+                width: 93%;
             }
-          }
+
+            p {
+                margin-bottom: 18px;
+            }
+
+            ._sub_btn {
+                // max-width: 185px;
+                width: fit-content;
+                position: absolute;
+                right: 0px;
+                bottom: -60px;
+                font-size: 1.5rem;
+                line-height: 48px;
+                a {
+                    line-height: 42px;
+                    div {
+                        height: 42px;
+                        padding: 0 18px;
+                        border-radius: 12%/50%;
+                        svg {
+                            font-size: 1.5rem;
+                        }
+                        &::before {
+                            height: 42px;
+                            width: 42px;
+                            left: -21px;
+                        }
+                        &::after {
+                            height: 42px;
+                            width: 42px;
+                            right: -21px;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 1.25rem;
+                    position: static;
+                    margin: 0 auto;
+                }
+            }
         }
 
-        @include media-breakpoint-down(sm) {
-          font-size: 1.25rem;
-          position: static;
-          margin: 0 auto;
+        // 小愛爸爸-謝國樑介紹
+        .dad {
+            h1 {
+                color: $primary;
+            }
+            .image {
+                padding-left: 40px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                .d-flex {
+                    flex-wrap: wrap-reverse;
+                    .image {
+                        padding: 0 15px;
+                    }
+                }
+            }
         }
-      }
-    }
 
-    // 小愛爸爸-謝國樑介紹
-    .dad {
-      h1 {
-        color: $primary;
-      }
-      .image {
-        padding-left: 40px;
-      }
-
-      @include media-breakpoint-down(sm) {
-        .d-flex {
-          flex-wrap: wrap-reverse;
-          .image {
-            padding: 0 15px;
-          }
+        .platform {
+            margin-bottom: 190px;
+            h1 {
+                color: $primary;
+            }
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
         }
-      }
     }
-
-    .platform {
-      margin-bottom: 190px;
-      h1 {
-        color: $primary;
-      }
-      @include media-breakpoint-down(md) {
-        display: none;
-      }
-    }
-  }
 }
 ._img_box {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  overflow: hidden;
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-  }
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 }
 
 .slick-slide img.a {
-  @include media-breakpoint-down(sm) {
-    display: none;
-  }
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
 }
 
 .slick-slide img.b {
-  display: none;
-  @include media-breakpoint-down(sm) {
-    display: block;
-  }
+    display: none;
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
 }

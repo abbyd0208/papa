@@ -1,177 +1,200 @@
 // slider 內容樣式
 .work-page {
-  // ab 2021.8.22 寬度由slick限制，所以把max-width拿掉
-  // border: 1px solid green;
-  // max-width: 1100px;
-  background-color: white;
-  border-radius: 50px;
-  padding: 24px;
-  margin: 40px;
-  transition: opacity 1s ease;
-  // >div{ border: 1px solid #000; }
+    // ab 2021.8.22 寬度由slick限制，所以把max-width拿掉
+    // border: 1px solid green;
+    // max-width: 1100px;
+    background-color: white;
+    border-radius: 50px;
+    padding: 24px;
+    margin: 40px;
+    transition: opacity 1s ease;
+    // >div{ border: 1px solid #000; }
 
-  p {
-    line-height: 2;
-    margin-bottom: 0;
-    font-size: 1.125rem;
-    @include media-breakpoint-down(sm) {
-      font-size: 1rem;
+    p {
+        line-height: 2;
+        margin-bottom: 0;
+        font-size: 1.125rem;
     }
-  }
 
-  ._img_box {
-    padding-bottom: 50%;
-    border-radius: 7%/14%;
-    @include media-breakpoint-down(xl) {
-      margin-bottom: 20px;
+    ._img_box {
+        padding-bottom: 50%;
+        border-radius: 7%/14%;
+        @include media-breakpoint-down(xl) {
+            margin-bottom: 20px;
+        }
+        img {
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
-    img {
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  }
 
-  & .d-flex:nth-child(-n + 2) {
-    border-bottom: 1px solid #707070;
-  }
+    & .d-flex:nth-child(-n + 2) {
+        border-bottom: 1px solid #707070;
+    }
 }
 
 .slider {
-  margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 .platform_card {
-  background-color: #ffffff;
-  max-width: 350px;
-  width: 32%;
-  padding: 24px;
-  border-radius: 30px;
-  @include basic-shadow;
+    background-color: #ffffff;
+    max-width: 350px;
+    width: 32%;
+    padding: 24px;
+    border-radius: 30px;
+    @include basic-shadow;
 
-  p {
-    font-size: 1.125rem;
-    @include media-breakpoint-down(md) {
-      font-size: 1rem;
+    p {
+        font-size: 1.125rem;
+        @include media-breakpoint-down(md) {
+            font-size: 1rem;
+        }
     }
-  }
-  ._sub_btn {
-    line-height: 42px;
-    margin: 0 auto 48px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
-    a {
-      cursor: text;
-      div {
-        z-index: 3;
-        height: 42px !important;
-        border-radius: 17%/50%;
-      }
+    ._sub_btn {
+        line-height: 42px;
+        margin: 0 auto 48px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+        a {
+            cursor: text;
+            div {
+                z-index: 3;
+                height: 42px !important;
+                border-radius: 17%/50%;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
     }
 
-    @include media-breakpoint-down(md) {
-      font-size: 1.125rem;
-      font-weight: 500;
+    ._img_box {
+        width: 80%;
+        padding-bottom: 75%;
+        margin: 0 auto 36px;
     }
-  }
 
-  ._img_box {
-    width: 80%;
-    padding-bottom: 75%;
-    margin: 0 auto 36px;
-  }
+    hr {
+        border-top: 1px solid #707070;
+    }
 
-  hr {
-    border-top: 1px solid #707070;
-  }
-
-  &:nth-child(-n + 2) {
-    margin-right: 8px;
-  }
+    &:nth-child(-n + 2) {
+        margin-right: 8px;
+    }
 }
 
 .refer {
-  .refer_card {
-    @include Dflex;
-    justify-content: center;
-    margin-bottom: 32px;
+    .refer_card {
+        @include Dflex;
+        justify-content: center;
+        margin-bottom: 32px;
 
-    // 頭像
-    .avatar {
-      width: 20%;
-      padding: 0%;
+        // 頭像
+        .avatar {
+            width: 20%;
+            padding: 0%;
 
-      ._img_box {
-        border-radius: 50%;
-        box-shadow: 1px 4px 6px 0px rgb(0 0 0 / 20%);
-      }
-      @include media-breakpoint-down(sm) {
-        width: 50%;
-      }
-    }
-    // 文字
-    .content {
-      @include Dflex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      background-color: #ffffff;
-      border-radius: 60px;
-      box-shadow: 1px 1px 4px 0px rgb(0 0 0 / 10%);
-      p {
-        max-height: 145px;
-        overflow: auto;
-      }
-      @include media-breakpoint-down(sm) {
-        width: 90%;
-        margin-top: -6%;
-        div {
-          max-height: 150px;
+            ._img_box {
+                border-radius: 50%;
+                box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.4);
+            }
+            @include media-breakpoint-down(sm) {
+                width: 50%;
+            }
         }
-        p {
-          max-height: 120px;
-          overflow: auto;
-        }
-      }
-    }
-
-    // 文字左右樣式
-    &.text_right {
-      .content {
-        margin-left: -6%;
-        padding: 12px 5% 12px 9%;
-      }
-      @include media-breakpoint-down(sm) {
-        flex-direction: column;
-        align-items: center;
+        // 文字
         .content {
-          margin-left: 0;
-          padding: 10% 5% 12px 5%;
+            @include Dflex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            background-color: #ffffff;
+            border-radius: 60px;
+            box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);
+            p {
+                max-height: 145px;
+                overflow: auto;
+            }
+            @include media-breakpoint-down(sm) {
+                width: 90%;
+                margin-top: -6%;
+                div {
+                    max-height: 150px;
+                }
+                p {
+                    max-height: 120px;
+                    overflow: auto;
+                }
+            }
         }
-      }
+
+        // 文字左右樣式
+        &.text_right {
+            .content {
+                margin-left: -6%;
+                padding: 12px 5% 12px 9%;
+            }
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+                align-items: center;
+                .content {
+                    margin-left: 0;
+                    padding: 10% 5% 12px 5%;
+                }
+            }
+        }
+
+        &.text_left {
+            .content {
+                margin-right: -6%;
+                padding: 12px 9% 12px 5%;
+                h3 {
+                    text-align: end;
+                    margin-bottom: 8px;
+                }
+            }
+            @include media-breakpoint-down(sm) {
+                flex-direction: column-reverse;
+                align-items: center;
+                .content {
+                    margin-right: 0;
+                    padding: 10% 5% 12px 5%;
+                    h3 {
+                        text-align: start;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//展開文章按鈕
+.flip {
+    display: none;
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid $secondary;
+    background-color: $background;
+    color: $secondary;
+    padding: 0 15px;
+    cursor: pointer;
+    i {
+        background-image: url(../image/plus.png);
+        width: 28px;
+        border: 2px solid black;
+        background-size: cover;
+        display: inline-block;
+        height: 28px;
     }
 
-    &.text_left {
-      .content {
-        margin-right: -6%;
-        padding: 12px 9% 12px 5%;
-        h3 {
-          text-align: end;
-          margin-bottom: 8px;
-        }
-      }
-      @include media-breakpoint-down(sm) {
-        flex-direction: column-reverse;
-        align-items: center;
-        .content {
-          margin-right: 0;
-          padding: 10% 5% 12px 5%;
-          h3 {
-            text-align: start;
-          }
-        }
-      }
+    @include media-breakpoint-down(md) {
+        display: block;
     }
-  }
 }
 // 平台卡片樣式
