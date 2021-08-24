@@ -24,9 +24,10 @@
 	<link rel="stylesheet" href="js/slick/slick-theme.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<script data-search-pseudo-elements defer src="dist/fontawesome-5.15.2/js/all.min.js"></script>
+	<!-- <script data-search-pseudo-elements defer src="dist/fontawesome-5.15.2/js/all.min.js"></script>  -->
+	<script src="dist/fontawesome-5.15.2/js/all.min.js"></script>
 
-</head>
+</head
 
 <body>
 	<div class="wrapper">
@@ -143,8 +144,8 @@
 				<!-- 影片 -->
 				<div class="video_block">
 					<div class="video_box">
-						<iframe src="https://www.youtube.com/embed/SORD03t7nlo" frameborder="0"
-							allowfullscreen></iframe>
+						<!-- <iframe src="https://www.youtube.com/embed/SORD03t7nlo" frameborder="0"
+							allowfullscreen></iframe> -->
 					</div>
 					<p class="content">我們的努力需要您的長期關注，敬請訂閱 電子報，您將可每兩週收到一次最新公益活動與善心企業贊助的好康訊息。</p>
 					<div class="_sub_btn">
@@ -506,6 +507,7 @@
 
 			// 公益成果
 			$('.works_slide').slick({
+				
 				centerMode: true,
 				centerPadding: '350px',
 				slidesToShow: 1,
@@ -514,16 +516,16 @@
 				dots: true,
 				responsive: [
 					{
-						breakpoint: 960,
+						breakpoint: 1300,
 						settings: {
-							arrows: false,
-							centerMode: true,
+							// arrows: false,
+							centerMode: false,
 							centerPadding: '0px',
-							slidesToShow: 1
+							// slidesToShow: 1
 						}
 					}
 				]
-			})
+			});
 
 			$('.platform_slider').slick({
 				centerMode: true,
