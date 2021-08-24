@@ -62,7 +62,7 @@
 
 <body>
     <!-- 上方banner -->
-    <div class="banner_slider">
+    <!-- <div class="banner_slider">
         <div>
             <img src="image/banner.png" alt="">
         </div>
@@ -72,10 +72,9 @@
         <div>
             <img src="image/banner.png" alt="">
         </div>
-    </div>
-
+    </div> -->
     <!-- 公益成果 -->
-    <div class="works_slide">
+    <!-- <div class="works_slide">
         <div class="work-page d-flex-column ">
             <div class="d-flex py-4 flex-column flex-xl-row">
                 <div class="col-xl-5 col-12">
@@ -190,58 +189,58 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- 平台特色 -->
-    <div class="platform">
+    <div class="platform_slider">
         <div class="platform_card">
-          <div class="_sub_btn">
-            <a class="_sub_btn_anchor" href="">
-              <div>青年志工</div>
-            </a>
-          </div>
-            <div class="_img_box ">
-              <img src="./image/image/image_3.png" alt="" />
+            <div class="_sub_btn">
+                <a class="_sub_btn_anchor" href="">
+                    <div>青年志工</div>
+                </a>
             </div>
-          <hr>
-          <p>善的力量，越多人的加入就會越
-            大，進而能幫助到的人也就越
-            多，只要您願意，非常歡迎您加
-            入我們「小愛爸爸志工」的行列 </p>
+            <div class="_img_box ">
+                <img src="./image/image/image_3.png" alt="" />
+            </div>
+            <hr>
+            <p>善的力量，越多人的加入就會越
+                大，進而能幫助到的人也就越
+                多，只要您願意，非常歡迎您加
+                入我們「小愛爸爸志工」的行列 </p>
         </div>
         <div class="platform_card">
             <div class="_sub_btn">
-              <a class="_sub_btn_anchor" href="">
-                <div>青年志工</div>
-              </a>
+                <a class="_sub_btn_anchor" href="">
+                    <div>青年志工</div>
+                </a>
             </div>
-              <div class="_img_box ">
+            <div class="_img_box ">
                 <img src="./image/image/image_3.png" alt="" />
-              </div>
+            </div>
             <hr>
             <p>善的力量，越多人的加入就會越
-              大，進而能幫助到的人也就越
-              多，只要您願意，非常歡迎您加
-              入我們「小愛爸爸志工」的行列 </p>
-          </div>
-          <div class="platform_card">
+                大，進而能幫助到的人也就越
+                多，只要您願意，非常歡迎您加
+                入我們「小愛爸爸志工」的行列 </p>
+        </div>
+        <div class="platform_card">
             <div class="_sub_btn">
-              <a class="_sub_btn_anchor" href="">
-                <div>青年志工</div>
-              </a>
+                <a class="_sub_btn_anchor" href="">
+                    <div>青年志工</div>
+                </a>
             </div>
-              <div class="_img_box ">
+            <div class="_img_box ">
                 <img src="./image/image/image_3.png" alt="" />
-              </div>
+            </div>
             <hr>
             <p>善的力量，越多人的加入就會越
-              大，進而能幫助到的人也就越
-              多，只要您願意，非常歡迎您加
-              入我們「小愛爸爸志工」的行列 </p>
-          </div>
-      </div>
+                大，進而能幫助到的人也就越
+                多，只要您願意，非常歡迎您加
+                入我們「小愛爸爸志工」的行列 </p>
+        </div>
 
 
+    </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
@@ -255,7 +254,7 @@
 
             $('.works_slide').slick({
                 centerMode: true,
-                centerPadding: '150px',
+                centerPadding: '350px',
                 slidesToShow: 1,
                 variableWidth: false,
                 arrows: true,
@@ -268,6 +267,38 @@
                             centerMode: true,
                             centerPadding: '0px',
                             slidesToShow: 1
+                        }
+                    }
+                ]
+            })
+
+            $('.platform_slider').slick({
+                centerMode: true,
+                centerPadding: '25%',
+                slidesToShow: 1,
+                variableWidth: false,
+                arrows: true,
+               dots: true,
+                responsive: [
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '15%',
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 427,
+                        settings: {
+                            centerPadding: '10%',
+                        }
+                    },
+                    {
+                        breakpoint: 360,
+                        settings: {
+                            centerPadding: '8%',
                         }
                     }
                 ]
