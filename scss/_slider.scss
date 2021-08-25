@@ -1,7 +1,4 @@
-// * {
-//     margin: 0px;
-//     padding: 0px;
-// }
+
 /* 以下首頁banner調整 */
 .banner_slider img {
   width: 100%;
@@ -13,7 +10,6 @@
 }
 
 .banner_slider .slick-dots {
-  border: 1px solid red;
   bottom: 25px;
 }
 
@@ -40,13 +36,83 @@
   opacity: 1;
 }
 
-.works_slide .slick-dots {
-  border: 2px solid orange;
-  width: 10%;
-  bottom: auto;
-  right: 10%;
-  top: 0;
-}
+.works_slide{
+
+  border: 1px solid green;
+  .slick-dots {
+    border: 2px solid orange;
+    width: 200px;
+    bottom: auto;
+    right: 10%;
+    top: -5%;
+    li{
+      // *{ border: 1px solid red;}
+      margin: 0%;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      // border: 1px solid blue;
+      button:before{
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        opacity: 1;
+        color: #495254;
+        font-size: 18px;
+      }
+      &.slick-active{
+        button:before{
+          border: 2px solid #495254;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .slick-arrow{
+    z-index: 100;
+    // border: 2px solid red;
+    &.slick-next{
+      right: 10%;
+    }
+    &.slick-prev{
+      left: 10%;
+    }
+    &.slick-prev,
+    &.slick-next{
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+    }
+  
+    &.slick-prev:before,
+    &.slick-next:before{
+      color: $secondary;
+      font-size: 50px;
+      opacity: 1;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    border: 1px solid pink;
+    padding: 0 10%;
+  }
+
+  @include media-breakpoint-down(md){
+    .slick-dots{ width: 150px; right: 0;}
+    padding:0%;
+    .slick-arrow{
+      &.slick-next{
+        right: 20px;
+      }
+      &.slick-prev{
+        left: 20px;
+      }
+    }
+  }
+  
+} 
+
+
 
 /* 平台特色 */
 .platform_slider {
