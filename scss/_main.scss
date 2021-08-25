@@ -188,15 +188,20 @@
     }
 }
 
+
+// 定位動畫
 section {
     position: relative;
     // 動畫
-    .about_conent {
-        position: absolute;
-        border: 0;
-        top: -110px;
-        right: -35px;
-        right: -107px;
-        transform: scale(0.8);
+    .animate{
+        &.about_conent {
+            position: absolute;
+            border: 0;
+            top: -110px;
+            right: -35px;
+            right: -107px;
+            transform: scale(0.8);
+        }
     }
+    
 }
