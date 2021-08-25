@@ -100,7 +100,7 @@
 
             ._img_box {
                 border-radius: 50%;
-                box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.4);
+                box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.2);
             }
             @include media-breakpoint-down(sm) {
                 width: 50%;
@@ -114,7 +114,7 @@
             width: 80%;
             background-color: #ffffff;
             border-radius: 60px;
-            box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
             p {
                 max-height: 145px;
                 overflow: auto;

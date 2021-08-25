@@ -11807,16 +11807,11 @@ h1.phone_title {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 1399.98px) {
   h2 {
-    font-size: 1.75rem;
-  }
-}
-@media (max-width: 767.98px) {
-  h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -11839,12 +11834,7 @@ p {
   font-size: 1.25rem;
   margin: 0;
 }
-@media (max-width: 1199.98px) {
-  p {
-    font-size: 1.125rem;
-  }
-}
-@media (max-width: 767.98px) {
+@media (max-width: 1399.98px) {
   p {
     font-size: 1rem;
   }
@@ -12460,8 +12450,8 @@ header .static_nav.navbar-expand-lg .navbar-collapse .navbar-nav .nav-item:last-
 }
 .refer .refer_card .avatar ._img_box {
   border-radius: 50%;
-  -webkit-box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 767.98px) {
   .refer .refer_card .avatar {
@@ -12483,8 +12473,8 @@ header .static_nav.navbar-expand-lg .navbar-collapse .navbar-nav .nav-item:last-
   width: 80%;
   background-color: #ffffff;
   border-radius: 60px;
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
 }
 .refer .refer_card .content p {
   max-height: 145px;
