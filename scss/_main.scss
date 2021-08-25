@@ -41,6 +41,7 @@
     }
 
     .container {
+        position: relative;
         // 關於小愛爸爸公益平台
         .about {
             p {
@@ -174,8 +175,6 @@
     }
 }
 
-//
-
 .slick-slide img.a {
     @include media-breakpoint-down(sm) {
         display: none;
@@ -186,5 +185,18 @@
     display: none;
     @include media-breakpoint-down(sm) {
         display: block;
+    }
+}
+
+section {
+    position: relative;
+    // 動畫
+    .about_conent {
+        position: absolute;
+        border: 0;
+        top: -110px;
+        right: -35px;
+        right: -107px;
+        transform: scale(0.8);
     }
 }

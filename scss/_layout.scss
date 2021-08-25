@@ -121,18 +121,11 @@ header {
                 justify-content: center;
                 flex-direction: column;
                 text-decoration: none;
-                img {
-                    width: 100px;
-                    margin-bottom: 8px;
-                    @include media-breakpoint-down(xl) {
-                        width: 80px;
-                    }
-                }
             }
 
             @include media-breakpoint-down(xl) {
-                font-size: 1.125rem;
-                padding: 8px 0;
+                // font-size: 1.125rem;
+                // padding: 8px 0;
             }
         }
 
@@ -149,8 +142,8 @@ header {
         transform: translate(0px, -105%);
         // transition: opacity 0.2 ease, transform 0.5 ease;
         transition-property: opacity, transform;
-        transition-duration: 0.2s, 0.5s;
-        transition-timing-function: ease, ease-out;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
         z-index: 150;
         &.show {
             transform: translate(0px, 0px);
@@ -274,12 +267,15 @@ header {
                     }
                 }
                 &::before {
-                    left: 15%;
+                    left: 17%;
+                    @include media-breakpoint-down(xl) {
+                        left: 18%;
+                    }
                 }
                 &::after {
-                    left: 86%;
+                    left: 83%;
                     @include media-breakpoint-down(xl) {
-                        left: 84%;
+                        left: 79%;
                     }
                 }
                 .nav-item {
@@ -288,9 +284,9 @@ header {
                         margin-top: -30px;
                         img {
                             width: 170px;
-                            @include media-breakpoint-down(xl) {
-                                width: 150px;
-                            }
+                            // @include media-breakpoint-down(xl) {
+                            //     width: 150px;
+                            // }
                         }
                         @include media-breakpoint-down(md) {
                             display: none;
@@ -302,6 +298,10 @@ header {
                         z-index: 100;
                         right: -100px;
                         top: -30px;
+                    }
+
+                    @include media-breakpoint-down(xl) {
+                        transform: scale(0.8);
                     }
                 }
 
@@ -329,6 +329,20 @@ header {
                     }
                 }
             }
+        }
+    }
+
+    //header動畫
+    .animate {
+        transform: scale(0.8);
+        border: 0;
+        // transform-origin: center;
+        @include media-breakpoint-down(xl) {
+            // transform: scale(0.6) translate(0, 10px);
+        }
+
+        &.about {
+            border: 0;
         }
     }
 }
