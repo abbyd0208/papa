@@ -32,10 +32,7 @@
     .content {
         position: relative;
         @include media-breakpoint-down(md) {
-            height: 190px;
-        }
-        @include media-breakpoint-down(sm) {
-            height: 165px;
+            height: 172px;
         }
     }
 
@@ -71,6 +68,10 @@
                         padding-right: 15px;
                     }
                 }
+            }
+            //開關鈕
+            .flip {
+                left: 15px;
             }
         }
 
@@ -158,6 +159,7 @@
         }
     }
 }
+// 等比圖片
 ._img_box {
     position: relative;
     width: 100%;
@@ -171,6 +173,8 @@
         width: 100%;
     }
 }
+
+//
 
 .slick-slide img.a {
     @include media-breakpoint-down(sm) {

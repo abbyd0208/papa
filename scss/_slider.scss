@@ -1,164 +1,161 @@
-
 /* 以下首頁banner調整 */
 .banner_slider img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .slick-dotted.slick-slider {
-  margin-bottom: 190px;
+    margin-bottom: 190px;
 }
 
 .banner_slider .slick-dots {
-  bottom: 25px;
+    bottom: 25px;
 }
 
 .banner_slider .slick-dots li button::before {
-  background-color: #cdcecf;
-  border: 3px solid #000;
-  border-radius: 50%;
-  content: '';
-  opacity: 1;
+    background-color: #cdcecf;
+    border: 3px solid #000;
+    border-radius: 50%;
+    content: '';
+    opacity: 1;
 }
 
 .banner_slider .slick-dots li {
-  margin: 0 20px;
+    margin: 0 20px;
 }
 
 .banner_slider .slick-dots li.slick-active button::before {
-  background-color: #000;
+    background-color: #000;
 }
 
 .works_slide .slick-slide {
-  opacity: 0.3;
+    opacity: 0.3;
 }
 .works_slide .slick-active {
-  opacity: 1;
+    opacity: 1;
 }
 
-.works_slide{
-
-  border: 1px solid green;
-  .slick-dots {
-    border: 2px solid orange;
-    width: 200px;
-    bottom: auto;
-    right: 10%;
-    top: -5%;
-    li{
-      // *{ border: 1px solid red;}
-      margin: 0%;
-      width: 35px;
-      height: 35px;
-      line-height: 35px;
-      // border: 1px solid blue;
-      button:before{
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-        opacity: 1;
-        color: #495254;
-        font-size: 18px;
-      }
-      &.slick-active{
-        button:before{
-          border: 2px solid #495254;
-          border-radius: 50%;
+.works_slide {
+    border: 1px solid green;
+    .slick-dots {
+        border: 2px solid orange;
+        width: 200px;
+        bottom: auto;
+        right: 10%;
+        top: -5%;
+        li {
+            // *{ border: 1px solid red;}
+            margin: 0%;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            // border: 1px solid blue;
+            button:before {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                opacity: 1;
+                color: #495254;
+                font-size: 18px;
+            }
+            &.slick-active {
+                button:before {
+                    border: 2px solid #495254;
+                    border-radius: 50%;
+                }
+            }
         }
-      }
     }
-  }
-  .slick-arrow{
-    z-index: 100;
-    // border: 2px solid red;
-    &.slick-next{
-      right: 10%;
+    .slick-arrow {
+        z-index: 100;
+        // border: 2px solid red;
+        &.slick-next {
+            right: 10%;
+        }
+        &.slick-prev {
+            left: 10%;
+        }
+        &.slick-prev,
+        &.slick-next {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        &.slick-prev:before,
+        &.slick-next:before {
+            color: $secondary;
+            font-size: 50px;
+            opacity: 1;
+        }
     }
-    &.slick-prev{
-      left: 10%;
-    }
-    &.slick-prev,
-    &.slick-next{
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-    }
-  
-    &.slick-prev:before,
-    &.slick-next:before{
-      color: $secondary;
-      font-size: 50px;
-      opacity: 1;
-    }
-  }
 
-  @include media-breakpoint-down(xl) {
-    border: 1px solid pink;
-    padding: 0 10%;
-  }
-
-  @include media-breakpoint-down(md){
-    .slick-dots{ width: 150px; right: 0;}
-    padding:0%;
-    .slick-arrow{
-      &.slick-next{
-        right: 20px;
-      }
-      &.slick-prev{
-        left: 20px;
-      }
-    }
-  }
-  
-} 
-
-
-
-/* 平台特色 */
-.platform_slider {
-  display: none;
-  @include media-max('992px') {
-    display: block;
-  }
-
-  .slick-slide {
-    opacity: 0.3;
-  }
-  .slick-active {
-    opacity: 1;
-  }
-
-  .platform_card {
-    max-width: none;
-    background-color: #ffffff;
-    padding: 24px;
-    border-radius: 30px;
-    margin: 6px 50px;
-    @include basic-shadow;
-    // @include media-breakpoint-down(md) {
-    //   margin: 0 px;
-    // }
-    @include media-breakpoint-down(sm) {
-      margin: 6px 12px;
-    }
-  }
-
-  ._img_box {
-    margin: 0 auto 24px;
-  }
-
-  ._sub_btn {
-    margin: 0 auto 24px;
-    a {
-      cursor: text;
-      div {
-        border-radius: 20%/50%;
-      }
+    @include media-breakpoint-down(xl) {
+        border: 1px solid pink;
     }
 
     @include media-breakpoint-down(md) {
-      font-size: 1.25rem;
-      font-weight: 500;
+        .slick-dots {
+            width: 150px;
+            right: 0;
+        }
+        padding: 0%;
+        .slick-arrow {
+            &.slick-next {
+                right: 20px;
+            }
+            &.slick-prev {
+                left: 20px;
+            }
+        }
     }
-  }
+}
+
+/* 平台特色 */
+.platform_slider {
+    display: none;
+    @include media-max('992px') {
+        display: block;
+    }
+
+    .slick-slide {
+        opacity: 0.3;
+    }
+    .slick-active {
+        opacity: 1;
+    }
+
+    .platform_card {
+        max-width: none;
+        background-color: #ffffff;
+        padding: 24px;
+        border-radius: 30px;
+        margin: 6px 50px;
+        @include basic-shadow;
+        // @include media-breakpoint-down(md) {
+        //   margin: 0 px;
+        // }
+        @include media-breakpoint-down(sm) {
+            margin: 6px 12px;
+        }
+    }
+
+    ._img_box {
+        margin: 0 auto 24px;
+    }
+
+    ._sub_btn {
+        margin: 0 auto 24px;
+        a {
+            cursor: text;
+            div {
+                border-radius: 20%/50%;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+    }
 }

@@ -1,18 +1,14 @@
 // slider 內容樣式
 .work-page {
+    background-color: white;
+    border-radius: 50px;
+    padding: 24px;
+    margin: 40px;
+    transition: opacity 1s ease;
+    @include basic-shadow;
 
-  background-color: white;
-  border-radius: 50px;
-  padding: 24px;
-  margin: 40px;
-  transition: opacity 1s ease;
-
-  @include basic-shadow;
-  p {
-    line-height: 2;
-    margin-bottom: 0;}
-    @include media-max('1420px') {
-      font-size: 1.125rem;
+    p {
+        margin-bottom: 0;
     }
 
     ._img_box {
@@ -27,8 +23,33 @@
         }
     }
 
-    & .d-flex:nth-child(-n + 2) {
-        border-bottom: 1px solid #707070;
+    .col-md-7 {
+        @include media-breakpoint-down(lg) {
+            height: 94px;
+            margin: 0 0 16px 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            height: 60px;
+            flex: 0 0 0;
+        }
+        &.unfold {
+            height: auto;
+        }
+    }
+
+    .flip {
+        left: 15px;
+        width: calc(100% - 30px);
+        @include media-breakpoint-down(lg) {
+            display: block;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        & .d-flex:nth-child(-n + 2) {
+            border-bottom: 1px solid #707070;
+        }
     }
 }
 
@@ -87,7 +108,6 @@
 }
 
 .refer {
-
     .refer_card {
         @include Dflex;
         justify-content: center;
@@ -116,6 +136,7 @@
             background-color: #ffffff;
             border-radius: 60px;
             box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+            z-index: -1;
             p {
                 max-height: 145px;
                 overflow: auto;
@@ -173,25 +194,25 @@
     }
 }
 
-//展開文章按鈕
+//文章伸縮按鈕
 .flip {
     display: none;
     position: absolute;
-    bottom: -32px;
+    bottom: -30px;
     left: 0;
-    width: 100%;
+    width: calc(100% - 30px);
     border-bottom: 2px solid $secondary;
-    background-color: $background;
     color: $secondary;
-    padding: 0 15px;
     cursor: pointer;
+    font-size: 0.9rem;
     i {
         background-image: url(../image/plus.png);
-        width: 28px;
-        border: 2px solid black;
+        width: 12px;
+        height: 12px;
+        border: 0px;
+        margin: 0 10px 0 0;
         background-size: cover;
         display: inline-block;
-        height: 28px;
     }
 
     @include media-breakpoint-down(md) {

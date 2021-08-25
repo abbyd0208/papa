@@ -332,3 +332,39 @@ header {
         }
     }
 }
+
+footer {
+    border: 2px solid #ff00ff;
+    background-color: $secondary;
+    color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 28px;
+    position: relative;
+    @include media-breakpoint-down(lg) {
+        padding-top: 24px;
+        padding-bottom: 200px;
+    }
+    // p {
+    //     font-size: 1.125rem;
+    //     @include media-breakpoint-down(lg) {
+    //         font-size: 0.9rem;
+    //     }
+    // }
+
+    img {
+        width: 280px;
+        position: absolute;
+        right: 25px;
+        top: -20px;
+        @include media-max('992px') {
+            display: none;
+        }
+    }
+    .designed_by {
+        padding: 0 15px;
+        text-align: center;
+        @include media-breakpoint-down(md) {
+            text-align: start;
+        }
+    }
+}
