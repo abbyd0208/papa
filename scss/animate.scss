@@ -89,7 +89,7 @@ body {
     }
 }
 
-.intro {
+.animate.intro {
     @include size(126px, 133px);
     @for $i from 1 to 6 {
         .ani_#{$i} {
@@ -143,7 +143,7 @@ body {
     }
 }
 
-.works {
+.animate.works {
     @include size(126px, 132px);
     @for $i from 1 to 5 {
         .ani_#{$i} {
@@ -189,7 +189,7 @@ body {
     }
 }
 
-.feature {
+.animate.feature {
     @include size(155px, 122px);
     @for $i from 1 to 6 {
         .ani_#{$i} {
@@ -248,7 +248,7 @@ body {
     }
 }
 
-.about_conent {
+.animate.about_conent {
     @include size(718px, 514px);
     .item {
         position: absolute;
@@ -313,7 +313,7 @@ body {
     }
 }
 
-.intro_content {
+.animate.intro_content {
     @include size(382px, 460px);
     .item {
         position: absolute;
@@ -403,7 +403,7 @@ body {
     }
 }
 
-.deco_star {
+.animate.deco_star {
     @include size(178px, 230px);
     .item {
         position: absolute;
@@ -444,7 +444,7 @@ body {
     }
 }
 
-.feature_content {
+.animate.feature_content {
     @include size(736px, 602px);
     .item {
         position: absolute;
@@ -526,7 +526,7 @@ body {
     }
 }
 
-.feature_content_2 {
+.animate.feature_content_2 {
     @include size(606px, 368px);
     .item {
         position: absolute;
@@ -590,7 +590,7 @@ body {
     }
 }
 
-.footer_castle {
+.animate.footer_castle {
     @include size(390px, 536px);
     .item {
         position: absolute;
@@ -616,7 +616,7 @@ body {
     }
 }
 
-.footer_grass {
+.animate.footer_grass {
     @include size(1080px, 234px);
     .item {
         position: absolute;
@@ -661,7 +661,7 @@ body {
     }
 }
 
-.feature_card_1 {
+.animate.feature_card_1 {
     @include size(276px, 218px);
     .item {
         position: absolute;
@@ -738,7 +738,7 @@ body {
     }
 }
 
-.feature_card_2 {
+.animate.feature_card_2 {
     @include size(270px, 212px);
     .item {
         position: absolute;
@@ -807,7 +807,7 @@ body {
         }
     }
 }
-.feature_card_3 {
+.animate.feature_card_3 {
     @include size(300px, 198px);
     .item {
         position: absolute;
@@ -878,7 +878,7 @@ body {
     }
 }
 
-.footer_end {
+.animate.footer_end {
     @include size(506px, 298px);
     .item {
         position: absolute;

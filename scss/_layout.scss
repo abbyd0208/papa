@@ -113,6 +113,7 @@ header {
             position: relative;
             font-size: 1.25rem;
             white-space: nowrap;
+            padding: 8px;
             // 左右四個item
             a {
                 color: $font-color;
@@ -138,13 +139,8 @@ header {
     .sticky_nav {
         width: 100%;
         position: fixed;
-
         transform: translate(0px, -105%);
-        // transition: opacity 0.2 ease, transform 0.5 ease;
-        transition-property: opacity, transform;
-        transition-duration: 0.5s;
-        transition-timing-function: ease;
-        z-index: 150;
+        transition: all 0.2s ease;
         &.show {
             transform: translate(0px, 0px);
         }
@@ -160,34 +156,12 @@ header {
                         margin-left: 10px;
                         position: relative;
                     }
-
-                    // &.line {
-                    //   &::after {
-                    //     content: '';
-                    //     display: block;
-                    //     width: 1px;
-                    //     height: 140px;
-                    //     position: absolute;
-                    //     bottom: 25px;
-                    //     background-color: #707070;
-                    //     right: -15%;
-                    //     @include media-breakpoint-down(md) {
-                    //       display: none;
-                    //     }
-                    //   }
-                    //   &::after {
-                    //     @include media-breakpoint-down(lg) {
-                    //       left: 83%;
-                    //     }
-                    //   }
-                    // }
                 }
             }
         }
 
         @include media-breakpoint-down(md) {
             visibility: collapse;
-            transition: visibility 0.2s ease, top 0.5 ease;
             &.show_nav {
                 visibility: visible;
             }
@@ -257,7 +231,7 @@ header {
                     width: 1px;
                     height: 100px;
                     position: absolute;
-                    bottom: 25px;
+                    bottom: 50px;
                     background-color: #707070;
                     @include media-breakpoint-down(xl) {
                         height: 80px;
@@ -273,10 +247,10 @@ header {
                     }
                 }
                 &::after {
-                    left: 83%;
-                    @include media-breakpoint-down(xl) {
-                        left: 79%;
-                    }
+                    left: 82%;
+                    // @include media-breakpoint-down(xl) {
+                    //     left: 82%;
+                    // }
                 }
                 .nav-item {
                     // 中間logo
@@ -298,10 +272,16 @@ header {
                         z-index: 100;
                         right: -100px;
                         top: -30px;
+                        @include media-breakpoint-down(xl) {
+                            top: -10px;
+                        }
                     }
 
                     @include media-breakpoint-down(xl) {
                         transform: scale(0.8);
+                    }
+                    @include media-breakpoint-down(md) {
+                        transform: scale(1);
                     }
                 }
 
@@ -336,9 +316,10 @@ header {
     .animate {
         transform: scale(0.8);
         border: 0;
-        // transform-origin: center;
         @include media-breakpoint-down(xl) {
-            // transform: scale(0.6) translate(0, 10px);
+        }
+        @include media-breakpoint-down(md) {
+            display: none;
         }
 
         &.about {
@@ -354,23 +335,25 @@ footer {
     padding-top: 80px;
     padding-bottom: 28px;
     position: relative;
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
         padding-top: 24px;
         padding-bottom: 200px;
     }
-    // p {
-    //     font-size: 1.125rem;
-    //     @include media-breakpoint-down(lg) {
-    //         font-size: 0.9rem;
-    //     }
-    // }
 
     img {
         width: 280px;
         position: absolute;
         right: 25px;
         top: -20px;
-        @include media-max('992px') {
+        // @include media-max('992px') {
+        //     display: none;
+        // }
+        @include media-breakpoint-down(md) {
+            right: 10%;
+            top: 40px;
+        }
+
+        @include media-breakpoint-down(xs) {
             display: none;
         }
     }

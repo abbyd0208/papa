@@ -58,7 +58,7 @@ $grid-breakpoints: map-merge(
         md: 768px,
         lg: 992px,
         xl: 1200px,
-        xxl: 1400px //新增,,,,,,,,,,,,,,,
+        xxl: 1400px //新增,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     ),
     $grid-breakpoints
 );
@@ -74,15 +74,11 @@ $container-max-widths: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $container-max-widths: map-merge(
     (
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1400px // sm: 540px,
-        // md: 720px,
-        // lg: 960px,
-        // xl: 1140px,
-        // xxl: 1260px //新增,,,,,,,,,,,,,,,
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1260px //新增,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     ),
     $container-max-widths
 );
@@ -93,6 +89,7 @@ $container-max-widths: map-merge(
     $remSize: $size / 16px;
     @return $remSize * 1rem;
 }
+
 @mixin font-size($size) {
     font-size: $size;
     font-size: calculateRem($size);
