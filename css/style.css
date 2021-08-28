@@ -12960,11 +12960,6 @@ body {
   overflow: hidden;
 }
 
-.menu .animate {
-  margin: 0 20px;
-  display: inline-block;
-}
-
 .animate.about {
   border: 1px solid green;
   width: 136px;

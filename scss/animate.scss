@@ -11,13 +11,7 @@ body {
         overflow: hidden;
     }
 }
-//  .menu 暫時排版用 正式要拿掉
-.menu {
-    .animate {
-        margin: 0 20px;
-        display: inline-block;
-    }
-}
+
 
 @mixin size($w, $h) {
     border: 1px solid green;
