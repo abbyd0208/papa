@@ -1,5 +1,6 @@
 .main {
     padding-top: 228px;
+    overflow: hidden;
     @include media-breakpoint-down(xl) {
         padding-top: 197px;
     }
@@ -12,6 +13,7 @@
 }
 
 section {
+    border: 1px solid red;
     position: relative;
     margin-bottom: 190px;
     @include media-breakpoint-down(md) {
@@ -22,10 +24,21 @@ section {
         &.about_conent {
             position: absolute;
             border: 0;
-            top: -110px;
-            right: -75px;
+            top: -30%;
+            right: -10%;
             z-index: -1;
             // @include media-breakpoint-down();
+        }
+        &.intro_content{
+            position: absolute;
+            left: -5%;
+            top: -40%;
+            z-index: 1;
+        }
+        &.feature_content{
+            position: absolute;
+            right: -25%;
+            top: -70%;
         }
     }
 }
@@ -187,6 +200,13 @@ section {
     // 照片
     .image {
         padding-left: 40px;
+        position: relative;
+        // 動畫
+        .animate{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
     }
 
     @include media-breakpoint-down(sm) {

@@ -1,0 +1,962 @@
+body {
+    background-color: #eee;
+}
+.animate {
+    border: 1px solid #eee;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    &.overflowHidden {
+        overflow: hidden;
+    }
+
+    @include media-breakpoint-down(xl) {
+        transform: scale(0.8);
+    }
+    @include media-breakpoint-down(lg) {
+        transform: scale(0.6);
+    }
+}
+
+
+@mixin size($w, $h) {
+    border: 1px solid green;
+    width: $w;
+    height: $h;
+    position: relative;
+    cursor: pointer;
+}
+
+.animate.about {
+    @include size(136px, 134px);
+
+    .item {
+        position: absolute;
+    }
+    @for $i from 1 to 6 {
+        .ani_#{$i} {
+            transition: all 0.3s linear;
+        }
+    }
+    .ani_1 {
+        left: 0;
+        top: 0;
+        width: 68%;
+    }
+    .ani_2 {
+        left: 0;
+        bottom: 0;
+        width: 68%;
+        z-index: 2;
+    }
+    .ani_3 {
+        right: 0;
+        bottom: 0;
+        width: 50%;
+    }
+    .ani_4 {
+        right: 20%;
+        bottom: 10%;
+        width: 50%;
+        z-index: 4;
+    }
+    .ani_5 {
+        right: 55%;
+        bottom: 20%;
+        width: 25%;
+        z-index: 3;
+    }
+    &:hover {
+        .ani_1 {
+            left: 3%;
+        }
+        .ani_2 {
+            left: 5%;
+            transform: rotate(-3deg);
+        }
+        .ani_3 {
+            right: 3%;
+        }
+        .ani_4 {
+            transform-origin: bottom right;
+            transform: rotate(5deg);
+        }
+        .ani_5 {
+            transform-origin: bottom right;
+            transform: rotate(15deg);
+            right: 53%;
+        }
+    }
+}
+
+.animate.intro {
+    @include size(126px, 133px);
+    @for $i from 1 to 6 {
+        .ani_#{$i} {
+            transition: all 0.3s linear;
+        }
+    }
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .ani_2 {
+        left: 32%;
+        top: 42%;
+        width: 12%;
+    }
+    .ani_3 {
+        right: 0;
+        top: 8%;
+        width: 19%;
+    }
+    .ani_4 {
+        left: 24%;
+        top: 25%;
+        width: 29%;
+    }
+    .ani_5 {
+        left: 0;
+        bottom: 5%;
+        width: 58%;
+    }
+
+    &:hover {
+        .ani_1 {
+        }
+        .ani_2 {
+            top: 40%;
+        }
+        .ani_3 {
+            top: 0;
+        }
+        .ani_4 {
+            top: 23%;
+        }
+        .ani_5 {
+            transform: rotate(-15deg);
+        }
+    }
+}
+
+.animate.works {
+    @include size(126px, 132px);
+    @for $i from 1 to 5 {
+        .ani_#{$i} {
+            transition: all 0.3s linear;
+        }
+    }
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 71%;
+        right: 0;
+        bottom: 0;
+    }
+    .ani_2 {
+        width: 54%;
+        right: 10%;
+        top: 0;
+    }
+    .ani_3 {
+        width: 55%;
+        left: 5%;
+        bottom: 0;
+    }
+    .ani_4 {
+        width: 60%;
+        right: 5%;
+        bottom: 0;
+    }
+
+    &:hover {
+        .ani_1 {
+        }
+        .ani_2 {
+            transform: rotate(5deg);
+        }
+        .ani_3 {
+            left: 0%;
+        }
+        .ani_4 {
+            right: 10%;
+        }
+    }
+}
+
+.animate.feature {
+    @include size(155px, 122px);
+    @for $i from 1 to 6 {
+        .ani_#{$i} {
+            transition: all 0.3s linear;
+        }
+    }
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 55%;
+        left: 0;
+        bottom: 0;
+    }
+    .ani_2 {
+        width: 45%;
+        right: 0;
+        bottom: 0;
+    }
+    .ani_3 {
+        width: 30%;
+        left: 25%;
+        bottom: 0%;
+        transform-origin: center left;
+    }
+    .ani_4 {
+        width: 30%;
+        right: 15%;
+        bottom: 0%;
+        transform-origin: center right;
+    }
+    .ani_5 {
+        width: 13%;
+        left: 50%;
+    }
+
+    &:hover {
+        .ani_1 {
+            left: -3%;
+        }
+        .ani_2 {
+            right: -3%;
+        }
+        .ani_3 {
+            left: 29%;
+            transform: rotate(-60deg);
+        }
+        .ani_4 {
+            right: 19%;
+            transform: rotate(60deg);
+        }
+        .ani_5 {
+            transform: rotate(-20deg);
+            left: 52%;
+        }
+    }
+}
+
+.animate.about_conent {
+    @include size(718px, 514px);
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 52%;
+        right: -10%;
+        bottom: 0;
+        z-index: 5;
+    }
+    .ani_2 {
+        width: 40%;
+        right: 27%;
+        bottom: 5%;
+        animation: redKid 1s infinite alternate both;
+        animation-delay: -5s;
+    }
+    .ani_3 {
+        width: 33%;
+        right: 10%;
+        top: 10%;
+        animation: blueKid 1s infinite alternate both;
+        animation-delay: -1s;
+    }
+    .ani_4 {
+        width: 25%;
+        left: 25%;
+        top: 10%;
+        animation: flower 1s infinite alternate both;
+        animation-delay: -0.8s;
+    }
+    .ani_5 {
+    }
+
+    @keyframes redKid {
+        0% {
+            right: 20%;
+        }
+        100% {
+            right: 25%;
+        }
+    }
+
+    @keyframes blueKid {
+        0% {
+            top: 5%;
+        }
+        100% {
+            top: 10%;
+        }
+    }
+
+    @keyframes flower {
+        0% {
+            left: 20%;
+            top: 5%;
+        }
+        100% {
+            left: 25%;
+            top: 10%;
+        }
+    }
+}
+
+.animate.intro_content {
+    @include size(382px, 460px);
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 67%;
+        left: 0%;
+        bottom: 0;
+        z-index: 10;
+    }
+
+    .ani_4 {
+        width: 65%;
+        left: 30%;
+        top: 12%;
+    }
+    .group {
+        width: 57%;
+        height: 90%;
+        left: 42%;
+        top: 0;
+        .ani_2 {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 3;
+        }
+        .ani_3 {
+            width: 50%;
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            z-index: 6;
+            animation: arms infinite 1s alternate both;
+        }
+    }
+    &.active {
+        .ani_1 {
+            animation: yellowＲectangle 1.5s alternate both;
+            animation-delay: 1s;
+        }
+        .group {
+            animation: girl 1.5s alternate both;
+            animation-delay: 1.5s;
+        }
+        .ani_4 {
+            animation: blueCircle 1.5s alternate both;
+            animation-delay: 2s;
+        }
+    }
+
+    @keyframes yellowＲectangle {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 0;
+        }
+    }
+
+    @keyframes girl {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 42%;
+        }
+    }
+
+    @keyframes arms {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(10deg);
+        }
+    }
+
+    @keyframes blueCircle {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 30%;
+        }
+    }
+}
+
+.animate.deco_star {
+    @include size(178px, 230px);
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 35%;
+        left: 0;
+        animation: rotateRight 1s infinite alternate both;
+    }
+    .ani_2 {
+        width: 38%;
+        right: 0;
+        top: 15%;
+        animation: rotateLeft 1s infinite alternate both;
+    }
+    .ani_3 {
+        width: 70%;
+        left: 10%;
+        bottom: 0;
+        animation: rotateRight 1s infinite alternate both;
+    }
+
+    @keyframes rotateLeft {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-30deg);
+        }
+    }
+    @keyframes rotateRight {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(30deg);
+        }
+    }
+}
+
+.animate.feature_content {
+    @include size(736px, 602px);
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 51%;
+        right: 0;
+        bottom: 0;
+        z-index: 7;
+    }
+    .ani_2 {
+        width: 43%;
+        right: 35%;
+        bottom: 4%;
+        z-index: 6;
+        animation: redKid 1s infinite alternate both;
+    }
+    .ani_3 {
+        width: 44%;
+        right: 25%;
+        top: 10%;
+        z-index: 6;
+        animation: orangeKid 1s infinite alternate both;
+    }
+    .ani_4 {
+        width: 78%;
+        left: 10%;
+    }
+    .ani_5 {
+        width: 9%;
+        top: 25%;
+        left: 10%;
+        animation: rotateWave 1s infinite alternate both;
+    }
+    .ani_6 {
+        width: 8%;
+        top: 28%;
+        left: 5%;
+        animation: star 1s infinite alternate both;
+    }
+
+    @keyframes redKid {
+        0% {
+            right: 30%;
+        }
+        100% {
+            right: 35%;
+        }
+    }
+
+    @keyframes orangeKid {
+        0% {
+            right: 20%;
+            top: 15%;
+        }
+        100% {
+            right: 25%;
+            top: 10%;
+        }
+    }
+    @keyframes rotateWave {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(10deg);
+        }
+    }
+
+    @keyframes star {
+        0% {
+            top: 30%;
+            left: 10%;
+        }
+        100% {
+            top: 28%;
+            left: 5%;
+        }
+    }
+}
+
+.animate.feature_content_2 {
+    @include size(606px, 368px);
+    .item {
+        position: absolute;
+    }
+    .group {
+        width: 90%;
+        // animation: eleMove 5s infinite alternate both;
+    }
+    .ani_1 {
+        width: 100%;
+        left: 100%;
+        top: 0;
+    }
+    .ani_2 {
+        width: 22%;
+        left: 35%;
+        top: 10%;
+        z-index: 2;
+        transform-origin: center top;
+        animation: earMove 1s infinite alternate;
+    }
+    .ani_3 {
+        width: 14%;
+        right: -10%;
+        top: 45%;
+        animation: flowerMove 2s ease-in-out infinite alternate both;
+    }
+
+    @keyframes earMove {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    @keyframes eleMove {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 0%;
+        }
+    }
+
+    @keyframes flowerMove {
+        0% {
+            right: -8%;
+            top: 45%;
+            transform: rotate(0);
+        }
+        55% {
+            right: -15%;
+        }
+        100% {
+            right: 0%;
+            top: 0%;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.animate.footer_castle {
+    @include size(390px, 536px);
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 23%;
+        left: 58%;
+        top: 15%;
+        animation: flag 2s ease-in-out infinite alternate both;
+    }
+    .ani_2 {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+    @keyframes flag {
+        0% {
+            top: 15%;
+        }
+        100% {
+            top: 0%;
+        }
+    }
+}
+
+.animate.footer_grass {
+    @include size(1080px, 234px);
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+    .ani_2 {
+        width: 10%;
+        left: 15%;
+        top: 52%;
+        animation: glass 1s ease-in-out infinite alternate both;
+    }
+    .ani_3 {
+        width: 13%;
+        left: 33%;
+        top: 10%;
+        animation: bearRotate 1.5s linear infinite alternate both;
+        animation-delay: 2s;
+    }
+
+    @keyframes glass {
+        0%,
+        50% {
+            left: 15%;
+        }
+        100% {
+            left: 18%;
+        }
+    }
+
+    @keyframes bearRotate {
+        0%,
+        50% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(20deg);
+        }
+    }
+}
+
+.animate.feature_card_1 {
+    @include size(276px, 218px);
+    margin: 0 auto;
+    @include media-breakpoint-down(xl) {
+        transform: scale(1);
+    }
+    .item {
+        position: absolute;
+    }
+
+    .ani_1 {
+        width: 50%;
+        left: 0;
+        bottom: 0;
+    }
+    .ani_2 {
+        width: 14%;
+        left: 2%;
+        bottom: 10%;
+        transform-origin: center bottom;
+        animation: armRotateLeft 1s infinite alternate both;
+    }
+    .ani_3 {
+        width: 50%;
+        right: 0;
+        bottom: 0;
+    }
+    .ani_4 {
+        width: 14%;
+        right: 2%;
+        bottom: 10%;
+        transform-origin: center bottom;
+        animation: armRotateRight 1s infinite alternate both;
+    }
+    .ani_5 {
+        width: 14%;
+        top: 45%;
+        left: 18.5%;
+    }
+    .ani_6 {
+        width: 14%;
+        top: 45%;
+        right: 18%;
+    }
+
+    .ani_5,
+    .ani_6 {
+        animation: mouseUp 1s ease-in-out infinite alternate both;
+    }
+
+    @keyframes mouseUp {
+        0%,
+        50% {
+            top: 46%;
+        }
+        100% {
+            top: 42%;
+        }
+    }
+
+    @keyframes armRotateLeft {
+        0%,
+        50% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-15deg);
+        }
+    }
+
+    @keyframes armRotateRight {
+        0%,
+        50% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(15deg);
+        }
+    }
+}
+
+.animate.feature_card_2 {
+    @include size(270px, 212px);
+    margin: 0 auto;
+    @include media-breakpoint-down(xl) {
+        transform: scale(1);
+    }
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 44%;
+        left: 0;
+        bottom: 0;
+    }
+    .ani_2 {
+        width: 20%;
+        left: 12%;
+        bottom: 10%;
+        transform-origin: center bottom;
+        animation: thinkRotate 1s ease infinite alternate both;
+    }
+    .ani_3 {
+        width: 56%;
+        right: 0;
+        bottom: 0;
+    }
+    .ani_4 {
+        width: 65%;
+        bottom: 5%;
+        right: 5%;
+        transform-origin: right top;
+        animation: paperRotate 1s ease infinite alternate both;
+    }
+    .ani_5 {
+        width: 8%;
+        left: 48%;
+        animation: markRotate 1s ease infinite alternate both;
+    }
+
+    @keyframes thinkRotate {
+        0%,
+        50% {
+            bottom: 10%;
+            transform: rotate(0deg);
+        }
+        100% {
+            bottom: 15%;
+            transform: rotate(-10deg);
+        }
+    }
+
+    @keyframes paperRotate {
+        0%,
+        50% {
+            bottom: 5%;
+            transform: rotate(0deg);
+        }
+        100% {
+            bottom: 8%;
+            transform: rotate(10deg);
+        }
+    }
+
+    @keyframes markRotate {
+        0%,
+        60% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(10deg);
+        }
+    }
+}
+.animate.feature_card_3 {
+    @include size(300px, 198px);
+    margin: 0 auto;
+    @include media-breakpoint-down(xl) {
+        transform: scale(1);
+    }
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 52%;
+        left: 0;
+        bottom: 0;
+        animation: moveRight 0.8s ease infinite alternate both;
+    }
+    .ani_2 {
+        width: 48%;
+        right: 0;
+        bottom: 0;
+        animation: moveLeft 0.8s ease infinite alternate both;
+    }
+
+    .ani_3,
+    .ani_4,
+    .ani_5 {
+        animation: opacity 0.8s ease infinite alternate both;
+    }
+    .ani_3 {
+        width: 8.6%;
+        left: 47%;
+        top: 35%;
+        animation-delay: -2s;
+    }
+    .ani_4 {
+        width: 12%;
+        left: 42%;
+        top: 55%;
+        animation-delay: -3s;
+    }
+    .ani_5 {
+        width: 13%;
+        left: 28%;
+        top: 75%;
+        animation-delay: -4s;
+    }
+
+    @keyframes moveLeft {
+        0% {
+            right: 0;
+        }
+        100% {
+            right: 5%;
+        }
+    }
+
+    @keyframes moveRight {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: 5%;
+        }
+    }
+
+    @keyframes opacity {
+        0%,
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.animate.footer_end {
+    @include size(506px, 298px);
+    .item {
+        position: absolute;
+    }
+    .ani_1 {
+        width: 38.5%;
+    }
+    .ani_2 {
+        width: 17%;
+    }
+    .ani_3 {
+        width: 27%;
+    }
+    .ani_4 {
+        width: 36.5%;
+    }
+
+    @keyframes slideUp {
+        0%,
+        30% {
+            transform: translateY(100%);
+        }
+        70% {
+            transform: translateY(-5%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    .ani_1 {
+        left: 0;
+    }
+    .ani_2 {
+        left: 30%;
+        bottom: 15%;
+        z-index: 4;
+    }
+    .ani_3 {
+        left: 45%;
+        top: 15%;
+    }
+    .ani_4 {
+        right: 0;
+        top: 10%;
+    }
+
+    &.active {
+        .ani_1,
+        .ani_2,
+        .ani_3,
+        .ani_4 {
+            animation: slideUp 0.8s ease alternate both;
+        }
+        .ani_1 {
+            animation-delay: 0.5s;
+        }
+        .ani_2 {
+            animation-delay: 1s;
+        }
+        .ani_3 {
+            animation-delay: 1.5s;
+        }
+        .ani_4 {
+            animation-delay: 2s;
+        }
+    }
+}
