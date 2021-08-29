@@ -12,10 +12,12 @@ body {
     }
 
     @include media-breakpoint-down(xl) {
-        transform: scale(0.8);
+        transform-origin: left bottom;
+        transform: scale(0.65);
     }
     @include media-breakpoint-down(lg) {
-        transform: scale(0.6);
+        transform-origin: left bottom;
+        transform: scale(0.5);
     }
 }
 
@@ -251,6 +253,11 @@ body {
 
 .animate.about_conent {
     @include size(718px, 514px);
+    @include media-breakpoint-down(xl) {
+        transform-origin: right bottom;
+        // transform: scale(0.75);
+    }
+
     .item {
         position: absolute;
     }
@@ -264,14 +271,14 @@ body {
         width: 40%;
         right: 27%;
         bottom: 5%;
-        animation: redKid 1s infinite alternate both;
+        animation: redKidLeft 1s infinite alternate both;
         animation-delay: -5s;
     }
     .ani_3 {
         width: 33%;
-        right: 10%;
+        right: 15%;
         top: 10%;
-        animation: blueKid 1s infinite alternate both;
+        animation: blueKidTop 1s infinite alternate both;
         animation-delay: -1s;
     }
     .ani_4 {
@@ -280,22 +287,23 @@ body {
         top: 10%;
         animation: flower 1s infinite alternate both;
         animation-delay: -0.8s;
+        z-index: 1;
     }
     .ani_5 {
     }
 
-    @keyframes redKid {
+    @keyframes redKidLeft {
         0% {
             right: 20%;
         }
         100% {
-            right: 25%;
+            right: 27%;
         }
     }
 
-    @keyframes blueKid {
+    @keyframes blueKidTop {
         0% {
-            top: 5%;
+            top: 15%;
         }
         100% {
             top: 10%;
@@ -529,6 +537,10 @@ body {
 
 .animate.feature_content_2 {
     @include size(606px, 368px);
+    @include media-breakpoint-down(xl) {
+        transform-origin: left bottom;
+        transform: scale(0.5);
+    }
     .item {
         position: absolute;
     }
@@ -591,8 +603,14 @@ body {
     }
 }
 
+
+
 .animate.footer_castle {
     @include size(390px, 536px);
+    @include media-breakpoint-down(xl) {
+        transform-origin: right bottom;
+        transform: scale(0.75);
+    }
     .item {
         position: absolute;
     }
@@ -619,6 +637,10 @@ body {
 
 .animate.footer_grass {
     @include size(1080px, 234px);
+    @include media-breakpoint-down(xl) {
+        transform-origin: right bottom;
+        transform: scale(0.75);
+    }
     .item {
         position: absolute;
     }
@@ -893,6 +915,10 @@ body {
 
 .animate.footer_end {
     @include size(506px, 298px);
+    @include media-breakpoint-down(xl) {
+        transform-origin: left bottom;
+        transform: scale(0.7);
+    }
     .item {
         position: absolute;
     }

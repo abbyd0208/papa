@@ -142,6 +142,9 @@
                 max-height: 145px;
                 overflow: auto;
             }
+            @include media-breakpoint-down(xl) {
+               h3{ font-size: 1.1rem;}
+            }
             @include media-breakpoint-down(sm) {
                 width: 90%;
                 margin-top: -6%;
