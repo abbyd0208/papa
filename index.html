@@ -791,6 +791,8 @@
 			IsClose = false;
 			// 監聽網頁，滾動至350 顯示 sticky_nav
 			$(window).scroll(function () {
+				// Alvin 08-26 改用 throttle 參考網址 https://medium.com/@steven234/throttle%E8%B7%9F-debounce%E6%9C%89%E4%BB%80%E9%BA%BC%E5%8D%80%E5%88%A5-e0b1979b1b4f
+
 				// if (Timer) { clearTimeout(Timer) }
 				// Timer = setTimeout(function () {
 				// 	let scrollTop = $(this).scrollTop();
@@ -800,8 +802,6 @@
 				// 		$(".sticky_nav").removeClass("show")
 				// 	}
 				// }, 500);
-				// Alvin 08-26 改用 throttle 參考網址
-				// https://medium.com/@steven234/throttle%E8%B7%9F-debounce%E6%9C%89%E4%BB%80%E9%BA%BC%E5%8D%80%E5%88%A5-e0b1979b1b4f
 
 				if (IsClose) {
 					return
@@ -809,7 +809,7 @@
 				IsClose = true
 				Timer = setTimeout(function () {
 					let scrollTop = $(this).scrollTop();
-
+					// 0830 Alvin	
 					if (scrollTop > 350) {
 						$(".navbar-collapse").removeClass("show")
 						$(".navbar-toggler").removeClass("open")
@@ -830,13 +830,14 @@
 			$(".navbar-toggler").on("click", function () {
 				// 漢堡切換 icon 和底色
 				$(".navbar-toggler").toggleClass("open")
+				// 0830 Alvin
 				// $(".fa-times").toggleClass("show")
 				// $(".fa-bars").toggleClass("show")
 				// 設 sticky-nav > visibility: initial;
 				// $(".sticky_nav").toggleClass("show_nav")
 			})
 
-						// 漢堡
+			// 0830 Alvin
 			$(".sticky_btn").on("click", function () {
 				// 漢堡切換 icon 和底色
 				$(".sticky_btn").toggleClass("open")
