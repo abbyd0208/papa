@@ -72,7 +72,13 @@ header {
             outline: none;
         }
         &.open {
-            background-color: $background;
+            background-color: rgba(0, 0, 0, 0);
+            .fa-times {
+                display: block;
+            }
+            .fa-bars {
+                display: none;
+            }
         }
         svg {
             font-size: 35px;
@@ -135,69 +141,7 @@ header {
         }
     }
 
-    //動態navbar
-    .sticky_nav {
-        width: 100%;
-        position: fixed;
-        transform: translate(0px, -105%);
-        transition: all 0.2s ease;
-        z-index: 1000;
-        &.show {
-            transform: translate(0px, 0px);
-        }
-        &.navbar-expand-lg .navbar-collapse {
-            justify-content: flex-end;
-            .navbar-nav {
-                width: 50%;
-                min-width: 620px;
-                margin: 0 50px 0px 0;
-                .nav-item {
-                    // 訂閱按鈕
-                    &:last-child {
-                        margin-left: 10px;
-                        position: relative;
-                    }
-                }
-            }
-        }
-
-        @include media-breakpoint-down(md) {
-            visibility: collapse;
-            &.show_nav {
-                visibility: visible;
-            }
-            button {
-                visibility: visible;
-            }
-            &.navbar-expand-lg .navbar-collapse {
-                .navbar-nav {
-                    margin: 0 auto;
-                    width: 90%;
-                    align-items: center;
-                    min-width: 0;
-                    .nav-item {
-                        width: 100%;
-                        img {
-                            display: none;
-                        }
-                        &:nth-child(-n + 3) {
-                            border-bottom: 1px solid $main-gray;
-                        }
-                        // 訂閱按鈕 rwd
-                        &:last-child {
-                            right: 0;
-                            top: 0;
-                            width: fit-content;
-                            position: relative;
-                            margin: -5px 20px 12px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    //靜態navbar
+    //navbar
     .static_nav {
         position: absolute;
         width: 100%;
@@ -313,6 +257,145 @@ header {
         }
     }
 
+    //fixed navbar
+    .sticky_nav {
+        height: 80px;
+        width: 100%;
+        background-color: #fff6e5;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        transform: translate(0, -100%);
+        opacity: 0;
+        transition: all 0.5s ease;
+        &.show {
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: all 0.5s ease;
+        }
+
+        @include media-breakpoint-down(md) {
+            height: auto;
+            transform: translate(0, -100%);
+            opacity: 0;
+            &.show {
+                transform: translate(0, -100%);
+                opacity: 0;
+            }
+            &.open {
+                transform: translate(0, 0);
+                opacity: 1;
+                transition: all 0.5s ease;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $font-color;
+        }
+
+        ._sub_btn a {
+            color: white;
+        }
+
+        .contain {
+            height: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            @include media-breakpoint-down(md) {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 15px;
+            }
+        }
+
+        .nav_list {
+            @include media-breakpoint-down(md) {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                margin: auto;
+            }
+        }
+
+        .nav_item {
+            background-color: #fff6e5;
+            text-align: center;
+            padding: 0 20px;
+            display: inline-block;
+            // min-width: 160px;
+            font-size: 1.25rem;
+            @include media-breakpoint-up(lg) {
+                // border: 2px solid red;
+                &:nth-child(-n + 3) {
+                    border-right: 1px solid black;
+                }
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 1rem;
+            }
+            @include media-breakpoint-down(md) {
+                padding: 8px;
+                font-size: 1.25rem;
+
+                &:nth-child(-n + 3) {
+                    border-bottom: 1px solid black;
+                }
+                &:last-child {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .sticky_btn {
+        color: white;
+        font-size: 1.5rem;
+        position: fixed;
+        right: 16px;
+        top: 22px;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        outline: none;
+        background-color: #d2754c;
+        border: none;
+        transform: translate(0, -140%);
+        opacity: 0;
+        z-index: 11;
+        &.open {
+            background-color: rgba(0, 0, 0, 0);
+            .fa-times {
+                display: block;
+            }
+            .fa-bars {
+                display: none;
+            }
+        }
+        .fa-times {
+            font-size: 2.25rem;
+            color: #7cbade;
+            margin: auto;
+            display: none;
+        }
+        .fa-bars {
+            margin: auto;
+            display: block;
+        }
+        @include media-breakpoint-down(md) {
+            &.show {
+                transform: translate(0, 0);
+                opacity: 1;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+
     //header動畫
     .animate {
         transform: scale(0.8);
@@ -330,13 +413,12 @@ header {
 }
 
 footer {
-  
     background-color: $secondary;
     color: #ffffff;
     padding-top: 80px;
     padding-bottom: 30px;
     // position: relative;
-    @include media-breakpoint-down(xl){
+    @include media-breakpoint-down(xl) {
         padding-top: 80px;
         padding-left: 50px;
         padding-right: 50px;
@@ -347,14 +429,15 @@ footer {
         padding-top: 24px;
         padding-bottom: 200px;
     }
-    a{ color: inherit;}
+    a {
+        color: inherit;
+    }
 
-  
     .footer_logo img {
         width: 280px;
         margin: 0 auto;
 
-        @include media-breakpoint-down(lg){
+        @include media-breakpoint-down(lg) {
             width: 100%;
         }
         @include media-breakpoint-down(xl) {
@@ -380,6 +463,4 @@ footer {
             text-align: start;
         }
     }
-    
-
 }
