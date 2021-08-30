@@ -1,7 +1,10 @@
 .main {
+    border: 2px solid purple;
     padding-top: 228px;
+    overflow: hidden;
+    position: relative;
     @include media-breakpoint-down(xl) {
-        padding-top: 197px;
+        padding-top: 96px;
     }
     @include media-breakpoint-down(md) {
         padding-top: 90px;
@@ -9,24 +12,97 @@
     @include media-breakpoint-down(sm) {
         padding-top: 78px;
     }
+
+   
+
 }
 
 section {
+    // border: 1px solid red;
     position: relative;
-    margin-bottom: 190px;
+    // margin-bottom: 190px;
+    padding: 120px 0;
     @include media-breakpoint-down(md) {
-        margin-bottom: 110px;
+        padding: 100px 0;
     }
     // 動畫
     .animate {
         &.about_conent {
             position: absolute;
             border: 0;
-            top: -110px;
-            right: -75px;
+            top: -30%;
+            right: -5%;
             z-index: -1;
-            // @include media-breakpoint-down();
         }
+        &.intro_content{
+            position: absolute;
+            left: -5%;
+            top: -40%;
+            z-index: 1;
+        }
+        &.feature_content{
+            position: absolute;
+            right: -30%;
+            top: -50%;
+        }
+        &.feature_content_2{
+            position: absolute;
+            bottom: -10%;
+            left: -3%;
+        }
+    }
+}
+
+// 動畫
+.main_end_animate{
+    
+    position: relative;
+    width: 100%;
+    .leftbox{ position: absolute; right: 10%; bottom: 0;}
+    .rightbox{ position: absolute; right: 0%; bottom: 0;}
+}
+
+// 動畫
+footer{
+    position: relative;
+    .footer_animate{
+        position: absolute;
+        left: 0;
+        bottom: 0%;
+        overflow: hidden;
+        .animate.footer_end{
+            margin-bottom: -13%;
+        }
+    }
+}
+
+// 背景圖設置
+.bg_video{
+    background: url(../images/bg_video.png) center center no-repeat ;
+    background-size: contain;
+    @include media-breakpoint-down(md) {
+        background: none;
+    }
+}
+.bg_intro{
+    background: url(../images/bg_intro.png) left bottom no-repeat;
+    background-size: 50% auto;
+    @include media-breakpoint-down(md) {
+        background: none;
+    }
+}
+.bg_platform{
+    background: url(../images/bg_paltform.png) center bottom no-repeat;
+    background-size: contain;
+    @include media-breakpoint-down(md) {
+        background: none;
+    }
+}
+.bg_recommend{
+    background: url(../images/bg_recommend.png) center center no-repeat;
+    background-size: contain;
+    @include media-breakpoint-down(md) {
+        background: none;
     }
 }
 
@@ -126,7 +202,12 @@ section {
     margin: 0 auto;
     margin-bottom: 100px;
     position: relative;
-    @media-breakpoint-down (md) {
+
+    @include media-breakpoint-down(lg){
+        width: 80%;
+    }
+
+    @include media-breakpoint-down(md){
         width: 93%;
     }
 
@@ -187,6 +268,13 @@ section {
     // 照片
     .image {
         padding-left: 40px;
+        position: relative;
+        // 動畫
+        .animate{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
     }
 
     @include media-breakpoint-down(sm) {

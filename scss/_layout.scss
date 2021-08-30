@@ -141,6 +141,7 @@ header {
         position: fixed;
         transform: translate(0px, -105%);
         transition: all 0.2s ease;
+        z-index: 1000;
         &.show {
             transform: translate(0px, 0px);
         }
@@ -329,28 +330,43 @@ header {
 }
 
 footer {
-    border: 2px solid #ff00ff;
+  
     background-color: $secondary;
     color: #ffffff;
     padding-top: 80px;
-    padding-bottom: 28px;
-    position: relative;
+    padding-bottom: 30px;
+    // position: relative;
+    @include media-breakpoint-down(xl){
+        padding-top: 80px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+    }
+
     @include media-breakpoint-down(md) {
         padding-top: 24px;
         padding-bottom: 200px;
     }
+    a{ color: inherit;}
 
-    img {
+  
+    .footer_logo img {
         width: 280px;
-        position: absolute;
-        right: 25px;
-        top: -20px;
-        // @include media-max('992px') {
-        //     display: none;
-        // }
-        @include media-breakpoint-down(md) {
+        margin: 0 auto;
+
+        @include media-breakpoint-down(lg){
+            width: 100%;
+        }
+        @include media-breakpoint-down(xl) {
+            position: absolute;
+            width: 250px;
             right: 10%;
-            top: 40px;
+            top: -15px;
+        }
+
+        @include media-breakpoint-down(md) {
+            // right: 10%;
+            // top: 40px;
         }
 
         @include media-breakpoint-down(xs) {
@@ -364,4 +380,6 @@ footer {
             text-align: start;
         }
     }
+    
+
 }

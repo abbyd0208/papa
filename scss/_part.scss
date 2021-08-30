@@ -58,6 +58,7 @@
 }
 
 .platform_card {
+    // *{ border: 1px solid red;}
     background-color: #ffffff;
     max-width: 350px;
     width: 32%;
@@ -111,7 +112,7 @@
     .refer_card {
         @include Dflex;
         justify-content: center;
-        margin-bottom: 32px;
+        margin-bottom: 80px;
 
         // 頭像
         .avatar {
@@ -140,6 +141,9 @@
             p {
                 max-height: 145px;
                 overflow: auto;
+            }
+            @include media-breakpoint-down(xl) {
+               h3{ font-size: 1.1rem;}
             }
             @include media-breakpoint-down(sm) {
                 width: 90%;
