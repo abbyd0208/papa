@@ -788,7 +788,8 @@
 	<script>
 		$(document).ready(function () {
 			var Timer = null;
-			IsClose = false;
+			var IsClose = false;
+			var navH 
 			// 監聽網頁，滾動至350 顯示 sticky_nav
 			$(window).scroll(function () {
 				// Alvin 08-26 改用 throttle 參考網址 https://medium.com/@steven234/throttle%E8%B7%9F-debounce%E6%9C%89%E4%BB%80%E9%BA%BC%E5%8D%80%E5%88%A5-e0b1979b1b4f
@@ -809,8 +810,9 @@
 				IsClose = true
 				Timer = setTimeout(function () {
 					let scrollTop = $(this).scrollTop();
+					navH = $(".navbar").outerHeight();
 					// 0830 Alvin	
-					if (scrollTop > 350) {
+					if (scrollTop > navH) {
 						$(".navbar-collapse").removeClass("show")
 						$(".navbar-toggler").removeClass("open")
 						$(".sticky_nav").addClass("show")
@@ -823,7 +825,7 @@
 						$(".sticky_btn").removeClass("open")
 						IsClose = false
 					}
-				}, 500);
+				}, 0);
 			})
 
 			// 漢堡
