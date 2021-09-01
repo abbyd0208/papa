@@ -12349,7 +12349,7 @@ section:first-child {
 section .animate.about_conent {
   position: absolute;
   border: 0;
-  top: -30%;
+  top: 0%;
   right: -5%;
   z-index: -1;
 }
@@ -13198,6 +13198,22 @@ body {
             transform-origin: left bottom;
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
+  }
+}
+@media (max-width: 1199.98px) {
+  .animate {
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@media (max-width: 767.98px) {
+  .animate {
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
   }
 }
 
