@@ -13,17 +13,17 @@ body {
 
     @include media-breakpoint-down(xl) {
         // transform-origin: left bottom;
-        transform: scale(0.65);
+        transform: scale(0.8);
     }
     @include media-breakpoint-down(lg) {
         // transform-origin: left bottom;
-        transform: scale(0.5);
+        transform: scale(0.6);
     }
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
         // transform-origin: left bottom;
         transform: scale(0.5);
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
         // transform-origin: left bottom;
         transform: scale(0.4);
     }
@@ -258,21 +258,11 @@ body {
     }
 }
 
-
-
-
 .animate.about_conent {
     @include size(718px, 514px);
-<<<<<<< HEAD
-    // @include media-breakpoint-down(xl) {
-    //     transform-origin: right bottom;
-    //     // transform: scale(0.75);
-    // }
-=======
     @include media-breakpoint-down(xl) {
-        transform-origin: right bottom;
+        transform-origin: right;
     }
->>>>>>> 4f47f1d7efb4402759ba0647b067599136862f04
 
     .item {
         position: absolute;
@@ -287,19 +277,17 @@ body {
         width: 40%;
         right: 27%;
         bottom: 5%;
-        
     }
     .ani_3 {
         width: 33%;
         right: 15%;
         top: 10%;
-      
     }
     .ani_4 {
         width: 25%;
         left: 25%;
         top: 10%;
-      
+
         z-index: 1;
     }
     .ani_5 {
@@ -333,24 +321,24 @@ body {
         }
     }
     // 滾動觸發
-    &.active{
-        .ani_2{
-            animation: redKidLeft 1s  alternate ;
-        } 
-        .ani_3{  
-            animation: blueKidTop 1s  alternate ;
+    &.active {
+        .ani_2 {
+            animation: redKidLeft 1s alternate;
         }
-        .ani_4{
-            animation: flower 1s  alternate ;
+        .ani_3 {
+            animation: blueKidTop 1s alternate;
+        }
+        .ani_4 {
+            animation: flower 1s alternate;
         }
     }
 }
 
-
-
-
 .animate.intro_content {
     @include size(382px, 460px);
+    @include media-breakpoint-down(xl) {
+        transform-origin: left;
+    }
     .item {
         position: absolute;
     }
@@ -440,7 +428,6 @@ body {
     }
 }
 
-
 .animate.deco_star {
     @include size(178px, 230px);
     .item {
@@ -483,7 +470,11 @@ body {
 }
 
 .animate.feature_content {
+    transform-origin: right;
     @include size(736px, 602px);
+    @include media-breakpoint-up(xl) {
+        transform: scale(0.8);
+    }
     .item {
         position: absolute;
     }
@@ -565,10 +556,10 @@ body {
 }
 
 .animate.feature_content_2 {
+    transform-origin: left;
     @include size(606px, 368px);
-    @include media-breakpoint-down(xl) {
-        transform-origin: left bottom;
-        transform: scale(0.5);
+    @include media-breakpoint-up(xl) {
+        transform: scale(0.8);
     }
     .item {
         position: absolute;
@@ -633,11 +624,9 @@ body {
 }
 
 .animate.footer_castle {
+    transform-origin: bottom right;
     @include size(390px, 536px);
-    @include media-breakpoint-down(xl) {
-        transform-origin: right bottom;
-        transform: scale(0.75);
-    }
+
     .item {
         position: absolute;
     }
@@ -663,11 +652,8 @@ body {
 }
 
 .animate.footer_grass {
+    transform-origin: bottom right;
     @include size(1080px, 234px);
-    @include media-breakpoint-down(xl) {
-        transform-origin: right bottom;
-        transform: scale(0.75);
-    }
     .item {
         position: absolute;
     }

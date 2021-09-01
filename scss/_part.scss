@@ -110,7 +110,7 @@
 
 .refer {
     .refer_card {
-        @include Dflex;
+        display: flex;
         justify-content: center;
         margin-bottom: 80px;
 
@@ -118,19 +118,22 @@
         .avatar {
             width: 20%;
             padding: 0%;
-
+            z-index: 0;
             ._img_box {
                 border-radius: 50%;
                 box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.2);
             }
+            @include media-breakpoint-down(md) {
+                width: 35%;
+            }
             @include media-breakpoint-down(sm) {
-                width: 50%;
+                min-width: 175px;
             }
         }
 
         // 文字
         .content {
-            @include Dflex;
+            display: flex;
             justify-content: center;
             align-items: center;
             width: 80%;
@@ -138,22 +141,21 @@
             border-radius: 60px;
             box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
             z-index: -1;
-            p {
-                max-height: 145px;
-                overflow: auto;
-            }
+
             @include media-breakpoint-down(xl) {
-               h3{ font-size: 1.1rem;}
+                h3 {
+                    font-size: 1.1rem;
+                }
             }
             @include media-breakpoint-down(sm) {
-                width: 90%;
-                margin-top: -6%;
-                div {
-                    max-height: 150px;
-                }
+                // width: 90%;
+                // margin-top: -6%;
+                // div {
+                //     max-height: 125px;
+                //     overflow: scroll;
+                // }
                 p {
-                    max-height: 120px;
-                    overflow: auto;
+                    // max-height: 100px;
                 }
             }
         }
@@ -164,14 +166,14 @@
                 margin-left: -6%;
                 padding: 12px 5% 12px 9%;
             }
-            @include media-breakpoint-down(sm) {
-                flex-direction: column;
-                align-items: center;
-                .content {
-                    margin-left: 0;
-                    padding: 10% 5% 12px 5%;
-                }
-            }
+            // @include media-breakpoint-down(sm) {
+            //     flex-direction: column;
+            //     align-items: center;
+            //     .content {
+            //         margin-left: 0;
+            //         padding: 10% 5% 12px 5%;
+            //     }
+            // }
         }
 
         &.text_left {
@@ -183,17 +185,17 @@
                     margin-bottom: 8px;
                 }
             }
-            @include media-breakpoint-down(sm) {
-                flex-direction: column-reverse;
-                align-items: center;
-                .content {
-                    margin-right: 0;
-                    padding: 10% 5% 12px 5%;
-                    h3 {
-                        text-align: start;
-                    }
-                }
-            }
+            // @include media-breakpoint-down(sm) {
+            //     flex-direction: column-reverse;
+            //     align-items: center;
+            //     .content {
+            //         margin-right: 0;
+            //         padding: 10% 5% 12px 5%;
+            //         h3 {
+            //             text-align: start;
+            //         }
+            //     }
+            // }
         }
     }
 }
@@ -223,4 +225,37 @@
         display: block;
     }
 }
-// 平台卡片樣式
+
+// 影片+靜態圖片
+.video_box {
+    width: 100%;
+    margin-bottom: 24px;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+        margin: 0 auto 18px;
+    }
+}
+._img_box {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+    z-index: -2;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
