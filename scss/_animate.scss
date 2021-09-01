@@ -275,18 +275,18 @@ body {
     }
     .ani_2 {
         width: 40%;
-        right: 27%;
+        right: 25%;
         bottom: 5%;
     }
     .ani_3 {
         width: 33%;
-        right: 15%;
+        right: 10%;
         top: 10%;
     }
     .ani_4 {
         width: 25%;
-        left: 25%;
-        top: 10%;
+        left: 20%;
+        top: 5%;
 
         z-index: 1;
     }
@@ -323,13 +323,13 @@ body {
     // 滾動觸發
     &.active {
         .ani_2 {
-            animation: redKidLeft 1s alternate;
+            animation: redKidLeft 1s alternate both;
         }
         .ani_3 {
-            animation: blueKidTop 1s alternate;
+            animation: blueKidTop 1s alternate both;
         }
         .ani_4 {
-            animation: flower 1s alternate;
+            animation: flower 1s alternate both;
         }
     }
 }
@@ -344,20 +344,20 @@ body {
     }
     .ani_1 {
         width: 67%;
-        left: 0%;
+        left: -100%;
         bottom: 0;
         z-index: 10;
     }
 
     .ani_4 {
         width: 65%;
-        left: 30%;
+        left: -100%;
         top: 12%;
     }
     .group {
         width: 57%;
         height: 90%;
-        left: 42%;
+        left: -100%;
         top: 0;
         .ani_2 {
             width: 100%;
@@ -375,21 +375,7 @@ body {
             animation: arms infinite 1s alternate both;
         }
     }
-    // 滾動觸發
-    &.active {
-        .ani_1 {
-            animation: yellowＲectangle 1.5s alternate both;
-            animation-delay: 1s;
-        }
-        .group {
-            animation: girl 1.5s alternate both;
-            animation-delay: 1.5s;
-        }
-        .ani_4 {
-            animation: blueCircle 1.5s alternate both;
-            animation-delay: 2s;
-        }
-    }
+   
 
     @keyframes yellowＲectangle {
         0% {
@@ -424,6 +410,21 @@ body {
         }
         100% {
             left: 30%;
+        }
+    }
+     // 滾動觸發
+     &.active {
+        .ani_1 {
+            animation: yellowＲectangle 1.5s alternate both;
+            // animation-delay: 1s;
+        }
+        .group {
+            animation: girl 1.5s alternate both;
+            animation-delay: .8s;
+        }
+        .ani_4 {
+            animation: blueCircle 1.5s alternate both;
+            animation-delay: 1s;
         }
     }
 }
@@ -486,17 +487,16 @@ body {
     }
     .ani_2 {
         width: 43%;
-        right: 35%;
+        right: 30%;
         bottom: 4%;
         z-index: 6;
-        animation: redKid 1s infinite alternate both;
     }
     .ani_3 {
         width: 44%;
-        right: 25%;
-        top: 10%;
+        right: 20%;
+        top: 15%;
         z-index: 6;
-        animation: orangeKid 1s infinite alternate both;
+     
     }
     .ani_4 {
         width: 78%;
@@ -506,13 +506,13 @@ body {
         width: 9%;
         top: 25%;
         left: 10%;
-        animation: rotateWave 1s infinite alternate both;
+      
     }
     .ani_6 {
         width: 8%;
-        top: 28%;
-        left: 5%;
-        animation: star 1s infinite alternate both;
+        top: 30%;
+        left: 10%;
+       
     }
 
     @keyframes redKid {
@@ -553,6 +553,14 @@ body {
             left: 5%;
         }
     }
+
+    &.active{
+     .ani_2{  animation: redKid 1s  alternate both;}   
+     .ani_3{   animation: orangeKid 1s  alternate both;}   
+     .ani_5{  animation: rotateWave 1s  alternate both;}   
+     .ani_6{ animation: star 1s  alternate both;}   
+    }
+
 }
 
 .animate.feature_content_2 {
