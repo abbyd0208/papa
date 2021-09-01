@@ -276,7 +276,7 @@
 					</div>
 				</div>
 				<!-- 動畫 -->
-				<div class="animate intro_content overflowHidden active">
+				<div class="animate intro_content overflowHidden">
 					<img class="item ani_1" src="images/animate/6_side_01.svg" alt="">
 					<div class="group item ">
 						<img class="ani_2" src="images/animate/6_side_02.svg" alt="">
@@ -710,7 +710,8 @@
 					</div>
 				</div>
 			</section>
-
+			
+		
 			<!-- 動畫 草地 -->
 			<div class="main_end_animate">
 				<div class="leftbox">
@@ -937,34 +938,40 @@
 		// todo scroll magic
 		$(function(){
             // init controller
-            // var controller = new ScrollMagic.Controller();
+            var controller = new ScrollMagic.Controller();
 
             // create a scene
-            // var scene = new ScrollMagic.Scene({
-            //     triggerElement:'#js-visual',
+            var scene = new ScrollMagic.Scene({
+                triggerElement:'.about_conent',
             
-            // })
-            // .setClassToggle('#js-visual','active')
+            })
+            .setClassToggle('.about_conent','active')
             // .addIndicators()
-            // .addTo(controller); // assign the scene to the controller
+            .addTo(controller); // assign the scene to the controller
 
-            // var scene2 = new ScrollMagic.Scene({
-            //     triggerElement:'#js-platform',
-            // })
-            // .setClassToggle('#js-platform','active')
-            // .addTo(controller); 
+            var scene2 = new ScrollMagic.Scene({
+                triggerElement:'.intro_content',
+            })
+            .setClassToggle('.intro_content','active')
+            .addTo(controller); 
             // scene2.offset(-400);
           
 
-            // var scene3 = new ScrollMagic.Scene({
-            //     triggerElement:'#js-service',
-            // })
-            // .setClassToggle('#js-service','active')
-            // .addTo(controller); 
+            var scene3 = new ScrollMagic.Scene({
+                triggerElement:'#platform',
+            })
+            .setClassToggle('#platform','active')
+            .addTo(controller); 
             // scene3.offset(-100);
 
-            //.addTo(scrollMagicController);
-            // controller.addScene([scene, scene2, scene3])
+			var scene4 = new ScrollMagic.Scene({
+                triggerElement:'#main_end_animate',
+            })
+            .setClassToggle('#main_end_animate','active')
+            .addTo(controller); 
+
+            // .addTo(scrollMagicController);
+            controller.addScene([scene, scene2, scene3,scene4])
 
         });
 

@@ -30,7 +30,7 @@ body {
 }
 
 @mixin size($w, $h) {
-    border: 1px solid green;
+    // border: 1px solid green;
     width: $w;
     height: $h;
     position: relative;
@@ -258,12 +258,21 @@ body {
     }
 }
 
+
+
+
 .animate.about_conent {
     @include size(718px, 514px);
+<<<<<<< HEAD
     // @include media-breakpoint-down(xl) {
     //     transform-origin: right bottom;
     //     // transform: scale(0.75);
     // }
+=======
+    @include media-breakpoint-down(xl) {
+        transform-origin: right bottom;
+    }
+>>>>>>> 4f47f1d7efb4402759ba0647b067599136862f04
 
     .item {
         position: absolute;
@@ -278,30 +287,26 @@ body {
         width: 40%;
         right: 27%;
         bottom: 5%;
-        animation: redKidLeft 1s infinite alternate both;
-        animation-delay: -5s;
+        
     }
     .ani_3 {
         width: 33%;
         right: 15%;
         top: 10%;
-        animation: blueKidTop 1s infinite alternate both;
-        animation-delay: -1s;
+      
     }
     .ani_4 {
         width: 25%;
         left: 25%;
         top: 10%;
-        animation: flower 1s infinite alternate both;
-        animation-delay: -0.8s;
+      
         z-index: 1;
     }
     .ani_5 {
     }
-
     @keyframes redKidLeft {
         0% {
-            right: 20%;
+            right: 25%;
         }
         100% {
             right: 27%;
@@ -327,7 +332,22 @@ body {
             top: 10%;
         }
     }
+    // 滾動觸發
+    &.active{
+        .ani_2{
+            animation: redKidLeft 1s  alternate ;
+        } 
+        .ani_3{  
+            animation: blueKidTop 1s  alternate ;
+        }
+        .ani_4{
+            animation: flower 1s  alternate ;
+        }
+    }
 }
+
+
+
 
 .animate.intro_content {
     @include size(382px, 460px);
@@ -367,6 +387,7 @@ body {
             animation: arms infinite 1s alternate both;
         }
     }
+    // 滾動觸發
     &.active {
         .ani_1 {
             animation: yellowＲectangle 1.5s alternate both;
@@ -418,6 +439,7 @@ body {
         }
     }
 }
+
 
 .animate.deco_star {
     @include size(178px, 230px);

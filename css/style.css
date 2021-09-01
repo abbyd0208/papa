@@ -13218,7 +13218,6 @@ body {
 }
 
 .animate.about {
-  border: 1px solid green;
   width: 136px;
   height: 134px;
   position: relative;
@@ -13301,7 +13300,6 @@ body {
 }
 
 .animate.intro {
-  border: 1px solid green;
   width: 126px;
   height: 133px;
   position: relative;
@@ -13370,7 +13368,6 @@ body {
 }
 
 .animate.works {
-  border: 1px solid green;
   width: 126px;
   height: 132px;
   position: relative;
@@ -13427,7 +13424,6 @@ body {
 }
 
 .animate.feature {
-  border: 1px solid green;
   width: 155px;
   height: 122px;
   position: relative;
@@ -13507,7 +13503,6 @@ body {
 }
 
 .animate.about_conent {
-  border: 1px solid green;
   width: 718px;
   height: 514px;
   position: relative;
@@ -13532,33 +13527,21 @@ body {
   width: 40%;
   right: 27%;
   bottom: 5%;
-  -webkit-animation: redKidLeft 1s infinite alternate both;
-          animation: redKidLeft 1s infinite alternate both;
-  -webkit-animation-delay: -5s;
-          animation-delay: -5s;
 }
 .animate.about_conent .ani_3 {
   width: 33%;
   right: 15%;
   top: 10%;
-  -webkit-animation: blueKidTop 1s infinite alternate both;
-          animation: blueKidTop 1s infinite alternate both;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
 }
 .animate.about_conent .ani_4 {
   width: 25%;
   left: 25%;
   top: 10%;
-  -webkit-animation: flower 1s infinite alternate both;
-          animation: flower 1s infinite alternate both;
-  -webkit-animation-delay: -0.8s;
-          animation-delay: -0.8s;
   z-index: 1;
 }
 @-webkit-keyframes redKidLeft {
   0% {
-    right: 20%;
+    right: 25%;
   }
   100% {
     right: 27%;
@@ -13566,7 +13549,7 @@ body {
 }
 @keyframes redKidLeft {
   0% {
-    right: 20%;
+    right: 25%;
   }
   100% {
     right: 27%;
@@ -13608,9 +13591,20 @@ body {
     top: 10%;
   }
 }
+.animate.about_conent.active .ani_2 {
+  -webkit-animation: redKidLeft 1s alternate;
+          animation: redKidLeft 1s alternate;
+}
+.animate.about_conent.active .ani_3 {
+  -webkit-animation: blueKidTop 1s alternate;
+          animation: blueKidTop 1s alternate;
+}
+.animate.about_conent.active .ani_4 {
+  -webkit-animation: flower 1s alternate;
+          animation: flower 1s alternate;
+}
 
 .animate.intro_content {
-  border: 1px solid green;
   width: 382px;
   height: 460px;
   position: relative;
@@ -13740,7 +13734,6 @@ body {
 }
 
 .animate.deco_star {
-  border: 1px solid green;
   width: 178px;
   height: 230px;
   position: relative;
@@ -13811,7 +13804,6 @@ body {
 }
 
 .animate.feature_content {
-  border: 1px solid green;
   width: 736px;
   height: 602px;
   position: relative;
@@ -13938,7 +13930,6 @@ body {
 }
 
 .animate.feature_content_2 {
-  border: 1px solid green;
   width: 606px;
   height: 368px;
   position: relative;
@@ -14052,7 +14043,6 @@ body {
 }
 
 .animate.footer_castle {
-  border: 1px solid green;
   width: 390px;
   height: 536px;
   position: relative;
@@ -14099,7 +14089,6 @@ body {
 }
 
 .animate.footer_grass {
-  border: 1px solid green;
   width: 1080px;
   height: 234px;
   position: relative;
@@ -14175,7 +14164,6 @@ body {
 }
 
 .animate.feature_card_1 {
-  border: 1px solid green;
   width: 276px;
   height: 218px;
   position: relative;
@@ -14292,7 +14280,6 @@ body {
 }
 
 .animate.feature_card_2 {
-  border: 1px solid green;
   width: 270px;
   height: 212px;
   position: relative;
@@ -14412,7 +14399,6 @@ body {
 }
 
 .animate.feature_card_3 {
-  border: 1px solid green;
   width: 300px;
   height: 198px;
   position: relative;
@@ -14519,7 +14505,6 @@ body {
 }
 
 .animate.footer_end {
-  border: 1px solid green;
   width: 506px;
   height: 298px;
   position: relative;
