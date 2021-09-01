@@ -276,7 +276,7 @@
 					</div>
 				</div>
 				<!-- 動畫 -->
-				<div class="animate intro_content overflowHidden active">
+				<div class="animate intro_content overflowHidden">
 					<img class="item ani_1" src="images/animate/6_side_01.svg" alt="">
 					<div class="group item ">
 						<img class="ani_2" src="images/animate/6_side_02.svg" alt="">
@@ -940,17 +940,17 @@
 
             // create a scene
             var scene = new ScrollMagic.Scene({
-                triggerElement:'#about',
+                triggerElement:'.about_conent',
             
             })
-            .setClassToggle('#about','active')
+            .setClassToggle('.about_conent','active')
             // .addIndicators()
             .addTo(controller); // assign the scene to the controller
 
             var scene2 = new ScrollMagic.Scene({
-                triggerElement:'#dad',
+                triggerElement:'.intro_content',
             })
-            .setClassToggle('#dad','active')
+            .setClassToggle('.intro_content','active')
             .addTo(controller); 
             // scene2.offset(-400);
           
