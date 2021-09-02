@@ -118,7 +118,7 @@
         .avatar {
             width: 20%;
             padding: 0%;
-            z-index: 0;
+            z-index: 1;
             ._img_box {
                 border-radius: 50%;
                 box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.2);
@@ -135,12 +135,18 @@
         .content {
             display: flex;
             justify-content: center;
-            align-items: center;
+            flex-direction: column;
             width: 80%;
             background-color: #ffffff;
             border-radius: 60px;
             box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
-            z-index: -1;
+            z-index: 0;
+
+            div {
+                @include media-breakpoint-down(sm) {
+                    overflow: auto;
+                }
+            }
 
             @include media-breakpoint-down(xl) {
                 h3 {
@@ -251,7 +257,7 @@
     height: 0;
     padding-bottom: 100%;
     overflow: hidden;
-    z-index: -2;
+    z-index: 0;
     img {
         position: absolute;
         top: 0;

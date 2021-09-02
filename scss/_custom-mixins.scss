@@ -308,6 +308,15 @@
 // }
 
 //小愛爸爸 計算標題圖片寬度
+@function calculateImgWidth($size, $num) {
+    @return ($size * $num);
+}
+
+@function calculateImgWidth-phone($size, $num) {
+    $ans: ($size * $num) + 30px;
+    @return $ans;
+}
+
 @mixin img-title($num) {
     margin: 0 auto 80px;
     width: calculateImgWidth(62px, $num);
@@ -355,13 +364,4 @@
     @include media-breakpoint-down(xs) {
         width: calculateImgWidth-phone(42.5px, $num);
     }
-}
-
-@function calculateImgWidth($size, $num) {
-    @return ($size * $num);
-}
-
-@function calculateImgWidth-phone($size, $num) {
-    $ans: ($size * $num) + 30px;
-    @return $ans;
 }

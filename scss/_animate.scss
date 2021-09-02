@@ -1,6 +1,6 @@
-body {
-    background-color: #eee;
-}
+// body {
+//     background-color: #eee;
+// }
 .animate {
     border: 1px solid #eee;
     img {
@@ -375,7 +375,6 @@ body {
             animation: arms infinite 1s alternate both;
         }
     }
-   
 
     @keyframes yellowＲectangle {
         0% {
@@ -412,15 +411,15 @@ body {
             left: 30%;
         }
     }
-     // 滾動觸發
-     &.active {
+    // 滾動觸發
+    &.active {
         .ani_1 {
             animation: yellowＲectangle 1.5s alternate both;
             // animation-delay: 1s;
         }
         .group {
             animation: girl 1.5s alternate both;
-            animation-delay: .8s;
+            animation-delay: 0.8s;
         }
         .ani_4 {
             animation: blueCircle 1.5s alternate both;
@@ -496,7 +495,6 @@ body {
         right: 20%;
         top: 15%;
         z-index: 6;
-     
     }
     .ani_4 {
         width: 78%;
@@ -506,13 +504,11 @@ body {
         width: 9%;
         top: 25%;
         left: 10%;
-      
     }
     .ani_6 {
         width: 8%;
         top: 30%;
         left: 10%;
-       
     }
 
     @keyframes redKid {
@@ -554,13 +550,20 @@ body {
         }
     }
 
-    &.active{
-     .ani_2{  animation: redKid 1s  alternate both;}   
-     .ani_3{   animation: orangeKid 1s  alternate both;}   
-     .ani_5{  animation: rotateWave 1s  alternate both;}   
-     .ani_6{ animation: star 1s  alternate both;}   
+    &.active {
+        .ani_2 {
+            animation: redKid 1s alternate both;
+        }
+        .ani_3 {
+            animation: orangeKid 1s alternate both;
+        }
+        .ani_5 {
+            animation: rotateWave 1s alternate both;
+        }
+        .ani_6 {
+            animation: star 1s alternate both;
+        }
     }
-
 }
 
 .animate.feature_content_2 {
@@ -936,10 +939,6 @@ body {
 
 .animate.footer_end {
     @include size(506px, 298px);
-    @include media-breakpoint-down(xl) {
-        transform-origin: left bottom;
-        transform: scale(0.7);
-    }
     .item {
         position: absolute;
     }
