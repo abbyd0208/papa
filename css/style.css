@@ -9272,6 +9272,37 @@ footer {
             font-size: 1.125rem;
             margin-bottom: 1px; } }
 
+html, body {
+  height: 100%; }
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background: url(../images/loading/backgrouhd_01.jpg) center center no-repeat;
+  background-size: cover; }
+  .loading .content {
+    width: 80vw;
+    border: 1px solid green;
+    height: 80px; }
+
+.wrapper.cover {
+  height: 100%;
+  overflow: hidden; }
+
 .main {
   border: 2px solid purple;
   padding-top: 228px;
