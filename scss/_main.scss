@@ -77,7 +77,8 @@ section {
 // 背景圖設置
 .bg_video {
     background: url(../images/bg_video.png) center center no-repeat;
-    background-size: contain;
+    // ab改
+    background-size: cover;
     @include media-breakpoint-down(md) {
         background: none;
     }
@@ -91,14 +92,16 @@ section {
 }
 .bg_platform {
     background: url(../images/bg_paltform.png) center bottom no-repeat;
-    background-size: contain;
+    // ab改
+    background-size: cover;
     @include media-breakpoint-down(md) {
         background: none;
     }
 }
 .bg_recommend {
     background: url(../images/bg_recommend.png) center center no-repeat;
-    background-size: contain;
+    // ab改
+    background-size: cover;
     @include media-breakpoint-down(md) {
         background: none;
     }

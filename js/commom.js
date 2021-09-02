@@ -175,32 +175,45 @@ $(function () {
     var scene = new ScrollMagic.Scene({
         triggerElement: '.about_conent',
     })
-        .setClassToggle('.about_conent', 'active')
-        .addTo(controller); // assign the scene to the controller
+    .setClassToggle('.about_conent', 'active')
+    .addTo(controller); // assign the scene to the controller
 
     var scene2 = new ScrollMagic.Scene({
         triggerElement: '.intro_content',
     })
-        .setClassToggle('.intro_content', 'active')
-        .addTo(controller);
+    .setClassToggle('.intro_content', 'active')
+    .addTo(controller);
 
     var scene3 = new ScrollMagic.Scene({
         triggerElement: '.feature_content',
     })
-        .setClassToggle('.feature_content', 'active')
-        .addTo(controller);
+    .setClassToggle('.feature_content', 'active')
+    .addTo(controller);
 
     var scene4 = new ScrollMagic.Scene({
         triggerElement: '.feature_content_2',
     })
-        .setClassToggle('.feature_content_2', 'active')
-        .addTo(controller);
+    .setClassToggle('.feature_content_2', 'active')
+    .addTo(controller);
 
     var scene5 = new ScrollMagic.Scene({
+        triggerElement: '.footer_castle',
+    })
+    .setClassToggle('.footer_castle', 'active')
+    .addTo(controller);
+    
+        
+    var scene6 = new ScrollMagic.Scene({
         triggerElement: '#main_end_animate',
     })
-        .setClassToggle('#main_end_animate', 'active')
-        .addTo(controller);
+    .setClassToggle('#main_end_animate', 'active')
+    .addTo(controller);
 
-    controller.addScene([scene, scene2, scene3, scene4, scene5]);
+    scene2.offset(-200); 
+    scene3.offset(-200); 
+    scene4.offset(-200); 
+    scene5.offset(-200); 
+    scene6.offset(-400);
+
+    controller.addScene([scene, scene2, scene3, scene4, scene5,scene6]);
 });
