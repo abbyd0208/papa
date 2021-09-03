@@ -10,14 +10,40 @@ html,body{ height: 100%;}
     top:0;
     z-index: 1000;
     overflow: hidden;
-    background:url(../images/loading/backgrouhd_01.jpg) center center no-repeat;
+    background: $background  center center no-repeat ;
     background-size: cover;
+    transition: opacity .5s linear;
     .content{
-        width: 80vw;
-        border: 1px solid green;
-        height: 80px;
+        width: 60vw;
+        height: 10vh;
+        display: flex; 
+        justify-content: center;
+        align-items: flex-end;
+        // border: 1px solid green;
+        .word{
+            transform:translateY(0px);
+            height: 100%; margin: 0 .5%;
+            &.sm{ height: 30%;}
+        }
+        img{
+            width: auto; height: 100%;
+        }
     }
 
+    @keyframes loading {
+        0%{ transform:translateY(-20px);}
+        80%{ transform:translateY(0px);}
+        100%{transform:translateY(-20px);}
+    }
+
+  
+
+    @for $i from 1 to 11 {
+        .word_#{$i}{ 
+            animation: loading 1s linear infinite  both;
+            animation-delay:$i*.1s
+        }
+    }
 }
 
 .wrapper.cover{ height: 100%; overflow: hidden;}

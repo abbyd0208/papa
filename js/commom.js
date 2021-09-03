@@ -1,4 +1,13 @@
 $(document).ready(function () {
+
+    setTimeout(function(){
+        $('.loading').css({'visibility':'hidden', 'opacity':0});
+        $('.wrapper').removeClass('cover')
+    },3000);
+
+
+
+
     var Timer = null;
     var IsClose = false;
     var navH;

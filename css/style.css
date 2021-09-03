@@ -9292,12 +9292,106 @@ html, body {
   top: 0;
   z-index: 1000;
   overflow: hidden;
-  background: url(../images/loading/backgrouhd_01.jpg) center center no-repeat;
-  background-size: cover; }
+  background: #fff6e5 center center no-repeat;
+  background-size: cover;
+  -webkit-transition: opacity .5s linear;
+  -o-transition: opacity .5s linear;
+  transition: opacity .5s linear; }
   .loading .content {
-    width: 80vw;
-    border: 1px solid green;
-    height: 80px; }
+    width: 60vw;
+    height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    .loading .content .word {
+      -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      transform: translateY(0px);
+      height: 100%;
+      margin: 0 .5%; }
+      .loading .content .word.sm {
+        height: 30%; }
+    .loading .content img {
+      width: auto;
+      height: 100%; }
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  80% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); } }
+
+@keyframes loading {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  80% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); } }
+  .loading .word_1 {
+    -webkit-animation: loading 1s linear infinite  both;
+    animation: loading 1s linear infinite  both;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s; }
+  .loading .word_2 {
+    -webkit-animation: loading 1s linear infinite  both;
+    animation: loading 1s linear infinite  both;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s; }
+  .loading .word_3 {
+    -webkit-animation: loading 1s linear infinite  both;
+    animation: loading 1s linear infinite  both;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s; }
+  .loading .word_4 {
+    -webkit-animation: loading 1s linear infinite  both;
+    animation: loading 1s linear infinite  both;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s; }
+  .loading .word_5 {
+    -webkit-animation: loading 1s linear infinite  both;
+    animation: loading 1s linear infinite  both;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s; }
+  .loading .word_6 {
+    -webkit-animation: loading 1s linear infinite  both;
+    animation: loading 1s linear infinite  both;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s; }
+  .loading .word_7 {
+    -webkit-animation: loading 1s linear infinite  both;
+    animation: loading 1s linear infinite  both;
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s; }
+  .loading .word_8 {
+    -webkit-animation: loading 1s linear infinite  both;
+    animation: loading 1s linear infinite  both;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s; }
+  .loading .word_9 {
+    -webkit-animation: loading 1s linear infinite  both;
+    animation: loading 1s linear infinite  both;
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s; }
+  .loading .word_10 {
+    -webkit-animation: loading 1s linear infinite  both;
+    animation: loading 1s linear infinite  both;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s; }
 
 .wrapper.cover {
   height: 100%;
