@@ -30,7 +30,6 @@
 }
 
 @mixin size($w, $h) {
-    // border: 1px solid green;
     width: $w;
     height: $h;
     position: relative;
@@ -281,13 +280,12 @@
     .ani_3 {
         width: 33%;
         right: 10%;
-        top: 10%;
+        top: 15%;
     }
     .ani_4 {
         width: 25%;
-        left: 20%;
-        top: 5%;
-
+        left: 25%;
+        top: 10%;
         z-index: 1;
     }
     .ani_5 {
@@ -312,12 +310,12 @@
 
     @keyframes flower {
         0% {
-            left: 20%;
-            top: 5%;
-        }
-        100% {
             left: 25%;
             top: 10%;
+        }
+        100% {
+            left: 20%;
+            top: 5%;
         }
     }
     // 滾動觸發
@@ -577,7 +575,9 @@
     }
     .group {
         width: 90%;
-        // animation: eleMove 5s infinite alternate both;
+        left: -100%;
+        border: 1px solid red;
+
     }
     .ani_1 {
         width: 100%;
@@ -632,6 +632,10 @@
             transform: rotate(360deg);
         }
     }
+
+    &.active{
+        .group{  animation: eleMove 1.5s  alternate both;}
+    }
 }
 
 .animate.footer_castle {
@@ -645,7 +649,7 @@
         width: 23%;
         left: 58%;
         top: 15%;
-        animation: flag 2s ease-in-out infinite alternate both;
+        
     }
     .ani_2 {
         width: 100%;
@@ -658,6 +662,11 @@
         }
         100% {
             top: 0%;
+        }
+    }
+    &.active{
+        .ani_1{
+            animation: flag .8s ease-in-out alternate both;
         }
     }
 }
@@ -985,6 +994,10 @@
         top: 10%;
     }
 
+   
+}
+
+#main_end_animate{
     &.active {
         .ani_1,
         .ani_2,
