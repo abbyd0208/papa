@@ -10,8 +10,12 @@ html,body{ height: 100%;}
     top:0;
     z-index: 1000;
     overflow: hidden;
-    background: $background  center center no-repeat ;
-    background-size: cover;
+    background: $background no-repeat;
+    background-image: url(../images/loading/cloud_left.png) , url(../images/loading/clould-right.png);
+    background-position: left 10%, right 60%;
+    background-size: 30%, 30%;
+
+    // background-size: cover;
     transition: opacity .5s linear;
     .content{
         width: 60vw;
@@ -71,6 +75,7 @@ section {
     // margin-bottom: 190px;
     padding: 120px 0;
     @include media-breakpoint-down(md) {
+        border: 1px solid green;
         padding: 100px 0;
     }
 

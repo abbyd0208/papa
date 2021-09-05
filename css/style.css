@@ -9292,8 +9292,10 @@ html, body {
   top: 0;
   z-index: 1000;
   overflow: hidden;
-  background: #fff6e5 center center no-repeat;
-  background-size: cover;
+  background: #fff6e5 no-repeat;
+  background-image: url(../images/loading/cloud_left.png), url(../images/loading/clould-right.png);
+  background-position: left 10%, right 60%;
+  background-size: 30%, 30%;
   -webkit-transition: opacity .5s linear;
   -o-transition: opacity .5s linear;
   transition: opacity .5s linear; }
@@ -10312,11 +10314,11 @@ section {
   .animate.about_conent .ani_3 {
     width: 33%;
     right: 10%;
-    top: 10%; }
+    top: 15%; }
   .animate.about_conent .ani_4 {
     width: 25%;
-    left: 20%;
-    top: 5%;
+    left: 25%;
+    top: 10%;
     z-index: 1; }
 
 @-webkit-keyframes redKidLeft {
@@ -10345,19 +10347,19 @@ section {
 
 @-webkit-keyframes flower {
   0% {
-    left: 20%;
-    top: 5%; }
-  100% {
     left: 25%;
-    top: 10%; } }
+    top: 10%; }
+  100% {
+    left: 20%;
+    top: 5%; } }
 
 @keyframes flower {
   0% {
-    left: 20%;
-    top: 5%; }
-  100% {
     left: 25%;
-    top: 10%; } }
+    top: 10%; }
+  100% {
+    left: 20%;
+    top: 5%; } }
   .animate.about_conent.active .ani_2 {
     -webkit-animation: redKidLeft 1s alternate both;
     animation: redKidLeft 1s alternate both; }

@@ -5,9 +5,6 @@ $(document).ready(function () {
         $('.wrapper').removeClass('cover')
     },3000);
 
-
-
-
     var Timer = null;
     var IsClose = false;
     var navH;
