@@ -166,7 +166,7 @@ section {
 .content {
     position: relative;
     @include media-breakpoint-down(sm) {
-        max-height: 172px;
+        height: 172px;
     }
 }
 .content.unfold {
