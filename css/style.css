@@ -9495,7 +9495,7 @@ section {
   position: relative; }
   @media (max-width: 767.98px) {
     .content {
-      max-height: 172px; } }
+      height: 172px; } }
 
 .content.unfold {
   height: 100%; }
@@ -9863,7 +9863,7 @@ section {
   cursor: pointer;
   font-size: 0.9rem; }
   .flip i {
-    background-image: url(../image/plus.png);
+    background-image: url(../images/plus.png);
     width: 12px;
     height: 12px;
     border: 0px;
