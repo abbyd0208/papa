@@ -36,20 +36,20 @@
 }
 
 .works_slide {
-    border: 1px solid green;
+    border: 0px solid green;
     .slick-dots {
-        border: 2px solid orange;
+        border: 0px solid orange;
         width: 200px;
         bottom: auto;
         right: 10%;
         top: -15%;
         li {
-            // *{ border: 1px solid red;}
+            // *{ border: 0px solid red;}
             margin: 0%;
             width: 35px;
             height: 35px;
             line-height: 35px;
-            // border: 1px solid blue;
+            // border: 0px solid blue;
             button:before {
                 width: 35px;
                 height: 35px;
@@ -68,7 +68,7 @@
     }
     .slick-arrow {
         z-index: 100;
-        // border: 2px solid red;
+        // border: 0px solid red;
         &.slick-next {
             right: 10%;
         }
@@ -91,7 +91,6 @@
     }
 
     @include media-breakpoint-down(xl) {
-        border: 1px solid pink;
     }
 
     @include media-breakpoint-down(md) {
@@ -107,6 +106,11 @@
             &.slick-prev {
                 left: 20px;
             }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .slick-dots{
+            top: -10%;
         }
     }
 }

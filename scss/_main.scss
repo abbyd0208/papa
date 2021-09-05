@@ -23,7 +23,7 @@ html,body{ height: 100%;}
         display: flex; 
         justify-content: center;
         align-items: flex-end;
-        // border: 1px solid green;
+        // border: 0px solid green;
         .word{
             transform:translateY(0px);
             height: 100%; margin: 0 .5%;
@@ -60,7 +60,7 @@ html,body{ height: 100%;}
 .wrapper.cover{ height: 100%; overflow: hidden;}
 
 .main {
-    border: 2px solid purple;
+    border: 0px solid purple;
     padding-top: 228px;
     overflow: hidden;
     position: relative;
@@ -77,13 +77,18 @@ html,body{ height: 100%;}
 
 // 動畫
 section {
-    // border: 1px solid red;
+    // border: 0px solid red;
     position: relative;
     // margin-bottom: 190px;
     padding: 120px 0;
     @include media-breakpoint-down(md) {
-        border: 1px solid green;
+        border: 0px solid green;
         padding: 100px 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        border: 0px solid hotpink;
+        padding: 60px 0;
     }
 
     &:first-child {
@@ -101,6 +106,9 @@ section {
             @include media-breakpoint-down(md) {
                 top: -115px;
             }
+            @include media-breakpoint-down(sm) {
+                top: -150px;
+            }
         }
         &.intro_content {
             position: absolute;
@@ -112,6 +120,10 @@ section {
             position: absolute;
             right: -160px;
             top: -300px;
+            @include media-breakpoint-down(sm) {
+                right: -75px;
+                top: -250px;
+            }
         }
         &.feature_content_2 {
             position: absolute;
@@ -133,6 +145,16 @@ section {
         position: absolute;
         right: 0%;
         bottom: 0;
+    }
+    @include media-breakpoint-down(sm) {
+        .leftbox {
+            right: 0%;
+        }
+        .rightbox{
+            .animate{
+                transform: scale(0.3);
+            }
+        }
     }
 }
 
@@ -166,6 +188,9 @@ section {
     background-size: cover;
     @include media-breakpoint-down(md) {
         background: none;
+    }
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 65px;
     }
 }
 
@@ -240,6 +265,12 @@ section {
     @include media-breakpoint-down(md) {
         width: 93%;
         margin-bottom: 0px;
+    }
+
+    @include media-breakpoint-down(sm) {
+       .content{
+           height: auto;
+       }
     }
 
     p {
@@ -325,6 +356,11 @@ section {
 .work_section {
     .web_title {
         @include img-title(4);
+        @include media-breakpoint-down(sm){
+            margin: 0;
+            margin-bottom: 32px;
+            padding-left: 15px;
+        }
     }
 }
 
@@ -335,7 +371,7 @@ section {
     }
     .phone_title {
         @include img-title-phone(4);
-        margin: 0 auto 32px;
+        margin-bottom:32px;
     }
 }
 
