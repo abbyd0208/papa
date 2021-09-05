@@ -74,7 +74,7 @@ $(document).ready(function () {
             {
                 breakpoint: 1550,
                 settings: {
-                    arrows: false,
+                    arrows: true,
                     centerMode: true,
                     centerPadding: '200px',
                     slidesToShow: 1,

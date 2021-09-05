@@ -9394,6 +9394,10 @@ html, body {
     animation: loading 1s linear infinite  both;
     -webkit-animation-delay: 1s;
     animation-delay: 1s; }
+  @media (max-width: 767.98px) {
+    .loading .content {
+      width: 40vw;
+      height: 5vh; } }
 
 .wrapper.cover {
   height: 100%;
@@ -9419,6 +9423,7 @@ section {
   padding: 120px 0; }
   @media (max-width: 991.98px) {
     section {
+      border: 1px solid green;
       padding: 100px 0; } }
   section:first-child {
     padding-top: 0; }
@@ -9565,7 +9570,8 @@ section {
       width: 80%; } }
   @media (max-width: 991.98px) {
     .video_block {
-      width: 93%; } }
+      width: 93%;
+      margin-bottom: 0px; } }
   .video_block p {
     margin-bottom: 18px; }
   .video_block ._sub_btn {
@@ -9931,7 +9937,7 @@ section {
     width: 200px;
     bottom: auto;
     right: 10%;
-    top: -5%; }
+    top: -15%; }
     .works_slide .slick-dots li {
       margin: 0%;
       width: 35px;
@@ -10018,9 +10024,9 @@ section {
     overflow: hidden; }
   @media (max-width: 1399.98px) {
     .animate {
-      -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-      transform: scale(0.8); } }
+      -webkit-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+      transform: scale(0.75); } }
   @media (max-width: 1199.98px) {
     .animate {
       -webkit-transform: scale(0.6);

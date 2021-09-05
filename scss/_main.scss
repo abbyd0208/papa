@@ -48,6 +48,13 @@ html,body{ height: 100%;}
             animation-delay:$i*.1s
         }
     }
+
+    @include media-breakpoint-down(sm) {
+        .content{
+            width: 40vw;
+            height: 5vh;
+        }
+    }
 }
 
 .wrapper.cover{ height: 100%; overflow: hidden;}
@@ -232,6 +239,7 @@ section {
 
     @include media-breakpoint-down(md) {
         width: 93%;
+        margin-bottom: 0px;
     }
 
     p {
