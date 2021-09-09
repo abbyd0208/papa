@@ -58,7 +58,8 @@ $grid-breakpoints: map-merge(
         md: 768px,
         lg: 992px,
         xl: 1200px,
-        xxl: 1400px //新增,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        xxl: 1400px,
+        xxxl: 1920px  //新增,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     ),
     $grid-breakpoints
 );
