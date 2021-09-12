@@ -9916,12 +9916,6 @@ footer {
 html, body {
   height: 100%; }
 
-body {
-  border: 2px solid pink; }
-
-body {
-  border: 3px solid green; }
-
 .loading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10129,29 +10123,50 @@ section {
       transform: scale(0.3); } }
 
 .bg_video {
-  background: url(../images/bg_video.png) center center no-repeat;
-  background-size: cover; }
+  background: url(../images/video_l.svg);
+  background-position: 100px top;
+  background-size: 100px auto;
+  background-repeat: no-repeat;
+  position: relative; }
+  .bg_video .bg {
+    width: 1400px;
+    position: absolute;
+    right: 0;
+    top: -100px;
+    z-index: -1; }
+  @media (max-width: 1399.98px) {
+    .bg_video {
+      background-size: 3% auto; }
+      .bg_video .bg {
+        width: 90%;
+        position: absolute;
+        right: 0;
+        top: -85px; } }
   @media (max-width: 991.98px) {
     .bg_video {
       background: none; } }
 
 .bg_intro {
-  background: url(../images/bg_intro.png) left bottom no-repeat;
-  background-size: 50% auto; }
+  background: url(../images/intro_l.svg) left bottom no-repeat;
+  background-size: 960 auto; }
   @media (max-width: 991.98px) {
     .bg_intro {
       background: none; } }
 
 .bg_platform {
-  background: url(../images/bg_paltform.png) center bottom no-repeat;
-  background-size: cover; }
+  background: url(../images/platform_l.svg), url(../images/platform_r.svg);
+  background-position: -50px top, right bottom;
+  background-size: 500px auto,1200px auto;
+  background-repeat: no-repeat; }
   @media (max-width: 991.98px) {
     .bg_platform {
       background: none; } }
 
 .bg_recommend {
-  background: url(../images/bg_recommend.png) center center no-repeat;
-  background-size: cover; }
+  background: url(../images/recommend_l.svg), url(../images/recommend_r.svg);
+  background-position: 30px center, right center;
+  background-size: 230px auto, 56px auto;
+  background-repeat: no-repeat; }
   @media (max-width: 991.98px) {
     .bg_recommend {
       background: none; } }
@@ -10622,7 +10637,7 @@ section {
     width: 200px;
     bottom: auto;
     right: 10%;
-    top: -15%; }
+    top: -80px; }
     .works_slide .slick-dots li {
       margin: 0%;
       width: 35px;

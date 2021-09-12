@@ -1,5 +1,6 @@
 html,body{ height: 100%;}
 
+
 .loading{
    display: flex;
    align-items: center;
@@ -161,32 +162,46 @@ section {
 
 // 背景圖設置
 .bg_video {
-    background: url(../images/bg_video.png) center center no-repeat;
-    // ab改
-    background-size: cover;
+    background: url(../images/video_l.svg);
+    background-position: 100px top;
+    background-size: 100px auto;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .bg{ width: 1400px; position: absolute; right: 0; top: -100px; z-index: -1;}
+
+    @include media-breakpoint-down(xl) {
+        
+        background-size: 3% auto;
+        .bg{ width: 90%; position: absolute; right: 0; top: -85px; }
+    }
+
     @include media-breakpoint-down(md) {
         background: none;
     }
+    
 }
 .bg_intro {
-    background: url(../images/bg_intro.png) left bottom no-repeat;
-    background-size: 50% auto;
+    background: url(../images/intro_l.svg) left bottom no-repeat;
+    background-size: 960 auto;
     @include media-breakpoint-down(md) {
         background: none;
     }
 }
 .bg_platform {
-    background: url(../images/bg_paltform.png) center bottom no-repeat;
-    // ab改
-    background-size: cover;
+    background: url(../images/platform_l.svg), url(../images/platform_r.svg);
+    background-position: -50px top, right bottom;
+    background-size: 500px auto,1200px auto;
+    background-repeat: no-repeat;
     @include media-breakpoint-down(md) {
         background: none;
     }
 }
 .bg_recommend {
-    background: url(../images/bg_recommend.png) center center no-repeat;
-    // ab改
-    background-size: cover;
+    background: url(../images/recommend_l.svg), url(../images/recommend_r.svg);
+    background-position: 30px center, right center;
+    background-size: 230px auto, 56px auto;
+    background-repeat: no-repeat;
     @include media-breakpoint-down(md) {
         background: none;
     }
