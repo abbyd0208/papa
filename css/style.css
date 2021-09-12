@@ -10144,7 +10144,9 @@ section {
         top: -85px; } }
   @media (max-width: 991.98px) {
     .bg_video {
-      background: none; } }
+      background: none; }
+      .bg_video .bg {
+        display: none; } }
 
 .bg_intro {
   background: url(../images/intro_l.svg) left bottom no-repeat;

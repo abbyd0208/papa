@@ -178,6 +178,7 @@ section {
 
     @include media-breakpoint-down(md) {
         background: none;
+        .bg{ display: none;}
     }
     
 }
