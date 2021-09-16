@@ -9874,22 +9874,23 @@ footer {
     display: -ms-flexbox;
     display: flex; }
     footer .footer_menu .item {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      display: inline-block;
       word-break: keep-all;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between; }
-      footer .footer_menu .item em {
-        display: inline-block;
-        font-style: normal;
-        padding: 0 3%; }
+      padding: 0 3%;
+      border-right: 1px solid #fff;
+      text-align: center; }
+      footer .footer_menu .item a {
+        display: inline-block; }
+      footer .footer_menu .item:nth-last-of-type(1) {
+        border: 0px; }
     @media (max-width: 991.98px) {
       footer .footer_menu {
         display: block; }
-        footer .footer_menu em {
-          display: inline-block; } }
+        footer .footer_menu .item {
+          display: block;
+          text-align: left;
+          border-right: 0px;
+          padding: 0; } }
   footer .designed_by {
     padding: 0 15px;
     text-align: center; }

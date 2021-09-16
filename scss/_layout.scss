@@ -471,16 +471,23 @@ footer {
     .footer_menu{
         // border: 1px solid green;
         display: flex;
-       
+    //    *{ border: 1px solid red;}
         .item{
-            display: flex;
+            display: inline-block;
             word-break:keep-all ;
-            justify-content: space-between;
-            em{ display: inline-block; font-style: normal; padding: 0 3%;}
+            padding: 0 3%;
+            border-right:1px solid #fff ;
+            text-align: center;
+            a{ display: inline-block;}
+            // em{ display: inline-block; font-style: normal; }
+            &:nth-last-of-type(1){
+                border: 0px;
+            }
         }
         @include media-breakpoint-down(md) {
           display: block;
-          em{ display: inline-block;}
+          .item{ display: block; text-align: left; border-right:0px ; padding: 0;}
+        //   em{ display: inline-block;}
         }
     }
 
