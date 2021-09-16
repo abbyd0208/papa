@@ -9677,7 +9677,7 @@ header .sticky_nav {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 500;
   -webkit-transform: translate(0, -100%);
   -ms-transform: translate(0, -100%);
   transform: translate(0, -100%);
@@ -9850,6 +9850,10 @@ footer {
       padding-bottom: 200px; } }
   footer a {
     color: inherit; }
+  footer hr {
+    width: 100%;
+    background-color: #fff;
+    height: 1px; }
   footer .footer_logo img {
     width: 280px;
     margin: 0 auto; }
@@ -9865,6 +9869,27 @@ footer {
     @media (max-width: 575.98px) {
       footer .footer_logo img {
         display: none; } }
+  footer .footer_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    footer .footer_menu .item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      word-break: keep-all;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      footer .footer_menu .item em {
+        display: inline-block;
+        font-style: normal;
+        padding: 0 3%; }
+    @media (max-width: 991.98px) {
+      footer .footer_menu {
+        display: block; }
+        footer .footer_menu em {
+          display: inline-block; } }
   footer .designed_by {
     padding: 0 15px;
     text-align: center; }
@@ -11560,6 +11585,11 @@ section {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1); } }
+  @media (max-width: 1199.98px) {
+    .animate.feature_card_1 {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8); } }
   .animate.feature_card_1 .item {
     position: absolute; }
   .animate.feature_card_1 .ani_1 {
@@ -11572,9 +11602,7 @@ section {
     bottom: 10%;
     -webkit-transform-origin: center bottom;
     -ms-transform-origin: center bottom;
-    transform-origin: center bottom;
-    -webkit-animation: armRotateLeft 1s infinite alternate both;
-    animation: armRotateLeft 1s infinite alternate both; }
+    transform-origin: center bottom; }
   .animate.feature_card_1 .ani_3 {
     width: 50%;
     right: 0;
@@ -11585,21 +11613,41 @@ section {
     bottom: 10%;
     -webkit-transform-origin: center bottom;
     -ms-transform-origin: center bottom;
-    transform-origin: center bottom;
-    -webkit-animation: armRotateRight 1s infinite alternate both;
-    animation: armRotateRight 1s infinite alternate both; }
+    transform-origin: center bottom; }
   .animate.feature_card_1 .ani_5 {
     width: 14%;
-    top: 45%;
+    top: 46%;
     left: 18.5%; }
   .animate.feature_card_1 .ani_6 {
     width: 14%;
-    top: 45%;
+    top: 46%;
     right: 18%; }
-  .animate.feature_card_1 .ani_5,
-  .animate.feature_card_1 .ani_6 {
+  .animate.feature_card_1.mobile .ani_2 {
+    -webkit-animation: armRotateLeft 1s infinite alternate both;
+    animation: armRotateLeft 1s infinite alternate both; }
+  .animate.feature_card_1.mobile .ani_4 {
+    -webkit-animation: armRotateRight 1s infinite alternate both;
+    animation: armRotateRight 1s infinite alternate both; }
+  .animate.feature_card_1.mobile .ani_5,
+  .animate.feature_card_1.mobile .ani_6 {
     -webkit-animation: mouseUp 1s ease-in-out infinite alternate both;
     animation: mouseUp 1s ease-in-out infinite alternate both; }
+  .animate.feature_card_1:hover .ani_2 {
+    -webkit-animation: armRotateLeft .5s alternate both;
+    animation: armRotateLeft .5s alternate both;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
+  .animate.feature_card_1:hover .ani_4 {
+    -webkit-animation: armRotateRight .5s alternate both;
+    animation: armRotateRight .5s alternate both;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
+  .animate.feature_card_1:hover .ani_5,
+  .animate.feature_card_1:hover .ani_6 {
+    -webkit-animation: mouseUp .5s ease-in-out alternate both;
+    animation: mouseUp .5s ease-in-out alternate both;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
 
 @-webkit-keyframes mouseUp {
   0%,
@@ -11662,6 +11710,11 @@ section {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1); } }
+  @media (max-width: 1199.98px) {
+    .animate.feature_card_2 {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8); } }
   .animate.feature_card_2 .item {
     position: absolute; }
   .animate.feature_card_2 .ani_1 {
@@ -11674,9 +11727,7 @@ section {
     bottom: 10%;
     -webkit-transform-origin: center bottom;
     -ms-transform-origin: center bottom;
-    transform-origin: center bottom;
-    -webkit-animation: thinkRotate 1s ease infinite alternate both;
-    animation: thinkRotate 1s ease infinite alternate both; }
+    transform-origin: center bottom; }
   .animate.feature_card_2 .ani_3 {
     width: 56%;
     right: 0;
@@ -11687,14 +11738,34 @@ section {
     right: 5%;
     -webkit-transform-origin: right top;
     -ms-transform-origin: right top;
-    transform-origin: right top;
-    -webkit-animation: paperRotate 1s ease infinite alternate both;
-    animation: paperRotate 1s ease infinite alternate both; }
+    transform-origin: right top; }
   .animate.feature_card_2 .ani_5 {
     width: 8%;
-    left: 48%;
+    left: 48%; }
+  .animate.feature_card_2.mobile .ani_2 {
+    -webkit-animation: thinkRotate 1s ease infinite alternate both;
+    animation: thinkRotate 1s ease infinite alternate both; }
+  .animate.feature_card_2.mobile .ani_4 {
+    -webkit-animation: paperRotate 1s ease infinite alternate both;
+    animation: paperRotate 1s ease infinite alternate both; }
+  .animate.feature_card_2.mobile .ani_5 {
     -webkit-animation: markRotate 1s ease infinite alternate both;
     animation: markRotate 1s ease infinite alternate both; }
+  .animate.feature_card_2:hover .ani_2 {
+    -webkit-animation: thinkRotate 1s ease alternate both;
+    animation: thinkRotate 1s ease alternate both;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
+  .animate.feature_card_2:hover .ani_4 {
+    -webkit-animation: paperRotate 1s ease alternate both;
+    animation: paperRotate 1s ease alternate both;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
+  .animate.feature_card_2:hover .ani_5 {
+    -webkit-animation: markRotate 1s ease alternate both;
+    animation: markRotate 1s ease alternate both;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
 
 @-webkit-keyframes thinkRotate {
   0%,
@@ -11769,43 +11840,86 @@ section {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1); } }
+  @media (max-width: 1199.98px) {
+    .animate.feature_card_3 {
+      -webkit-transform: scale(0.8) translateX(-15px);
+      -ms-transform: scale(0.8) translateX(-15px);
+      transform: scale(0.8) translateX(-15px); } }
   .animate.feature_card_3 .item {
     position: absolute; }
   .animate.feature_card_3 .ani_1 {
     width: 52%;
     left: 0;
     bottom: 0;
-    -webkit-animation: moveRight 0.8s ease infinite alternate both;
-    animation: moveRight 0.8s ease infinite alternate both; }
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom; }
   .animate.feature_card_3 .ani_2 {
     width: 48%;
     right: 0;
     bottom: 0;
-    -webkit-animation: moveLeft 0.8s ease infinite alternate both;
-    animation: moveLeft 0.8s ease infinite alternate both; }
-  .animate.feature_card_3 .ani_3,
-  .animate.feature_card_3 .ani_4,
-  .animate.feature_card_3 .ani_5 {
-    -webkit-animation: opacity 0.8s ease infinite alternate both;
-    animation: opacity 0.8s ease infinite alternate both; }
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom; }
   .animate.feature_card_3 .ani_3 {
     width: 8.6%;
     left: 47%;
-    top: 35%;
-    -webkit-animation-delay: -2s;
-    animation-delay: -2s; }
+    top: 35%; }
   .animate.feature_card_3 .ani_4 {
     width: 12%;
     left: 42%;
-    top: 55%;
-    -webkit-animation-delay: -3s;
-    animation-delay: -3s; }
+    top: 55%; }
   .animate.feature_card_3 .ani_5 {
     width: 13%;
     left: 28%;
-    top: 75%;
+    top: 75%; }
+  .animate.feature_card_3.mobile .ani_1 {
+    -webkit-animation: moveRight 0.8s ease infinite alternate both;
+    animation: moveRight 0.8s ease infinite alternate both; }
+  .animate.feature_card_3.mobile .ani_2 {
+    -webkit-animation: moveLeft 0.8s ease infinite alternate both;
+    animation: moveLeft 0.8s ease infinite alternate both; }
+  .animate.feature_card_3.mobile .ani_3,
+  .animate.feature_card_3.mobile .ani_4,
+  .animate.feature_card_3.mobile .ani_5 {
+    -webkit-animation: opacity 0.8s ease infinite alternate both;
+    animation: opacity 0.8s ease infinite alternate both; }
+  .animate.feature_card_3.mobile .ani_3 {
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s; }
+  .animate.feature_card_3.mobile .ani_4 {
+    -webkit-animation-delay: -3s;
+    animation-delay: -3s; }
+  .animate.feature_card_3.mobile .ani_5 {
     -webkit-animation-delay: -4s;
     animation-delay: -4s; }
+  .animate.feature_card_3:hover {
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
+    .animate.feature_card_3:hover .ani_1 {
+      -webkit-animation: moveRight 0.8s ease alternate both;
+      animation: moveRight 0.8s ease alternate both; }
+    .animate.feature_card_3:hover .ani_2 {
+      -webkit-animation: moveLeft 0.8s ease alternate both;
+      animation: moveLeft 0.8s ease alternate both;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1; }
+    .animate.feature_card_3:hover .ani_3,
+    .animate.feature_card_3:hover .ani_4,
+    .animate.feature_card_3:hover .ani_5 {
+      -webkit-animation: opacity 1s ease alternate both;
+      animation: opacity 1s ease alternate both;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1; }
+    .animate.feature_card_3:hover .ani_3 {
+      -webkit-animation-delay: -2s;
+      animation-delay: -2s; }
+    .animate.feature_card_3:hover .ani_4 {
+      -webkit-animation-delay: -3s;
+      animation-delay: -3s; }
+    .animate.feature_card_3:hover .ani_5 {
+      -webkit-animation-delay: -4s;
+      animation-delay: -4s; }
 
 @-webkit-keyframes moveLeft {
   0% {

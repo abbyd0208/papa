@@ -723,6 +723,9 @@
     @include media-breakpoint-down(xl) {
         transform: scale(1);
     }
+    @include media-breakpoint-down(lg) {
+        transform: scale(0.8);
+    }
     .item {
         position: absolute;
     }
@@ -737,7 +740,6 @@
         left: 2%;
         bottom: 10%;
         transform-origin: center bottom;
-        animation: armRotateLeft 1s infinite alternate both;
     }
     .ani_3 {
         width: 50%;
@@ -749,22 +751,37 @@
         right: 2%;
         bottom: 10%;
         transform-origin: center bottom;
-        animation: armRotateRight 1s infinite alternate both;
     }
     .ani_5 {
         width: 14%;
-        top: 45%;
+        top: 46%;
         left: 18.5%;
     }
     .ani_6 {
         width: 14%;
-        top: 45%;
+        top: 46%;
         right: 18%;
     }
 
-    .ani_5,
-    .ani_6 {
-        animation: mouseUp 1s ease-in-out infinite alternate both;
+    &.mobile{
+        .ani_2 { animation: armRotateLeft 1s infinite alternate both;}
+        .ani_4 {animation: armRotateRight 1s infinite alternate both;}
+        .ani_5,
+        .ani_6 {
+            animation: mouseUp 1s ease-in-out infinite alternate both;
+        }
+    }
+    &:hover{
+        .ani_2 { animation: armRotateLeft .5s alternate both;
+            animation-iteration-count: 1;}
+        .ani_4 { animation: armRotateRight .5s alternate both;
+            animation-iteration-count: 1;}
+        .ani_5,
+        .ani_6 {
+            animation: mouseUp .5s ease-in-out alternate both;
+            animation-iteration-count: 1;
+        }
+        
     }
 
     @keyframes mouseUp {
@@ -804,6 +821,9 @@
     @include media-breakpoint-down(xl) {
         transform: scale(1);
     }
+    @include media-breakpoint-down(lg) {
+        transform: scale(0.8);
+    }
     .item {
         position: absolute;
     }
@@ -817,7 +837,6 @@
         left: 12%;
         bottom: 10%;
         transform-origin: center bottom;
-        animation: thinkRotate 1s ease infinite alternate both;
     }
     .ani_3 {
         width: 56%;
@@ -829,14 +848,25 @@
         bottom: 5%;
         right: 5%;
         transform-origin: right top;
-        animation: paperRotate 1s ease infinite alternate both;
     }
     .ani_5 {
         width: 8%;
         left: 48%;
-        animation: markRotate 1s ease infinite alternate both;
     }
 
+    &.mobile{
+        .ani_2{ animation: thinkRotate 1s ease infinite alternate both;}
+        .ani_4{ animation: paperRotate 1s ease infinite alternate both;}
+        .ani_5{animation: markRotate 1s ease infinite alternate both;}
+    }
+    &:hover{
+        .ani_2{ animation: thinkRotate 1s ease alternate both;
+            animation-iteration-count: 1;}
+        .ani_4{ animation: paperRotate 1s ease alternate both;
+            animation-iteration-count: 1;}
+        .ani_5{animation: markRotate 1s ease alternate both;
+            animation-iteration-count: 1;}
+    }
     @keyframes thinkRotate {
         0%,
         50% {
@@ -877,6 +907,10 @@
     @include media-breakpoint-down(xl) {
         transform: scale(1);
     }
+    @include media-breakpoint-down(lg) {
+        transform: scale(0.8) translateX(-15px);
+        
+    }
     .item {
         position: absolute;
     }
@@ -884,39 +918,62 @@
         width: 52%;
         left: 0;
         bottom: 0;
-        animation: moveRight 0.8s ease infinite alternate both;
+        transform-origin: left bottom;
     }
     .ani_2 {
         width: 48%;
         right: 0;
         bottom: 0;
-        animation: moveLeft 0.8s ease infinite alternate both;
+        transform-origin: right bottom;
     }
 
-    .ani_3,
-    .ani_4,
-    .ani_5 {
-        animation: opacity 0.8s ease infinite alternate both;
-    }
+    
     .ani_3 {
         width: 8.6%;
         left: 47%;
         top: 35%;
-        animation-delay: -2s;
+       
     }
     .ani_4 {
         width: 12%;
         left: 42%;
         top: 55%;
-        animation-delay: -3s;
+        
     }
     .ani_5 {
         width: 13%;
         left: 28%;
         top: 75%;
-        animation-delay: -4s;
+        
     }
 
+    &.mobile{
+        .ani_1{animation: moveRight 0.8s ease infinite alternate both;}
+        .ani_2{animation: moveLeft 0.8s ease infinite alternate both;}
+        .ani_3,
+        .ani_4,
+        .ani_5 {
+            animation: opacity 0.8s ease infinite alternate both;
+        }
+        .ani_3{ animation-delay: -2s;}
+        .ani_4{animation-delay: -3s;}
+        .ani_5{animation-delay: -4s;}
+    }
+    &:hover{
+        .ani_1{animation: moveRight 0.8s ease alternate both;}
+        animation-iteration-count: 1;
+        .ani_2{animation: moveLeft 0.8s ease alternate both;
+            animation-iteration-count: 1;}
+        .ani_3,
+        .ani_4,
+        .ani_5 {
+            animation: opacity 1s ease alternate both;
+            animation-iteration-count: 1;
+        }
+        .ani_3{ animation-delay: -2s;}
+        .ani_4{animation-delay: -3s;}
+        .ani_5{animation-delay: -4s;}
+    }
     @keyframes moveLeft {
         0% {
             right: 0;
