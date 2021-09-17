@@ -36,7 +36,13 @@
 }
 
 .works_slide {
-    border: 0px solid green;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all .5s linear;
+    &.active{
+        opacity: 1;
+        transform: translateY(0px)
+    }
     .slick-track{ padding: 10px 0;}
     .slick-dots {
         border: 0px solid orange;
@@ -121,6 +127,13 @@
     display: none;
     @include media-max('992px') {
         display: block;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all .5s linear;
+        &.active{
+            opacity: 1;
+            transform: translateY(0px)
+        }
     }
 
     .slick-slide {

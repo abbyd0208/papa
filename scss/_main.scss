@@ -115,7 +115,7 @@ section {
             border: 0;
             top: 0px;
             right: -30px;
-            z-index: -1;
+            z-index: 5;
             @include media-breakpoint-down(xl) {
                 top: -100px;
             }
@@ -209,7 +209,6 @@ section {
     background-size: 500px auto,1200px auto;
     background-repeat: no-repeat;
     @include media-breakpoint-down(xl){
-        border: 5px solid pink;
         background-size: 30% auto,60% auto;
     }
     
@@ -233,9 +232,11 @@ section {
 // 內文
 .content {
     position: relative;
+    
     @include media-breakpoint-down(sm) {
         height: 172px;
     }
+   
 }
 .content.unfold {
     height: 100%;
@@ -243,6 +244,15 @@ section {
 
 .container {
     position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all .5s linear;
+    &.active{
+        opacity: 1;
+        transform: translateY(0px)
+    }
+    
 }
 
 // 關於小愛爸爸公益平台

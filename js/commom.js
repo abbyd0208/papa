@@ -215,11 +215,66 @@ $(function () {
     .setClassToggle('#main_end_animate', 'active')
     .addTo(controller);
 
+    
+
     scene2.offset(-200); 
     scene3.offset(-200); 
     scene4.offset(-200); 
     scene5.offset(-200); 
     scene6.offset(-400);
 
-    controller.addScene([scene, scene2, scene3, scene4, scene5,scene6]);
+
+
+    var contentAbout = new ScrollMagic.Scene({
+        triggerElement: '#about',
+    })
+    .setClassToggle('#about .container', 'active')
+    .addTo(controller);
+
+
+    var contentVideo = new ScrollMagic.Scene({
+        triggerElement: '#video',
+    })
+    .setClassToggle('#video .container', 'active')
+    .addTo(controller);
+
+    var contentDad = new ScrollMagic.Scene({
+        triggerElement: '#dad',
+    })
+    .setClassToggle('#dad .container', 'active')
+    .addTo(controller);
+
+    
+    var contentWorks = new ScrollMagic.Scene({
+        triggerElement: '#works',
+    })
+    .setClassToggle('#works .works_slide', 'active')
+    .addTo(controller);
+
+    var contentPlatform = new ScrollMagic.Scene({
+        triggerElement: '#platform',
+    })
+    .setClassToggle('#platform .container', 'active')
+    .addTo(controller);
+
+    var contentPlatform2 = new ScrollMagic.Scene({
+        triggerElement: '#platform',
+    })
+    .setClassToggle('#platform .platform_slider', 'active')
+    .addTo(controller);
+
+
+
+    var contentRecommend = new ScrollMagic.Scene({
+        triggerElement: '#recommend',
+    })
+    .setClassToggle('#recommend .container', 'active')
+    .addTo(controller);
+
+    
+
+
+
+
+    controller.addScene([scene, scene2, scene3, scene4, scene5,scene6,contentAbout,contentVideo,contentDad,contentWorks,contentPlatform,contentPlatform2,contentRecommend]);
 });

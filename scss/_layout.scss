@@ -69,8 +69,9 @@ header {
         width: 44px;
         height: 44px;
         background-color: $secondary;
-
         border: none;
+        position: relative;
+        z-index: 100;
         // 取消 bootstrap focus 效果
         &:focus {
             outline: none;
@@ -375,7 +376,7 @@ header {
         border: none;
         transform: translate(0, -140%);
         opacity: 0;
-        z-index: 11;
+        z-index: 500;
         box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.2);
         &.open {
             background-color: rgba(0, 0, 0, 0);
