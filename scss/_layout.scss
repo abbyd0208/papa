@@ -428,6 +428,7 @@ footer {
     color: #ffffff;
     padding-top: 80px;
     padding-bottom: 30px;
+    overflow: hidden;
     // position: relative;
     @include media-breakpoint-down(xl) {
         padding-top: 80px;
@@ -443,6 +444,12 @@ footer {
     a {
         color: inherit;
     }
+    .social{
+        &.icon_ig,&.icon_fb{display: inline-block; width: 40px; height: 40px; }
+        &.icon_ig{ background: url(../images/icon_ig.svg) center center no-repeat; background-size: cover; margin-right: 20px;}
+        &.icon_fb{ background: url(../images/icon_fb.svg) center center no-repeat; background-size: cover; }
+    }
+
     hr{ width: 100%; background-color: #fff; height: 1px;}
     .footer_logo img {
         width: 280px;
@@ -469,17 +476,15 @@ footer {
     }
 
     .footer_menu{
-        // border: 1px solid green;
         display: flex;
-    //    *{ border: 1px solid red;}
+    
         .item{
             display: inline-block;
             word-break:keep-all ;
             padding: 0 3%;
             border-right:1px solid #fff ;
             text-align: center;
-            a{ display: inline-block;}
-            // em{ display: inline-block; font-style: normal; }
+            a{ display: inline-block; font-size: 1.2rem;}
             &:nth-last-of-type(1){
                 border: 0px;
             }
@@ -487,7 +492,6 @@ footer {
         @include media-breakpoint-down(md) {
           display: block;
           .item{ display: block; text-align: left; border-right:0px ; padding: 0;}
-        //   em{ display: inline-block;}
         }
     }
 
@@ -501,7 +505,7 @@ footer {
 
     // footer 動畫 (從main移過來 0901 Alvin)
     .footer_animate {
-        width: 100%;
+        // width: 100%;
         position: absolute;
         left: 0;
         bottom: 0%;

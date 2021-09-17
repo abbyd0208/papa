@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76.98" height="76.98" viewBox="0 0 76.98 76.98">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.171" cy="0.783" fx="-0.45617836713790894" fy="0.6921356320381165" r="2.033" gradientTransform="matrix(0.653, -0.757, 0.615, 0.531, -0.422, 0.497)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f9ed32"/>
+      <stop offset="0.061" stop-color="#f7d939"/>
+      <stop offset="0.187" stop-color="#f4a54c"/>
+      <stop offset="0.365" stop-color="#f0536b"/>
+      <stop offset="0.449" stop-color="#ee2a7b"/>
+      <stop offset="0.599" stop-color="#9e2aa7"/>
+      <stop offset="0.742" stop-color="#5a2acc"/>
+      <stop offset="0.86" stop-color="#292ae7"/>
+      <stop offset="0.95" stop-color="#0b2af8"/>
+      <stop offset="1" stop-color="#002aff"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_981" data-name="Group 981" transform="translate(-13.209 -1.055)">
+    <path id="Rectangle_1288" data-name="Rectangle 1288" d="M23.341,0h30.3A23.339,23.339,0,0,1,76.98,23.339v30.3a23.34,23.34,0,0,1-23.34,23.34H23.34A23.34,23.34,0,0,1,0,53.641v-30.3A23.341,23.341,0,0,1,23.341,0Z" transform="translate(13.209 1.055)" fill="url(#radial-gradient)"/>
+    <g id="Group_980" data-name="Group 980" transform="translate(19.708 9.011)">
+      <g id="Group_977" data-name="Group 977">
+        <path id="Path_1716" data-name="Path 1716" d="M68.989,76.24H44.473A19.755,19.755,0,0,1,24.74,56.508V34.9A19.755,19.755,0,0,1,44.473,15.171H68.989A19.755,19.755,0,0,1,88.721,34.9v21.6A19.755,19.755,0,0,1,68.989,76.24ZM44.473,19.557A15.364,15.364,0,0,0,29.126,34.9v21.6A15.365,15.365,0,0,0,44.473,71.855H68.989A15.365,15.365,0,0,0,84.336,56.508V34.9A15.364,15.364,0,0,0,68.989,19.557Z" transform="translate(-24.74 -15.171)" fill="#fff"/>
+      </g>
+      <g id="Group_978" data-name="Group 978" transform="translate(14.426 12.969)">
+        <path id="Path_1717" data-name="Path 1717" d="M67.9,73.312A17.565,17.565,0,1,1,85.464,55.747,17.584,17.584,0,0,1,67.9,73.312Zm0-30.744a13.18,13.18,0,1,0,13.18,13.18A13.195,13.195,0,0,0,67.9,42.568Z" transform="translate(-50.335 -38.182)" fill="#fff"/>
+      </g>
+      <g id="Group_979" data-name="Group 979" transform="translate(45.642 9.865)">
+        <path id="Path_1718" data-name="Path 1718" d="M113.009,36.319a3.645,3.645,0,1,1-3.644-3.645A3.643,3.643,0,0,1,113.009,36.319Z" transform="translate(-105.72 -32.674)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

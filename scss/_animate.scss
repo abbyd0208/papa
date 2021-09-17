@@ -568,7 +568,7 @@
     transform-origin: left;
     @include size(606px, 368px);
     @include media-breakpoint-up(xl) {
-        transform: scale(0.8);
+        transform: scale(0.7);
     }
     .item {
         position: absolute;
