@@ -336,7 +336,7 @@
 
     @keyframes flowerRotate {
         0%{ transform: rotate(0deg) scale(0.6);}
-        100%{transform: rotate(360deg) scale(1);;}
+        100%{transform: rotate(360deg) scale(1);}
     }
 
     // 滾動觸發
@@ -525,11 +525,23 @@
         top: 25%;
         left: 10%;
     }
-    .ani_6 {
+    .group {
         width: 8%;
+        height: 16%;
         top: 30%;
         left: 10%;
+        border: 1px solid green;
     }
+    .ani_6{
+        width: 65%;
+        &:nth-of-type(2){
+            bottom: 0%;
+            right: 0;
+        }
+
+    }
+
+
 
     @keyframes redKid {
         0% {
@@ -570,6 +582,12 @@
         }
     }
 
+    @keyframes starRotate {
+        0%{ transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}
+    }
+
+
     &.active {
         .ani_2 {
             animation: redKid 1s alternate both;
@@ -580,8 +598,11 @@
         .ani_5 {
             animation: rotateWave 1s alternate both;
         }
-        .ani_6 {
+        .group {
             animation: star 1s alternate both;
+            .ani_6{
+                animation: starRotate 1s alternate both;
+            }
         }
     }
 }
