@@ -11115,11 +11115,28 @@ section {
     width: 33%;
     right: 10%;
     top: 15%; }
-  .animate.about_conent .ani_4 {
+  .animate.about_conent .group {
     width: 25%;
-    left: 25%;
+    height: 15%;
+    left: 30%;
     top: 10%;
-    z-index: 1; }
+    z-index: 1;
+    border: 1px solid red; }
+  .animate.about_conent .ani_6 {
+    width: 42%;
+    left: 0;
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6);
+    border: 1px solid green; }
+  .animate.about_conent .ani_7 {
+    width: 42%;
+    right: 0;
+    top: 30%;
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6);
+    border: 1px solid blue; }
 
 @-webkit-keyframes redKidLeft {
   0% {
@@ -11147,7 +11164,7 @@ section {
 
 @-webkit-keyframes flower {
   0% {
-    left: 25%;
+    left: 30%;
     top: 10%; }
   100% {
     left: 20%;
@@ -11155,20 +11172,39 @@ section {
 
 @keyframes flower {
   0% {
-    left: 25%;
+    left: 30%;
     top: 10%; }
   100% {
     left: 20%;
     top: 5%; } }
+
+@-webkit-keyframes flowerRotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.6);
+    transform: rotate(0deg) scale(0.6); }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+    transform: rotate(360deg) scale(1); } }
+
+@keyframes flowerRotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.6);
+    transform: rotate(0deg) scale(0.6); }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+    transform: rotate(360deg) scale(1); } }
   .animate.about_conent.active .ani_2 {
     -webkit-animation: redKidLeft 1s alternate both;
     animation: redKidLeft 1s alternate both; }
   .animate.about_conent.active .ani_3 {
     -webkit-animation: blueKidTop 1s alternate both;
     animation: blueKidTop 1s alternate both; }
-  .animate.about_conent.active .ani_4 {
+  .animate.about_conent.active .group {
     -webkit-animation: flower 1s alternate both;
     animation: flower 1s alternate both; }
+    .animate.about_conent.active .group .ani_6, .animate.about_conent.active .group .ani_7 {
+      -webkit-animation: flowerRotate 1.5s alternate both;
+      animation: flowerRotate 1.5s alternate both; }
 
 .animate.intro_content {
   width: 382px;

@@ -216,7 +216,7 @@ $(function () {
     .addTo(controller);
 
     
-
+    scene.offset(-200);
     scene2.offset(-200); 
     scene3.offset(-200); 
     scene4.offset(-200); 

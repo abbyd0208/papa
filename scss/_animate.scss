@@ -282,13 +282,28 @@
         right: 10%;
         top: 15%;
     }
-    .ani_4 {
+    .group {
         width: 25%;
-        left: 25%;
+        height: 15%;
+        left: 30%;
         top: 10%;
         z-index: 1;
+        border: 1px solid red;
     }
     .ani_5 {
+    }
+    .ani_6 {
+        width: 42%;
+        left: 0;
+        transform: scale(0.6);
+        border: 1px solid green;
+    }
+    .ani_7 {
+        width: 42%;
+        right: 0;
+        top: 30%;
+        transform: scale(0.6);
+        border: 1px solid blue;
     }
     @keyframes redKidLeft {
         0% {
@@ -310,7 +325,7 @@
 
     @keyframes flower {
         0% {
-            left: 25%;
+            left: 30%;
             top: 10%;
         }
         100% {
@@ -318,6 +333,12 @@
             top: 5%;
         }
     }
+
+    @keyframes flowerRotate {
+        0%{ transform: rotate(0deg) scale(0.6);}
+        100%{transform: rotate(360deg) scale(1);;}
+    }
+
     // 滾動觸發
     &.active {
         .ani_2 {
@@ -326,8 +347,9 @@
         .ani_3 {
             animation: blueKidTop 1s alternate both;
         }
-        .ani_4 {
+        .group {
             animation: flower 1s alternate both;
+            .ani_6,.ani_7{animation: flowerRotate 1.5s alternate both; }
         }
     }
 }
